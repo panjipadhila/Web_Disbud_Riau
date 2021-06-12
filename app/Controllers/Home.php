@@ -6,14 +6,20 @@ class Home extends BaseController
 {
 	function index()
 	{
-		return view('homepage');
+		echo view('header');
+		echo view('homepage');
+		echo view('footer');
 	}
 	function project()
 	{
-		return view('project');
+		echo view('header');
+		echo view('project');
+		echo view('footer');
 	}
 	function components()
 	{
-		return view('components');
+		echo view('header');
+		echo view('components');
+		echo view('footer');
 	}
 }
