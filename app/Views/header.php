@@ -38,7 +38,7 @@
                     </button>
                     <a class="navbar-brand" href="./index.html" title="">
                         <img src="./assets/images/mashup-icon.svg" class="navbar-logo-img" alt="">
-                        Mashup Template
+                        Website Resmi Dinas Kebudayaan Provinsi Riau
                     </a>
                 </div>
 
