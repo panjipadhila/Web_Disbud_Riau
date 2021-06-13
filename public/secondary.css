@@ -973,7 +973,7 @@ pre code {
 
 @media (min-width:1280px) {
     .row-hero-background {
-        margin-top:-5em;
+        margin-top: -5em;
         margin-left: -2em;
         margin-right: -15px
     }
@@ -981,21 +981,21 @@ pre code {
 
 @media (min-width:1180px) {
     .row-hero-background {
-        margin-top:-5em;
+        margin-top: -5em;
         margin-right: -15px
     }
 }
 
 @media (min-width:769px) {
     .row-hero-background {
-        margin-top:-5em;
+        margin-top: -5em;
         margin-right: -15px
     }
 }
 
 @media (max-width:768px) {
     .row-hero-background {
-        margin-top:-2em;
+        margin-top: -2em;
         text-align: center;
     }
 }
@@ -3361,26 +3361,93 @@ fieldset[disabled] .btn-link:hover {
     border-radius: 4px
 }
 
-.btn-group-lg>.btn,
-.btn-lg-leftmargin {
-    padding: 14px 700px 14px 22px;
-    width: 700px;
-    margin : 0 0 0 -20%;
-    font-size: 23px;
-    line-height: 1.33333;
-    border-radius: 4px
+@media(max-width: 767px) {
+    .btn-group-lg>.btn,
+    .btn-lg-leftmargin {
+        padding: 14px 22px 14px 22px;
+        width: 450px;
+        font-size: 23px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
+
+    .btn-group-lg>.btn,
+    .btn-lg-rightmargin {
+        padding: 14px 22px 14px 22px;
+        width: 450px;
+        font-size: 23px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
 }
 
-.btn-group-lg>.btn,
-.btn-lg-rightmargin {
-    padding: 14px 700px 14px 22px;
-    width: 700px;
-    margin : 0 -20% 0 0;
-    font-size: 23px;
-    line-height: 1.33333;
-    border-radius: 4px
+@media(min-width: 768px) {
+    .btn-group-lg>.btn,
+    .btn-lg-leftmargin {
+        padding: 14px 22px 14px 22px;
+        width: 450px;
+        margin: 0 0 0 -20%;
+        font-size: 23px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
+
+    .btn-group-lg>.btn,
+    .btn-lg-rightmargin {
+        padding: 14px 22px 14px 22px;
+        width: 450px;
+        margin: 0 -20% 0 0;
+        font-size: 23px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
 }
 
+@media(min-width: 1000px) {
+    .btn-group-lg>.btn,
+    .btn-lg-leftmargin {
+        padding: 14px 600px 14px 22px;
+        width: 600px;
+        margin: 0 0 0 -20%;
+        font-size: 23px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
+
+    .btn-group-lg>.btn,
+    .btn-lg-rightmargin {
+        padding: 14px 600px 14px 22px;
+        width: 600px;
+        margin: 0 -20% 0 0;
+        font-size: 23px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
+}
+
+
+
+@media(min-width: 1280px) {
+    .btn-group-lg>.btn,
+    .btn-lg-leftmargin {
+        padding: 14px 700px 14px 22px;
+        width: 700px;
+        margin: 0 0 0 -20%;
+        font-size: 23px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
+
+    .btn-group-lg>.btn,
+    .btn-lg-rightmargin {
+        padding: 14px 700px 14px 22px;
+        width: 700px;
+        margin: 0 -20% 0 0;
+        font-size: 23px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
+}
 
 .btn-group-sm>.btn,
 .btn-sm {
@@ -5754,7 +5821,7 @@ button.close {
 
 .background-image-container {
     text-align: left;
-    height:150px;
+    height: 150px;
     background-image: url(./assets/images/wave-hero-background-small.svg)
 }
 
