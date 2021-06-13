@@ -7,7 +7,7 @@ class Home extends BaseController
 	function index()
 	{
 		echo view('header');
-		echo view('homepage');
+		echo view('homepageTest1');
 		echo view('footer');
 	}
 	function project()

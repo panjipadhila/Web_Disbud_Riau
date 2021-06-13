@@ -1,24 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1300px" height="499px" viewBox="0 0 1300 499" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
-    <title>wave_background</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <radialGradient cx="116.70788%" cy="110.133192%" fx="116.70788%" fy="110.133192%" r="147.799618%" gradientTransform="translate(1.167079,1.101332),scale(0.357923,1.000000),rotate(-160.534454),translate(-1.167079,-1.101332)" id="radialGradient-1">
-            <stop stop-color="#0069FF" offset="0%"></stop>
-            <stop stop-color="#0269FD" offset="2.91250472%"></stop>
-            <stop stop-color="#0369FC" offset="4.5053357%"></stop>
-            <stop stop-color="#0468FB" offset="6.00516035%"></stop>
-            <stop stop-color="#1165EF" offset="25.4821693%"></stop>
-            <stop stop-color="#4457C0" offset="100%"></stop>
-        </radialGradient>
-    </defs>
-    <g id="Ressource" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="wave_background">
-            <g id="Group-4">
-                <path d="M0,1.89326617e-29 L1300,-2.84217094e-14 C1299.84369,99.0658466 1299.84369,259.045733 1300,479.93966 C939.379367,522.288692 978.893507,439.694844 650,450.952014 C321.106493,462.209185 306.589562,511.200484 0,450.952014 C1,327.508342 1,177.191004 0,1.89326617e-29 Z" id="Wave" fill="#C4C4C4" opacity="0.15"></path>
-                <path d="M1.00076864,0 L925.701255,0 L1302,0 C1302,223.960943 1302,366.849893 1302,428.66685 C1221.6052,416.744841 1147.81368,399.334739 958.281774,416.744841 C768.749863,434.154944 701.824308,503.789515 426.321989,437.77475 C242.653776,393.764907 100.880036,397.003272 1.00076864,447.489845 L1.00076864,0 Z" id="Wave" fill="url(#radialGradient-1)" transform="translate(651.500384, 232.828869) scale(-1, 1) translate(-651.500384, -232.828869) "></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1300 499" style="enable-background:new 0 0 1300 499;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;opacity:0.15;fill-rule:evenodd;clip-rule:evenodd;fill:#F3EF82;enable-background:new    ;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#F3EF82;}
+	.st2{display:none;opacity:0.15;fill-rule:evenodd;clip-rule:evenodd;fill:#F7E60B;enable-background:new    ;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Wave_6_);}
+</style>
+<g id="Group-4_2_">
+	<path id="Wave_5_" class="st0" d="M343.5,0h1140.7c-0.1,96.4-0.1,252.1,0,467c-316.4,41.2-281.8-39.2-570.4-28.2
+		s-301.3,58.6-570.4,0C344.4,318.7,344.4,172.4,343.5,0z"/>
+	<path id="Wave_4_" class="st1" d="M1486,0H674.6H344.4c0,217.9,0,357,0,417.1c70.5-11.6,135.3-28.5,301.6-11.6
+		c166.3,16.9,225,84.7,466.8,20.5c161.2-42.8,285.6-39.7,373.2,9.5V0z"/>
+</g>
+<g id="Group-4_1_">
+	<path id="Wave_3_" class="st0" d="M-125,0h1180.2c-0.1,97.7-0.1,255.5,0,473.5c-327.4,41.8-291.5-39.7-590.1-28.6
+		c-298.6,11.1-311.8,59.4-590.1,0C-124.1,323.1-124.1,174.8-125,0z"/>
+	<path id="Wave_2_" class="st1" d="M1057,0H217.5h-341.6c0,220.9,0,361.9,0,422.9c73-11.8,140-28.9,312-11.8
+		C360,428.3,420.8,497,670.9,431.9c166.7-43.4,295.4-40.2,386.1,9.6V0z"/>
+</g>
+<desc>Created with Sketch.</desc>
+<g id="Group-4">
+	<path id="Wave" class="st2" d="M0,0h1300c-0.2,99.1-0.2,259,0,479.9c-360.6,42.3-321.1-40.2-650-29s-343.4,60.2-650,0
+		C1,327.5,1,177.2,0,0z"/>
+	
+		<radialGradient id="Wave_6_" cx="-307.4148" cy="789.707" r="1.478" gradientTransform="matrix(439.0415 -155.1758 155.1757 439.0417 12208.1621 -393904.75)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#4BA54D"/>
+		<stop  offset="2.912505e-02" style="stop-color:#4BA54D"/>
+		<stop  offset="4.505335e-02" style="stop-color:#4BA54D"/>
+		<stop  offset="6.005161e-02" style="stop-color:#4BA54D"/>
+		<stop  offset="0.2548" style="stop-color:#4DA64F"/>
+		<stop  offset="1" style="stop-color:#4FA751"/>
+	</radialGradient>
+	<path id="Wave_1_" class="st3" d="M1302,0H377.3H1c0,224,0,366.8,0,428.7c80.4-11.9,154.2-29.3,343.7-11.9s256.5,87,532,21
+		c183.7-44,325.4-40.8,425.3,9.7V0z"/>
+</g>
 </svg>
