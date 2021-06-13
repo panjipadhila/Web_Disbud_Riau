@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1300 335.7" style="enable-background:new 0 0 1300 335.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;opacity:0.15;fill-rule:evenodd;clip-rule:evenodd;fill:#F3EF82;enable-background:new    ;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#F3EF82;}
+	.st2{display:none;opacity:0.15;fill-rule:evenodd;clip-rule:evenodd;fill:#F7E60B;enable-background:new    ;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:url(#Wave_2_);}
+</style>
+<g id="Group-4_2_">
+	<path id="Wave_5_" class="st0" d="M1301,335.7H2c0.2-70,0.2-183.1,0-339.3c360.3-29.9,320.9,28.4,649.5,20.5s343.1-42.6,649.5,0
+		C1300,104.2,1300,210.5,1301,335.7z"/>
+	<path id="Wave_4_" class="st1" d="M0,335.7h924h376c0-158.3,0-259.3,0-303c-80.3,8.4-154.1,20.7-343.5,8.4S700.3-20.4,425,26.2
+		C241.5,57.4,99.8,55.1,0,19.4L0,335.7z"/>
+</g>
+<desc>Created with Sketch.</desc>
+<g id="Group-4">
+	<path id="Wave" class="st2" d="M-1-2.6h1300c-0.2,72-0.2,188.2,0,348.7c-360.6,30.8-321.1-29.2-650-21.1s-343.4,43.8-650,0
+		C0,235.4,0,126.2-1-2.6z"/>
+	
+		<radialGradient id="Wave_2_" cx="-307.4143" cy="789.6991" r="1.478" gradientTransform="matrix(439.0415 -112.7278 155.1757 318.9429 12208.1621 -286153.0312)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#4BA54D"/>
+		<stop  offset="2.912505e-02" style="stop-color:#4BA54D"/>
+		<stop  offset="4.505335e-02" style="stop-color:#4BA54D"/>
+		<stop  offset="6.005161e-02" style="stop-color:#4BA54D"/>
+		<stop  offset="0.2548" style="stop-color:#4DA64F"/>
+		<stop  offset="1" style="stop-color:#4FA751"/>
+	</radialGradient>
+	<path id="Wave_1_" class="st3" d="M1301-2.6H376.3H0c0,162.7,0,266.5,0,311.4c80.4-8.7,154.2-21.3,343.7-8.7
+		c189.5,12.6,256.5,63.2,532,15.3c183.7-32,325.4-29.6,425.3,7.1V-2.6z"/>
+</g>
+</svg>

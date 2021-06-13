@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('project', 'Home::project');
 $routes->get('components', 'Home::components');
+$routes->get('opk', 'Home::opk');
 
 /*
  * --------------------------------------------------------------------

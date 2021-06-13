@@ -16,13 +16,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
     <link href="./assets/favicon.ico" rel="icon">
 
-    
+    <link href="" rel="stylesheet">
 
 
     <title>Title page</title>
 
     <link href="./main.550dcf66.css" rel="stylesheet">
-
+    <link href="./secondary.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                     </button>
                     <a class="navbar-brand" href="./index.html" title="">
                         <img src="./assets/images/mashup-icon.svg" class="navbar-logo-img" alt="">
-                        website dinas
+                        Website disbud
                     </a>
                 </div>
 

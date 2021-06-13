@@ -7,7 +7,7 @@ class Home extends BaseController
 	function index()
 	{
 		echo view('header');
-		echo view('homepageTest1');
+		echo view('homepage');
 		echo view('footer');
 	}
 	function project()
@@ -20,6 +20,12 @@ class Home extends BaseController
 	{
 		echo view('header');
 		echo view('components');
+		echo view('footer');
+	}
+
+	function opk(){
+		echo view('headerFixedTop');
+		echo view('opk');
 		echo view('footer');
 	}
 }
