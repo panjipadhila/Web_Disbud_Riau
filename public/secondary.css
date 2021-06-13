@@ -3361,6 +3361,27 @@ fieldset[disabled] .btn-link:hover {
     border-radius: 4px
 }
 
+.btn-group-lg>.btn,
+.btn-lg-leftmargin {
+    padding: 14px 700px 14px 22px;
+    width: 700px;
+    margin : 0 0 0 -20%;
+    font-size: 23px;
+    line-height: 1.33333;
+    border-radius: 4px
+}
+
+.btn-group-lg>.btn,
+.btn-lg-rightmargin {
+    padding: 14px 700px 14px 22px;
+    width: 700px;
+    margin : 0 -20% 0 0;
+    font-size: 23px;
+    line-height: 1.33333;
+    border-radius: 4px
+}
+
+
 .btn-group-sm>.btn,
 .btn-sm {
     padding: 7px 10px;
@@ -5760,6 +5781,7 @@ button.close {
 .btn-primary:hover {
     background-color: #4ba54d;
     color: #fff;
+    transform: translate(12px, 0);
     border-color: #4ba54d
 }
 

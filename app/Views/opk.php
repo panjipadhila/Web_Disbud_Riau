@@ -19,53 +19,40 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-md-4">
-                <img src="./assets/images/profil-01.jpg" alt="" class="reveal img-responsive reveal-content image-center">
-                <h3>Bidang 1</h3>
-                <h4>UX designer</h4>
-                <p>Sed elementum vehicula nisl, a egestas velit rhoncus nec.Cras vel sapien tincidunt, lacinia risus vel, imperdiet neque.</p>
-                <p><a href="/" class="btn btn-primary">Primary </a></p>
-            </div>
-
-            <div class="col-xs-12 col-md-4">
-                <img src="./assets/images/profil-02.jpg" alt="" class="reveal img-responsive reveal-content image-center">
-                <h3>Bidang 2</h3>
-                <h4>UI designer</h4>
-                <p>Praesent at feugiat est, at faucibus ipsum. Aenean condimentum mauris vel malesuadav pulvinar. Vestibulum sit amet hendrerit leo, quis vehicula mi.</p>
-                <p><a href="/" class="btn btn-primary">Primary </a></p>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <img src="./assets/images/profil-03.jpg" alt="" class="reveal img-responsive reveal-content image-center">
-                <h3>Bidang 3</h3>
-                <h4>Developer</h4>
-                <p>Busce rutrum nisi non dui placerat sodales. Vivamus feugiat rutrum malesuada. Nulla volutpat sapien ac gravida varius</p>
-                <p><a href="/" class="btn btn-primary">Primary </a></p>
-            </div>
+        <p><a href="" class="btn btn-primary btn-lg-leftmargin">Kesenian</a></p>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-md-4">
-                <img src="./assets/images/profil-01.jpg" alt="" class="reveal img-responsive reveal-content image-center">
-                <h3>Bidang 4</h3>
-                <h4>UX designer</h4>
-                <p>Sed elementum vehicula nisl, a egestas velit rhoncus nec.Cras vel sapien tincidunt, lacinia risus vel, imperdiet neque.</p>
-                <p><a href="/" class="btn btn-primary">Primary </a></p>
-            </div>
-
-            <div class="col-xs-12 col-md-4">
-                <img src="./assets/images/profil-02.jpg" alt="" class="reveal img-responsive reveal-content image-center">
-                <h3>Bidnag 5</h3>
-                <h4>UI designer</h4>
-                <p>Praesent at feugiat est, at faucibus ipsum. Aenean condimentum mauris vel malesuadav pulvinar. Vestibulum sit amet hendrerit leo, quis vehicula mi.</p>
-                <p><a href="/" class="btn btn-primary">Primary </a></p>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <img src="./assets/images/profil-03.jpg" alt="" class="reveal img-responsive reveal-content image-center">
-                <h3>Bidang 6</h3>
-                <h4>Developer</h4>
-                <p>Busce rutrum nisi non dui placerat sodales. Vivamus feugiat rutrum malesuada. Nulla volutpat sapien ac gravida varius</p>
-                <p><a href="/" class="btn btn-primary">Primary </a></p>
-            </div>
+        <p><a href="" class="btn btn-primary btn-lg-leftmargin">Bahasa</a></p>
         </div>
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-leftmargin">Permainan Tradisional</a></p>
+        </div>
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-leftmargin">Olahraga Tradisional</a></p>
+        </div>
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-leftmargin">Warisan Budaya Bendawi</a></p>
+        </div>
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-leftmargin">Tradisi Lisan</a></p>
+        </div>
+
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-rightmargin">Manuskrip</a></p>
+        </div>
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-rightmargin">Adad Istiadat</a></p>
+        </div>
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-rightmargin">Ritus</a></p>
+        </div>
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-rightmargin">Pengetahuan Tradisional</a></p>
+        </div>
+        <div class="row">
+        <p><a href="" class="btn btn-primary btn-lg-rightmargin">Teknologi Tradisional</a></p>
+        </div>
+           
     </div>
 </div>
 
