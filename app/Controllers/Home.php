@@ -6,25 +6,38 @@ class Home extends BaseController
 {
 	function index()
 	{
-		echo view('header');
+		$data = [
+			'title' => 'Home | Web Disbud Riau'
+		];
+		echo view('header', $data);
 		echo view('homepage');
 		echo view('footer');
 	}
 	function project()
 	{
-		echo view('header');
+		$data = [
+			'title' => 'Project'
+		];
+		echo view('header', $data);
 		echo view('project');
 		echo view('footer');
 	}
 	function components()
 	{
-		echo view('header');
+		$data = [
+			'title' => 'Components'
+		];
+		echo view('header', $data);
 		echo view('components');
 		echo view('footer');
 	}
 
-	function opk(){
-		echo view('headerFixedTop');
+	function opk()
+	{
+		$data = [
+			'title' => 'OPK | Web Disbud Riau'
+		];
+		echo view('headerFixedTop', $data);
 		echo view('opk');
 		echo view('footer');
 	}

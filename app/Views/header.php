@@ -16,10 +16,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
     <link href="./assets/favicon.ico" rel="icon">
 
-    
 
 
-    <title>Title page</title>
+
+    <title><?= $title; ?></title>
 
     <link href="./main.550dcf66.css" rel="stylesheet">
 

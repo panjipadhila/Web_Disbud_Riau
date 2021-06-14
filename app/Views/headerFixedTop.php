@@ -19,7 +19,7 @@
     <link href="" rel="stylesheet">
 
 
-    <title>Title page</title>
+    <title><?= $title; ?></title>
 
     <link href="./main.550dcf66.css" rel="stylesheet">
     <link href="./secondary.css" rel="stylesheet">
