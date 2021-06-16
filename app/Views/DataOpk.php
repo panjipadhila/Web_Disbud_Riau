@@ -1,12 +1,3 @@
-<div class="hero-full-container background-image-container white-text-container">
-    <div class="container">
-        <div class="row-hero-background">
-            <div class="col-xs-12">
-                <h1>Data OPK</h1>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container text-center">
     <div class="col-xs-12 col-md-12">
@@ -14,7 +5,7 @@
     </div>
 </div>
 <div class="container ">
-    <table class="table">
+    <table class="table table-fluid" id="dataTabelOpk">
         <thead>
             <tr>
                 <th scope="col">no</th>
@@ -40,7 +31,10 @@
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        navbarFixedTopAnimation();
+
+    $(document).ready(function() {
+        $('#dataTabelOpk').DataTable({
+            searching: false,
+        });
     });
 </script>
