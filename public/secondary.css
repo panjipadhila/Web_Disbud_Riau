@@ -6234,4 +6234,29 @@ label {
     margin-right: 5px
 }
 
+/* tambahan CSS*/
+
+::placeholder{
+    font-family: sans-serif;
+    font-size: small;
+    opacity: 0.5;
+}
+
+.table-color{
+    background-color:#4ba54d;
+}
+
+.thead{
+    border: none;
+}
+
+.thead-white-font{
+        color: white;
+}
+
+.table-border-radius10{
+    border-radius: 10px;
+}
+
+
 /*# sourceMappingURL=main.0cf8b554.map*/
