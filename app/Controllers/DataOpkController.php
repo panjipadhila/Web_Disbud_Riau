@@ -36,6 +36,28 @@ class DataOpkController extends BaseController
 		echo view('DataOpk', $data);
 		echo view('footer');
 	}
+	public function bahasa()
+	{
+		$opk = $this->OpkModel->where('kategori', 'Bahasa')->findAll();
+		$data = [
+			'title' => 'Data OPK | Web Disbud Riau',
+			'opk' => $opk
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DataOpk', $data);
+		echo view('footer');
+	}
+	public function permainantradisional()
+	{
+		$opk = $this->OpkModel->where('kategori', 'Permainan Tradisional')->findAll();
+		$data = [
+			'title' => 'Data OPK | Web Disbud Riau',
+			'opk' => $opk
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DataOpk_nosub', $data);
+		echo view('footer');
+	}
 	public function tradisiLisan()
 	{
 		$opk = $this->OpkModel->where('kategori', 'Tradisi Lisan')->findAll();
@@ -99,6 +121,28 @@ class DataOpkController extends BaseController
 	public function teknologiTradisional()
 	{
 		$opk = $this->OpkModel->where('kategori', 'Teknologi Tradisional')->findAll();
+		$data = [
+			'title' => 'Data OPK | Web Disbud Riau',
+			'opk' => $opk
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DataOpk_nosub', $data);
+		echo view('footer');
+	}
+	public function olahragaTradisional()
+	{
+		$opk = $this->OpkModel->where('kategori', 'Olahraga Tradisional')->findAll();
+		$data = [
+			'title' => 'Data OPK | Web Disbud Riau',
+			'opk' => $opk
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DataOpk_nosub', $data);
+		echo view('footer');
+	}
+	public function warisanBudayaBendawi()
+	{
+		$opk = $this->OpkModel->where('kategori', 'Warisan Budaya Bendawi')->findAll();
 		$data = [
 			'title' => 'Data OPK | Web Disbud Riau',
 			'opk' => $opk

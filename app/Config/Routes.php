@@ -42,6 +42,11 @@ $routes->get('ritus', 'DataOpkController::ritus');
 $routes->get('pengetahuanTradisional', 'DataOpkController::pengetahuanTradisional');
 $routes->get('teknologiTradisional', 'DataOpkController::teknologiTradisional');
 $routes->get('kesenian', 'DataOpkController::kesenian');
+$routes->get('bahasa', 'DataOpkController::bahasa');
+$routes->get('permainanTradisional', 'DataOpkController::permainantradisional');
+$routes->get('olahragaTradisional', 'DataOpkController::olahragaTradisional');
+$routes->get('warisanBudayaBendawi', 'DataOpkController::warisanBudayaBendawi');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

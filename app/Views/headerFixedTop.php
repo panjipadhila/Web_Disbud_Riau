@@ -25,7 +25,7 @@
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -41,8 +41,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/" title="">
-                        <img src="./assets/images/mashup-icon.svg" class="navbar-logo-img" alt="">
-                        Website disbud
+                        <img src="./assets/images/pngwing.com.png" class="navbar-logo-img" alt="">
+                        DINAS KEBUDAYAAN PROVINSI RIAU
                     </a>
                 </div>
 
