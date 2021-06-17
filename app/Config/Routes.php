@@ -35,6 +35,7 @@ $routes->get('/', 'Home::index');
 $routes->get('project', 'Home::project');
 $routes->get('components', 'Home::components');
 $routes->get('opk', 'Home::opk');
+$routes->get('(:num)', 'DataOpkController::detail/$1');
 $routes->get('tradisiLisan', 'DataOpkController::tradisiLisan');
 $routes->get('manuskrip', 'DataOpkController::manuskrip');
 $routes->get('adatIstiadat', 'DataOpkController::adatIstiadat');

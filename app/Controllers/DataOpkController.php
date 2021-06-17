@@ -151,4 +151,15 @@ class DataOpkController extends BaseController
 		echo view('DataOpk', $data);
 		echo view('footer');
 	}
+	public function detail($no)
+	{
+		$opk = $this->OpkModel->where('no', $no)->findAll();
+		$data = [
+			'title' => 'Deskripsi | Web Disbud Riau',
+			'opk' => $opk
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DataOpk', $data);
+		echo view('footer');
+	}
 }

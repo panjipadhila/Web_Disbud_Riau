@@ -6262,5 +6262,21 @@ label {
     border-radius: 10px;
 }
 
+.clickable-row{
+    border:transparent;
+    cursor:pointer;
+}
+
+.clickable-row:hover{
+    background-color: #fffdc7;
+    opacity: 98%;
+    transition-duration:0.5s;
+}
+
+.clickable-row:active{
+    background-color: #f3ef82;
+    opacity: 98%;
+}
+
 
 /*# sourceMappingURL=main.0cf8b554.map*/
