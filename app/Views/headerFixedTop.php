@@ -40,7 +40,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="./index.html" title="">
+                    <a class="navbar-brand" href="/" title="">
                         <img src="./assets/images/mashup-icon.svg" class="navbar-logo-img" alt="">
                         Website disbud
                     </a>

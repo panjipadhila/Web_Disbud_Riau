@@ -9,7 +9,7 @@
             <tr>
                 <th scope="col">no</th>
                 <th scope="col">nama</th>
-                <th scope="col">kategori</th>
+                <th scope="col">sub-kategori</th>
                 <th scope="col">Lokasi</th>
                 <th scope="col">Kondisi</th>
             </tr>
@@ -20,7 +20,7 @@
                 <tr>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $opk['nama'] ?></td>
-                    <td><?= $opk['kategori'] ?></td>
+                    <td><?= $opk['subkategori'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
                     <td><?= $opk['kondisi'] ?></td>
                 </tr>
