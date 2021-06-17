@@ -5788,7 +5788,15 @@ button.close {
 
 .navbar-brand>.navbar-logo-img {
     display: inline-block;
-    margin-top: -5px
+    /* width: 100px;
+    height: 75px;
+    margin-top: -5px */
+    height: 47px;
+width: 65px;
+left: 61px;
+top: 11px;
+border-radius: 0px;
+
 }
 
 .navbar-default .navbar-toggle .icon-bar {

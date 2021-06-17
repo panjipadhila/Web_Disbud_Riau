@@ -41,7 +41,7 @@ $routes->get('adatIstiadat', 'DataOpkController::adatIstiadat');
 $routes->get('ritus', 'DataOpkController::ritus');
 $routes->get('pengetahuanTradisional', 'DataOpkController::pengetahuanTradisional');
 $routes->get('teknologiTradisional', 'DataOpkController::teknologiTradisional');
-
+$routes->get('kesenian', 'DataOpkController::kesenian');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

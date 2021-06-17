@@ -19,38 +19,38 @@
             </div>
         </div>
         <div class="row">
-        <p><a href="kesenian" class="btn btn-primary btn-lg-leftmargin">Kesenian</a></p>
+            <p><a href="kesenian" class="btn btn-primary btn-lg-leftmargin">Kesenian</a></p>
         </div>
         <div class="row">
-        <p><a href="bahasa" class="btn btn-primary btn-lg-leftmargin">Bahasa</a></p>
+            <p><a href="bahasa" class="btn btn-primary btn-lg-leftmargin">Bahasa</a></p>
         </div>
         <div class="row">
-        <p><a href="permainanTradisional" class="btn btn-primary btn-lg-leftmargin">Permainan Tradisional</a></p>
+            <p><a href="permainanTradisional" class="btn btn-primary btn-lg-leftmargin">Permainan Tradisional</a></p>
         </div>
         <div class="row">
-        <p><a href="olahragaTradisional" class="btn btn-primary btn-lg-leftmargin">Olahraga Tradisional</a></p>
+            <p><a href="olahragaTradisional" class="btn btn-primary btn-lg-leftmargin">Olahraga Tradisional</a></p>
         </div>
         <div class="row">
-        <p><a href="warisanBudayaBendawi" class="btn btn-primary btn-lg-leftmargin">Warisan Budaya Bendawi</a></p>
+            <p><a href="warisanBudayaBendawi" class="btn btn-primary btn-lg-leftmargin">Warisan Budaya Bendawi</a></p>
         </div>
         <div class="row">
-        <p><a href="tradisiLisan" class="btn btn-primary btn-lg-leftmargin">Tradisi Lisan</a></p>
+            <p><a href="tradisiLisan" class="btn btn-primary btn-lg-leftmargin">Tradisi Lisan</a></p>
         </div>
 
         <div class="row">
-        <p><a href="manuskrip" class="btn btn-primary btn-lg-rightmargin">Manuskrip</a></p>
+            <p><a href="manuskrip" class="btn btn-primary btn-lg-rightmargin">Manuskrip</a></p>
         </div>
         <div class="row">
-        <p><a href="adatIstiadat" class="btn btn-primary btn-lg-rightmargin">Adad Istiadat</a></p>
+            <p><a href="adatIstiadat" class="btn btn-primary btn-lg-rightmargin">Adad Istiadat</a></p>
         </div>
         <div class="row">
-        <p><a href="ritus" class="btn btn-primary btn-lg-rightmargin">Ritus</a></p>
+            <p><a href="ritus" class="btn btn-primary btn-lg-rightmargin">Ritus</a></p>
         </div>
         <div class="row">
-        <p><a href="pengetahuanTradisional" class="btn btn-primary btn-lg-rightmargin">Pengetahuan Tradisional</a></p>
+            <p><a href="pengetahuanTradisional" class="btn btn-primary btn-lg-rightmargin">Pengetahuan Tradisional</a></p>
         </div>
         <div class="row">
-        <p><a href="teknologiTradisional" class="btn btn-primary btn-lg-rightmargin">Teknologi Tradisional</a></p>
+            <p><a href="teknologiTradisional" class="btn btn-primary btn-lg-rightmargin">Teknologi Tradisional</a></p>
         </div>
     </div>
 </div>
