@@ -19,6 +19,6 @@ class DataOpkModel extends Model
     }
     public function getOPKByNo($no)
     {
-        return $this->where('no', $no)->first();
+        return $this->where('no', $no)->findAll();
     }
 }
