@@ -6395,7 +6395,10 @@ label {
 }
 
 .card-img-bottom {
-    width: 100%;
+    display:block;
+    margin: 10px auto 0 auto;
+    height: 20%;
+    width: 25%;
     border-bottom-right-radius: calc(.25rem - 1px);
     border-bottom-left-radius: calc(.25rem - 1px)
 }

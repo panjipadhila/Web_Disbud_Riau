@@ -5,7 +5,6 @@
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><?= $detail['kategori']?></li>
-    <li class="list-group-item"></li>
   </ul>
 
   <img src="./assets/images/profil-01.jpg" class="card-img-bottom">
