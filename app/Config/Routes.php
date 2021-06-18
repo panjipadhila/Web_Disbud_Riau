@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\DataOpkController;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -36,18 +38,8 @@ $routes->get('project', 'Home::project');
 $routes->get('components', 'Home::components');
 $routes->get('opk', 'Home::opk');
 $routes->get('(:num)', 'DataOpkController::detail/$1');
-$routes->get('tradisiLisan', 'DataOpkController::tradisiLisan');
-$routes->get('manuskrip', 'DataOpkController::manuskrip');
-$routes->get('adatIstiadat', 'DataOpkController::adatIstiadat');
-$routes->get('ritus', 'DataOpkController::ritus');
-$routes->get('pengetahuanTradisional', 'DataOpkController::pengetahuanTradisional');
-$routes->get('teknologiTradisional', 'DataOpkController::teknologiTradisional');
-$routes->get('kesenian', 'DataOpkController::kesenian');
-$routes->get('bahasa', 'DataOpkController::bahasa');
-$routes->get('permainanTradisional', 'DataOpkController::permainantradisional');
-$routes->get('olahragaTradisional', 'DataOpkController::olahragaTradisional');
-$routes->get('warisanBudayaBendawi', 'DataOpkController::warisanBudayaBendawi');
 
+$routes->get('(:any)', 'DataOpkController::opkByKategori/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

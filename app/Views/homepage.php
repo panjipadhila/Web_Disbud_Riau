@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2>Objek Pemajuan Kebudayaan<br>Provinsi Riau</h2>
-                <p>Selamat datang pada portal data objek pemajuan kebudayaan<br>yang dikelola oleh dinas kebudayaan provinsi riau</p>
+                <p>Selamat datang di portal data Objek Pemajuan Kebudayaan<br>yang dikelola oleh Dinas Kebudayaan Provinsi Riau</p>
                 <br>
             </div>
         </div>
