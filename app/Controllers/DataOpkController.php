@@ -45,7 +45,7 @@ class DataOpkController extends BaseController
 			'opk' => $opk
 		];
 		echo view('headerFixedTop', $data);
-		echo view('DataOpk', $data);
+		echo view('deskripsi', $data);
 		echo view('footer');
 	}
 }
