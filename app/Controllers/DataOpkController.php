@@ -30,10 +30,12 @@ class DataOpkController extends BaseController
 		$opk = $this->OpkModel->getOPKByKategori($kategori);
 		$data = [
 			'title' => 'Data OPK | Web Disbud Riau',
-			'opk' => $opk
+			'opk' => $opk,
+			'kategori' => $kategori
 		];
 		echo view('headerFixedTop', $data);
-		echo view('DataOpk', $data);
+		if ($kategori == '')
+			echo view('DataOpk', $data);
 		echo view('footer');
 	}
 
