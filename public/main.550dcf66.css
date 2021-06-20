@@ -16,8 +16,8 @@ html {
 body {
     margin: 0;
     background-image: url("./assets/images/pucuk-bgputih.svg");
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: repeat;
+    /* background-attachment: fixed; */
 }
 
 article,
