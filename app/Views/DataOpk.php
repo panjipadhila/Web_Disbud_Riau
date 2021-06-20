@@ -1,9 +1,10 @@
 <div class="container text-center">
     <div class="col-xs-12 col-md-12">
-        <h2></h2>
+        <h2><?= $kategori; ?></h2>
     </div>
 </div>
 <div class="container ">
+
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
             <tr>

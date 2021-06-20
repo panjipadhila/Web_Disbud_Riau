@@ -45,11 +45,11 @@
                         <li><a href="opk" title="">OPK</a></li>
                         <li><a href="project" title="">News</a></li>
                         <li><a href="project" title="">Event</a></li>
-                        <li>
+                        <!-- <li>
                             <p>
                                 <a href="components" class="btn btn-default navbar-btn" title="">Components</a>
                             </p>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </div>
