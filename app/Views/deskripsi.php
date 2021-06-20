@@ -1,12 +1,4 @@
 <div class="section-container">
-  <style>
-    body {
-      background-color: #ffffff;
-      background-image: url("./assets/images/pucuk-bgputih.svg");
-      background-attachment: fixed;
-      background-size: cover;
-    }
-  </style>
   <div class="container text-left">
     <div class="card">
       <?php foreach ($opk as $detail) : ?>

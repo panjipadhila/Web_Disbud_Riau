@@ -16,8 +16,8 @@ html {
 body {
     margin: 0;
     background-image: url("./assets/images/pucuk-bgputih.svg");
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: repeat;
+    /* background-attachment: fixed; */
 }
 
 article,
@@ -3017,7 +3017,7 @@ fieldset[disabled] .btn-default:hover {
 
 .btn-primary {
     color: #4ba54d;
-    background-color: transparent;
+    background-color: white;
     border-color: #4ba54d
 }
 
