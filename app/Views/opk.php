@@ -1,6 +1,6 @@
 <!-- Add your site or app content here -->
 
-<div class="hero-full-container background-image-container white-text-container">
+<!-- <div class="hero-full-container background-image-container white-text-container">
     <div class="container">
         <div class="row-hero-background">
             <div class="col-xs-12">
@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="section-container">
     <div class="container text-center">
@@ -55,8 +55,8 @@
     </div>
 </div>
 
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         navbarFixedTopAnimation();
     });
-</script>
+</script> -->

@@ -34,8 +34,10 @@ class DataOpkController extends BaseController
 			'kategori' => $kategori
 		];
 		echo view('headerFixedTop', $data);
-		if ($kategori == '')
-			echo view('DataOpk', $data);
+		if ($kategori == 'Permainan Tradisional' || $kategori == 'Olahraga Tradisional')
+			echo view('DataOpk_nosub', $data);
+		else
+			echo view('DataOpk');
 		echo view('footer');
 	}
 
