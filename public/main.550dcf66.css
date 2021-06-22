@@ -5741,6 +5741,14 @@ button.close {
     background-repeat: no-repeat;
 }
 
+@media(max-width: 991px){
+    .background-image-container {
+        text-align: center;
+        background-image: url(./assets/images/header-web-12.svg);
+        background-size:cover;
+    }
+}
+
 .background-image-container-contain-img {
     background-size:contain
 }
