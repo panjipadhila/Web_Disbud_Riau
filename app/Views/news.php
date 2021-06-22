@@ -3,11 +3,11 @@
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
         
-        <h1 class="text-center">News</h1>
+        <h1 class="text-center">Gallery</h1>
         <p class="text-center">Halaman ini memuat berita terkini terkait informasi kebudayaan di Provinsi Riau</p>
 
         <div class="section-container-spacer">
-          <img src="./assets/images/img-06.jpg" alt="" class="img-responsive reveal-content" data-action="zoom">
+          <img src="./assets/images/event.jpeg" alt="" class="img-responsive reveal-content" data-action="zoom">
         </div>
 
         <div class="row">

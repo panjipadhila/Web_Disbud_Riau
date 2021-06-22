@@ -14,6 +14,7 @@
 
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
     <link href="./assets/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <title><?= $title; ?></title>
 
@@ -34,8 +35,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="./" title="">
-                        <img src="./assets/images/pngwing.com.png" class="navbar-logo-img" alt="">
-                        DINAS KEBUDAYAAN PROVINSI RIAU
+
                     </a>
                 </div>
 
@@ -43,8 +43,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/" title="">Home</a></li>
                         <li><a href="opk" title="">OPK</a></li>
-                        <li><a href="news" title="">News</a></li>
-                        <li><a href="project" title="">Event</a></li>
+                        <li><a href="news" title="">Gallery</a></li>
+                        <li><a href="project" title="">Kegiatan</a></li>
                         <!-- <li>
                             <p>
                                 <a href="components" class="btn btn-default navbar-btn" title="">Components</a>

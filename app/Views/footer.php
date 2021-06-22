@@ -16,13 +16,8 @@
                             <a href="https://facebook.com/Dinas-Kebudayaan-Provinsi-Riau-251250921989219/" class="social-round-icon white-round-icon fa-icon" title="">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                             </a>
-                            <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                            <a href="ddd" class="social-round-icon white-round-icon fa-icon" title="">
+                        
+                            <a href="https://www.instagram.com/disbud.provriau/" class="social-round-icon white-round-icon fa-icon" title="">
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                             </a>
                         </p>

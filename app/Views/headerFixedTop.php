@@ -50,8 +50,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/" title="">Home</a></li>
                         <li><a href="opk" title="">OPK</a></li>
-                        <li><a href="news" title="">News</a></li>
-                        <li><a href="project" title="">Event</a></li>
+                        <li><a href="news" title="">Gallery</a></li>
+                        <li><a href="project" title="">Kegiatan</a></li>
                         <!-- <li>
                             <p>
                                 <a href="components" class="btn btn-default navbar-btn" title="">Components</a>

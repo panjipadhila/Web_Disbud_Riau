@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2>Objek Pemajuan Kebudayaan<br>Provinsi Riau</h2>
+                <h2>OBJEK PEMAJUAN KEBUDAYAAN DAERAH<br>PROVINSI RIAU</h2>
                 <p>Selamat datang di portal data Objek Pemajuan Kebudayaan<br>yang dikelola oleh Dinas Kebudayaan Provinsi Riau</p>
                 <br>
             </div>
