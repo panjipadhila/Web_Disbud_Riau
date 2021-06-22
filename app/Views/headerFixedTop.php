@@ -50,7 +50,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/" title="">Home</a></li>
                         <li><a href="opk" title="">OPK</a></li>
-                        <li><a href="project" title="">News</a></li>
+                        <li><a href="news" title="">News</a></li>
                         <li><a href="project" title="">Event</a></li>
                         <!-- <li>
                             <p>
