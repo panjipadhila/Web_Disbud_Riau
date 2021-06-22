@@ -16,7 +16,7 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($opk as $opk) : ?>
-                <tr>
+                <tr class='clickable-row' data-href='/<?= $opk['no']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $opk['nama'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
@@ -33,6 +33,13 @@
             language: {
                 searchPlaceholder: "Nama/SubKategori/Lokasi"
             }
+        });
+    });
+
+    $(function() {
+        $("#dataTabelOpk").dataTable();
+        $(document).on('click', ".clickable-row", function() {
+            window.location = $(this).data("href");
         });
     });
 </script>
