@@ -4370,7 +4370,40 @@ tbody.collapse.in {
     margin-left: -15px
 }
 
-@media (min-width:768px) {
+@media (max-width:768px) {
+
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container>.navbar-header {
+        margin-right: 0;
+        margin-left: 0
+    }
+}
+
+@media (min-width:769px) {
+
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container>.navbar-header {
+        margin-right: -5%;
+        margin-left: -8%
+    }
+}
+
+@media (min-width:1000px) {
+
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container>.navbar-header {
+        margin-right: 0;
+        margin-left: 0
+    }
+}
+
+@media (min-width:1200px) {
 
     .container-fluid>.navbar-collapse,
     .container-fluid>.navbar-header,
