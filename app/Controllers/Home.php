@@ -45,7 +45,7 @@ class Home extends BaseController
 	function kegiatan()
 	{
 		$data = [
-			'title' => 'OPK | Web Disbud Riau'
+			'title' => 'Kegiatan | Web Disbud Riau'
 		];
 		echo view('headerFixedTop', $data);
 		echo view('kegiatan');
