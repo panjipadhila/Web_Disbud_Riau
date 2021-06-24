@@ -41,7 +41,7 @@
             <p><a href="Manuskrip" class="btn btn-primary btn-lg-rightmargin">Manuskrip</a></p>
         </div>
         <div class="row">
-            <p><a href="Adat Istiadat" class="btn btn-primary btn-lg-rightmargin">Adad Istiadat</a></p>
+            <p><a href="Adat Istiadat" class="btn btn-primary btn-lg-rightmargin">Adat Istiadat</a></p>
         </div>
         <div class="row">
             <p><a href="Ritus" class="btn btn-primary btn-lg-rightmargin">Ritus</a></p>

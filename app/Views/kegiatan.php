@@ -8,9 +8,9 @@
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
             <tr>
-                <th scope="col">no</th>
-                <th scope="col">nama</th>
-                <th scope="col">tanggal</th>
+                <th scope="col">No</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Tanggal</th>
             </tr>
         </thead>
         <tbody>

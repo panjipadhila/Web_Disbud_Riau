@@ -70,18 +70,7 @@
     <div class="row section-container-spacer">
       <div class="col-xs-12 col-md-12">
 
-        <h3>Do you like it ?</h3>
-        <p>
-          <a href="https://facebook.com/" class="social-round-icon fa-icon" title="">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          <a href="https://twitter.com/" class="social-round-icon fa-icon" title="">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/" class="social-round-icon fa-icon" title="">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-        </p>
+      
       </div>
     </div>
 
