@@ -3364,7 +3364,29 @@ fieldset[disabled] .btn-link:hover {
     border-radius: 4px
 }
 
-@media(max-width: 767px) {
+@media(max-width: 450px) {
+    .btn-group-lg>.btn,
+    .btn-lg-leftmargin {
+        padding: 14px 22px 14px 22px;
+        width: 300px;
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
+
+    .btn-group-lg>.btn,
+    .btn-lg-rightmargin {
+        padding: 14px 22px 14px 22px;
+        width: 300px;
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.33333;
+        border-radius: 4px
+    }
+}
+
+@media(min-width: 450px) {
     .btn-group-lg>.btn,
     .btn-lg-leftmargin {
         padding: 14px 22px 14px 22px;
