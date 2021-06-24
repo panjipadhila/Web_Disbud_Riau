@@ -41,4 +41,14 @@ class Home extends BaseController
 		echo view('opk');
 		echo view('footer');
 	}
+
+	function kegiatan()
+	{
+		$data = [
+			'title' => 'OPK | Web Disbud Riau'
+		];
+		echo view('headerFixedTop', $data);
+		echo view('kegiatan');
+		echo view('footer');
+	}
 }
