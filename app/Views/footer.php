@@ -5,14 +5,14 @@
 
             <div class="col-xs-12">
                 <h5>DINAS KEBUDAYAAN PROVINSI RIAU</h5>
-                <p>Jln. Jenderal Sudirman No. 194 <br> Tangkerang - Pekanbaru - Riau <br> Kode Pos 28128 <br> Email: disbud@riau.go.id</p>
+                <p>Jln. Jenderal Sudirman No. 194 <br> Tangkerang - Pekanbaru - Riau <br> Kode Pos 28128 <br> Email: <a href="mailto:disbud@riau.go.id">disbud@riau.go.id</a>
+                </p>
+
                 <div class="row">
                     <div class="col-xs-12 col-sm-7">
                         <!-- <p><small>Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small>
                         </p> -->
-                    </div>
-                    <div class="col-xs-12 col-sm-5">
-                        <p class="text-right">
+                        <p class="text-left">
                             <a href="https://facebook.com/Dinas-Kebudayaan-Provinsi-Riau-251250921989219/" class="social-round-icon white-round-icon fa-icon" title="">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                             </a>
@@ -21,6 +21,9 @@
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                             </a>
                         </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+
                     </div>
                 </div>
 
