@@ -4,7 +4,7 @@
     <form action="" method="post">
         <div class="form-group">
           <label for="exampleInputEmail1">Username</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
           <label for="exampleInputEmail1">Password</label>
           <input type="password" class="form-control" id="exampleInputPass1" placeholder="Password">
           <br>
