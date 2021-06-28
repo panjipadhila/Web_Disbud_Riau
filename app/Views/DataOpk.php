@@ -8,9 +8,9 @@
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
             <tr>
-                <th scope="col">no</th>
-                <th scope="col">nama</th>
-                <th scope="col">sub-kategori</th>
+                <th scope="col">No</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Sub-kategori</th>
                 <th scope="col">Lokasi</th>
                 <th scope="col">Kondisi</th>
             </tr>
