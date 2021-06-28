@@ -13,4 +13,7 @@ class AdminController extends BaseController
         echo view('login', $data);
         echo view('footer');
     }
+    function login()
+    {
+    }
 }
