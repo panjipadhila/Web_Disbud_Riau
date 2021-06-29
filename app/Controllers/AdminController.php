@@ -4,16 +4,23 @@ namespace App\Controllers;
 
 class AdminController extends BaseController
 {
-    function index()
+    function adminpage()
     {
         $data = [
-            'title' => 'Login Admin | Web Disbud Riau',
+            'title' => 'Admin | Web Disbud Riau',
         ];
         echo view('headerFixedTop', $data);
-        echo view('login', $data);
-        echo view('footer');
+        echo view('adminpage', $data);
+        echo view('footer');    
     }
-    function login()
-    {
-    }
+    // function login()
+    // {
+    //     $data = [
+    //         'title' => 'Login Admin | Web Disbud Riau',
+    //     ];
+    //     echo view('headerFixedTop', $data);
+    //     echo view('login', $data);
+    //     echo view('footer');
+    // }
+    
 }

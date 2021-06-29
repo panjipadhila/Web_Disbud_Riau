@@ -12,13 +12,13 @@
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-    <link href="./assets/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+    <link href="/assets/favicon.ico" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <title><?= $title; ?></title>
 
-    <link href="./main.550dcf66.css" rel="stylesheet">
+    <link href="/main.550dcf66.css" rel="stylesheet">
 
 </head>
 

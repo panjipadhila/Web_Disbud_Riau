@@ -38,11 +38,14 @@ $routes->get('news', 'Home::news');
 $routes->get('components', 'Home::components');
 $routes->get('opk', 'Home::opk');
 $routes->get('kegiatan', 'Home::kegiatan');
-$routes->get('admin', 'AdminController::index');
-$routes->get('login', 'AdminController::login');
+//$routes->get('loginadmin', 'AdminController::loginadmin');
+$routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('(:num)', 'DataOpkController::detail/$1');
 
-$routes->get('(:any)', 'DataOpkController::opkByKategori/$1');
+$routes->group('', ['filter' => 'login'], function($routes){
+    $routes->get('adminpage', 'AdminController::adminpage');
+});
+//$routes->get('(:any)', 'DataOpkController::opkByKategori/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

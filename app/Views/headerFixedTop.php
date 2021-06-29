@@ -14,13 +14,13 @@
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-    <link href="./assets/favicon.ico" rel="icon">
+    <link href="/assets/favicon.ico" rel="icon">
 
     <link href="" rel="stylesheet">
 
     <title><?= $title; ?></title>
 
-    <link href="./secondary.css" rel="stylesheet">
+    <link href="/secondary.css" rel="stylesheet">
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
@@ -41,7 +41,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/" title="">
-                        <img src="./assets/images/pngwing.com.png" class="navbar-logo-img" alt="">
+                        <img src="/assets/images/pngwing.com.png" class="navbar-logo-img" alt="">
                         DINAS KEBUDAYAAN PROVINSI RIAU
                     </a>
                 </div>

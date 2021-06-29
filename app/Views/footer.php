@@ -23,7 +23,7 @@
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-5 text-right">
-                        <a href="admin" class="text-right">Login as Admin</a>
+                        <a href="adminpage" class="text-right">Login as Admin</a>
                     </div>
                 </div>
 
