@@ -1,9 +1,11 @@
-<?php namespace Myth\Auth\Config;
+<?php
+
+namespace Myth\Auth\Config;
 
 use CodeIgniter\Config\BaseConfig;
 // use Myth\Auth\Authentication\LocalAuthenticator;
 
-class Auth extends BaseConfig 
+class Auth extends BaseConfig
 {
 	/**
 	 * --------------------------------------------------------------------
@@ -136,7 +138,7 @@ class Auth extends BaseConfig
 	 *
 	 * @var bool
 	 */
-	public $allowRegistration = false;
+	public $allowRegistration = true;
 
 	/**
 	 * --------------------------------------------------------------------
