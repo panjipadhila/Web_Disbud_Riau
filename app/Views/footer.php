@@ -23,7 +23,11 @@
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-5 text-right">
+                    <?php if (logged_in()) : ?>
+                        <a href="logout" class="text-right">Logout</a>
+                    <?php else : ?>
                         <a href="adminpage" class="text-right">Login as Admin</a>
+                    <?php endif; ?>
                     </div>
                 </div>
 
