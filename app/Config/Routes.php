@@ -41,7 +41,8 @@ $routes->get('kegiatan', 'Home::kegiatan');
 //$routes->get('loginadmin', 'AdminController::loginadmin');
 $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('(:num)', 'DataOpkController::detail/$1');
-
+$routes->get('kategori/(:any)', 'DataOpkController::opkByKategori/$1');
+/*
 $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('adminpage', 'AdminController::adminpage');
 });

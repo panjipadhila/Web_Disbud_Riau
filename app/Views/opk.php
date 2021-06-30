@@ -19,38 +19,38 @@
             </div>
         </div>
         <div class="row">
-            <p><a href="Kesenian" class="btn btn-primary btn-lg-leftmargin">Kesenian</a></p>
+            <p><a href="kategori/Kesenian" class="btn btn-primary btn-lg-leftmargin">Kesenian</a></p>
         </div>
         <div class="row">
-            <p><a href="Bahasa" class="btn btn-primary btn-lg-leftmargin">Bahasa</a></p>
+            <p><a href="kategori/Bahasa" class="btn btn-primary btn-lg-leftmargin">Bahasa</a></p>
         </div>
         <div class="row">
-            <p><a href="Permainan Tradisional" class="btn btn-primary btn-lg-leftmargin">Permainan Tradisional</a></p>
+            <p><a href="kategori/Permainan Tradisional" class="btn btn-primary btn-lg-leftmargin">Permainan Tradisional</a></p>
         </div>
         <div class="row">
-            <p><a href="Olahraga Tradisional" class="btn btn-primary btn-lg-leftmargin">Olahraga Tradisional</a></p>
+            <p><a href="kategori/Olahraga Tradisional" class="btn btn-primary btn-lg-leftmargin">Olahraga Tradisional</a></p>
         </div>
         <div class="row">
-            <p><a href="Warisan Budaya Bendawi" class="btn btn-primary btn-lg-leftmargin">Warisan Budaya Bendawi</a></p>
+            <p><a href="kategori/Warisan Budaya Bendawi" class="btn btn-primary btn-lg-leftmargin">Warisan Budaya Bendawi</a></p>
         </div>
         <div class="row">
-            <p><a href="Tradisi Lisan" class="btn btn-primary btn-lg-leftmargin">Tradisi Lisan</a></p>
+            <p><a href="kategori/Tradisi Lisan" class="btn btn-primary btn-lg-leftmargin">Tradisi Lisan</a></p>
         </div>
 
         <div class="row">
-            <p><a href="Manuskrip" class="btn btn-primary btn-lg-rightmargin">Manuskrip</a></p>
+            <p><a href="kategori/Manuskrip" class="btn btn-primary btn-lg-rightmargin">Manuskrip</a></p>
         </div>
         <div class="row">
-            <p><a href="Adat Istiadat" class="btn btn-primary btn-lg-rightmargin">Adat Istiadat</a></p>
+            <p><a href="kategori/Adat Istiadat" class="btn btn-primary btn-lg-rightmargin">Adat Istiadat</a></p>
         </div>
         <div class="row">
-            <p><a href="Ritus" class="btn btn-primary btn-lg-rightmargin">Ritus</a></p>
+            <p><a href="kategori/Ritus" class="btn btn-primary btn-lg-rightmargin">Ritus</a></p>
         </div>
         <div class="row">
-            <p><a href="Pengetahuan Tradisional" class="btn btn-primary btn-lg-rightmargin">Pengetahuan Tradisional</a></p>
+            <p><a href="kategori/Pengetahuan Tradisional" class="btn btn-primary btn-lg-rightmargin">Pengetahuan Tradisional</a></p>
         </div>
         <div class="row">
-            <p><a href="Teknologi Tradisional" class="btn btn-primary btn-lg-rightmargin">Teknologi Tradisional</a></p>
+            <p><a href="kategori/Teknologi Tradisional" class="btn btn-primary btn-lg-rightmargin">Teknologi Tradisional</a></p>
         </div>
     </div>
 </div>
