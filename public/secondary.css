@@ -3140,13 +3140,13 @@ fieldset[disabled] .btn-success:hover {
 }
 
 .btn-info {
-    border-color: #08005f
+    border-color: #EA6969
 }
 
 .btn-info,
 .btn-info.focus,
 .btn-info:focus {
-    color: #08005f;
+    color: #EA6969;
     background-color: transparent
 }
 
@@ -5916,9 +5916,9 @@ button.close {
 
 .btn-info:focus,
 .btn-info:hover {
-    background-color: #08005f;
+    background-color: #EA6969;
     color: #fff;
-    border-color: #08005f
+    border-color: #EA6969
 }
 
 .btn-success:focus,

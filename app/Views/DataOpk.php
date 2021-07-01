@@ -4,15 +4,16 @@
     </div>
 </div>
 <div class="container ">
-
-    <table class="table table-color table-border-radius10 " id="dataTabelOpk">
+<table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
-            <tr>
+                    <?php if (logged_in()) : ?>
+                        <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Sub-kategori</th>
                 <th scope="col">Lokasi</th>
                 <th scope="col">Kondisi</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -24,9 +25,35 @@
                     <td><?= $opk['subkategori'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
                     <td><?= $opk['kondisi'] ?></td>
+                    <td><a href="" class="btn btn-primary btn-sm">Edit</a> <a href="" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
+                    <?php else : ?>
+                        <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Sub-kategori</th>
+                <th scope="col">Lokasi</th>
+                <th scope="col">Kondisi</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <?php $i = 1; ?>
+            <?php foreach ($opk as $opk) : ?>
+                <tr class='clickable-row' data-href='/<?= $opk['no']; ?>'>
+                    <th scope="row"><?= $i++ ?></th>
+                    <td><?= $opk['nama'] ?></td>
+                    <td><?= $opk['subkategori'] ?></td>
+                    <td><?= $opk['lokasi'] ?></td>
+                    <td><?= $opk['kondisi'] ?></td>
+                    
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+                    <?php endif; ?>
+  
     </table>
 </div>
 

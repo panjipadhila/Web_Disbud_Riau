@@ -13,6 +13,13 @@ class AdminController extends BaseController
         echo view('adminpage', $data);
         echo view('footer');    
     }
+    // function register()
+    // {
+    //     $data = [
+    //         'title' => 'Admin | Web Disbud Riau',
+    //     ];
+    //     echo view('register', $data);
+    // }
     // function login()
     // {
     //     $data = [
