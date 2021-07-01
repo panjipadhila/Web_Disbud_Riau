@@ -51,4 +51,13 @@ class Home extends BaseController
 		echo view('kegiatan');
 		echo view('footer');
 	}
+	function museum()
+	{
+		$data = [
+			'title' => 'Kegiatan | Web Disbud Riau'
+		];
+		echo view('headerFixedTop', $data);
+		echo view('museum');
+		echo view('footer');
+	}
 }

@@ -43,6 +43,7 @@ $routes->get('adminpage', 'AdminController::adminpage');
 //$routes->get('register', 'AdminController::register');
 $routes->get('(:num)', 'DataOpkController::detail/$1');
 $routes->get('kategori/(:any)', 'DataOpkController::opkByKategori/$1');
+$routes->get('museum', 'Home::museum');
 /*
 $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('adminpage', 'AdminController::adminpage');
