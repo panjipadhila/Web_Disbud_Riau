@@ -64,115 +64,113 @@
         </nav>
     </header>
     <div class="container">
-	<div class="row">
-		<div class="col-sm-6 offset-sm-3">
-
-			<div class="card">
-				<h2 class="card-header"><?=lang('Auth.loginTitle')?></h2>
-				<div class="card-body">
-
-					<?= view('Myth\Auth\Views\_message_block') ?>
-
-					<form action="<?= route_to('login') ?>" method="post">
-						<?= csrf_field() ?>
-
-<?php if ($config->validFields === ['email']): ?>
-						<div class="form-group">
-							<label for="login"><?=lang('Auth.email')?></label>
-							<input type="email" class="form-control <?php if(session('errors.login')) : ?>is-invalid<?php endif ?>"
-								   name="login" placeholder="<?=lang('Auth.email')?>">
-							<div class="invalid-feedback">
-								<?= session('errors.login') ?>
-							</div>
-						</div>
-<?php else: ?>
-						<div class="form-group">
-							<label for="login"><?=lang('Auth.emailOrUsername')?></label>
-							<input type="text" class="form-control <?php if(session('errors.login')) : ?>is-invalid<?php endif ?>"
-								   name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
-							<div class="invalid-feedback">
-								<?= session('errors.login') ?>
-							</div>
-						</div>
-<?php endif; ?>
-
-						<div class="form-group">
-							<label for="password"><?=lang('Auth.password')?></label>
-							<input type="password" name="password" class="form-control  <?php if(session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>">
-							<div class="invalid-feedback">
-								<?= session('errors.password') ?>
-							</div>
-						</div>
-
-<?php if ($config->allowRemembering): ?>
-						<div class="form-check">
-							<label class="form-check-label">
-								<input type="checkbox" name="remember" class="form-check-input" <?php if(old('remember')) : ?> checked <?php endif ?>>
-								<?=lang('Auth.rememberMe')?>
-							</label>
-						</div>
-<?php endif; ?>
-
-						<br>
-
-						<button type="submit" class="btn btn-primary btn-block"><?=lang('Auth.loginAction')?></button>
-					</form>
-
-					<hr>
-
-<?php if ($config->allowRegistration) : ?>
-					<p><a href="<?= route_to('register') ?>"><?=lang('Auth.needAnAccount')?></a></p>
-<?php endif; ?>
-<?php if ($config->activeResetter): ?>
-					<p><a href="<?= route_to('forgot') ?>"><?=lang('Auth.forgotYourPassword')?></a></p>
-<?php endif; ?>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-<footer class="footer-container white-text-container">
-    <div class="container">
         <div class="row">
+            <div class="col-sm-6 offset-sm-3">
 
+                <div class="card">
+                    <h2 class="card-header"><?= lang('Auth.loginTitle') ?></h2>
+                    <div class="card-body">
 
-            <div class="col-xs-12">
-                <h5>DINAS KEBUDAYAAN PROVINSI RIAU</h5>
-                <p>Jln. Jenderal Sudirman No. 194 <br> Tangkerang - Pekanbaru - Riau <br> Kode Pos 28128 <br> Email: <a href="mailto:disbud@riau.go.id">disbud@riau.go.id</a>
-                </p>
+                        <?= view('Myth\Auth\Views\_message_block') ?>
 
-                <div class="row">
-                    <div class="col-xs-12 col-sm-7">
-                        <!-- <p><small>Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small>
-                        </p> -->
-                        <p class="text-left">
-                            <a href="https://facebook.com/Dinas-Kebudayaan-Provinsi-Riau-251250921989219/" class="social-round-icon white-round-icon fa-icon" title="">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
+                        <form action="<?= route_to('login') ?>" method="post">
+                            <?= csrf_field() ?>
 
-                            <a href="https://www.instagram.com/disbud.provriau/" class="social-round-icon white-round-icon fa-icon" title="">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </p>
+                            <?php if ($config->validFields === ['email']) : ?>
+                                <div class="form-group">
+                                    <label for="login"><?= lang('Auth.email') ?></label>
+                                    <input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.email') ?>">
+                                    <div class="invalid-feedback">
+                                        <?= session('errors.login') ?>
+                                    </div>
+                                </div>
+                            <?php else : ?>
+                                <div class="form-group">
+                                    <label for="login"><?= lang('Auth.emailOrUsername') ?></label>
+                                    <input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
+                                    <div class="invalid-feedback">
+                                        <?= session('errors.login') ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <div class="form-group">
+                                <label for="password"><?= lang('Auth.password') ?></label>
+                                <input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>">
+                                <div class="invalid-feedback">
+                                    <?= session('errors.password') ?>
+                                </div>
+                            </div>
+
+                            <?php if ($config->allowRemembering) : ?>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
+                                        <?= lang('Auth.rememberMe') ?>
+                                    </label>
+                                </div>
+                            <?php endif; ?>
+
+                            <br>
+
+                            <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.loginAction') ?></button>
+                        </form>
+
+                        <hr>
+
+                        <?php if ($config->allowRegistration) : ?>
+                            <p><a href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
+                        <?php endif; ?>
+                        <?php if ($config->activeResetter) : ?>
+                            <p><a href="<?= route_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
+                        <?php endif; ?>
                     </div>
-                   
                 </div>
-
 
             </div>
         </div>
     </div>
-</footer>
+    <footer class="footer-container white-text-container">
+        <div class="container">
+            <div class="row">
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        navActivePage();
-        scrollRevelation('.reveal');
-    });
-</script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+                <div class="col-xs-12">
+                    <h5>DINAS KEBUDAYAAN PROVINSI RIAU</h5>
+                    <p>Jln. Jenderal Sudirman No. 194 <br> Tangkerang - Pekanbaru - Riau <br> Kode Pos 28128 <br> Email: <a href="mailto:disbud@riau.go.id">disbud@riau.go.id</a>
+                    </p>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-7">
+                            <!-- <p><small>Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small>
+                        </p> -->
+                            <p class="text-left">
+                                <a href="https://facebook.com/Dinas-Kebudayaan-Provinsi-Riau-251250921989219/" class="social-round-icon white-round-icon fa-icon" title="">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/disbud.provriau/" class="social-round-icon white-round-icon fa-icon" title="">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            navActivePage();
+            scrollRevelation('.reveal');
+        });
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
 
 <script>
   (function (i, s, o, g, r, a, m) {
@@ -186,7 +184,7 @@
 </script>
 
 -->
-<script type="text/javascript" src="./main.0cf8b554.js"></script>
+    <script type="text/javascript" src="./main.0cf8b554.js"></script>
 </body>
 
 </html>
