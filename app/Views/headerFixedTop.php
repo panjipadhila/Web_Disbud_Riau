@@ -49,7 +49,15 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/" title="">Home</a></li>
-                        <li><a href="/opk" title="">OPK</a></li>
+                        <li class ="nav-item dropdown">
+                        <a class="nav-link dropdown toggle" href="#" id = "navbarDropdown" role = "button" data-Toggle="dropdown">Data</a>
+                        <div class = "dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="opk" title="">OPK</a>
+                        <br>
+                        <a href="museum" title="">Museum</a>
+                        </div>
+                        </li>
+                        <!-- <li><a href="/opk" title="">OPK</a></li> -->
                         <li><a href="/news" title="">Gallery</a></li>
                         <li><a href="/kegiatan" title="">Kegiatan</a></li>
                         <!-- <li>
