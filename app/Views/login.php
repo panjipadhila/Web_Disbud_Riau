@@ -65,10 +65,10 @@
     </header>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 offset-sm-3">
+            <div class="col-sm-6 col-sm-offset-3">
 
                 <div class="card">
-                    <h2 class="card-header"><?= lang('Auth.loginTitle') ?></h2>
+                    <h2 class="card-header card-header-center"><?= lang('Auth.loginTitle') ?></h2>
                     <div class="card-body">
 
                         <?= view('Myth\Auth\Views\_message_block') ?>
