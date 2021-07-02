@@ -15,8 +15,8 @@ html {
 
 body {
     margin: 0;
-    background-image: url("./assets/images/bgmelayu.svg");
-    background-size: repeat;
+    /* background-image: url("./assets/images/bgmelayu.svg");
+    background-size: repeat; */
     /* background-attachment: fixed; */
 }
 
