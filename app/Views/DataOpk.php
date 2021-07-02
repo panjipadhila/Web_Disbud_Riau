@@ -4,17 +4,21 @@
     </div>
 </div>
 <div class="container ">
-<table class="table table-color table-border-radius10 " id="dataTabelOpk">
+    <?php if (logged_in()) : ?>
+        <a href="/AdminController/tambah" class="btn btn-primary">Tambah data</a>
+        <br></br>
+    <?php endif; ?>
+    <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
-                    <?php if (logged_in()) : ?>
-                        <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Sub-kategori</th>
-                <th scope="col">Lokasi</th>
-                <th scope="col">Kondisi</th>
-                <th scope="col"></th>
-            </tr>
+            <?php if (logged_in()) : ?>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Sub-kategori</th>
+                    <th scope="col">Lokasi</th>
+                    <th scope="col">Kondisi</th>
+                    <th scope="col"></th>
+                </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
@@ -25,19 +29,19 @@
                     <td><?= $opk['subkategori'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
                     <td><?= $opk['kondisi'] ?></td>
-                    <td><a href="" class="btn btn-primary btn-sm">Edit</a> <a href="" class="btn btn-info btn-sm">Delete</a></td>
+                    <td><a href="/AdminController/edit" class="btn btn-primary btn-sm">Edit</a> <a href="/AdminController/delete" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
-                    <?php else : ?>
-                        <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Sub-kategori</th>
-                <th scope="col">Lokasi</th>
-                <th scope="col">Kondisi</th>
-                
-            </tr>
+    <?php else : ?>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Sub-kategori</th>
+            <th scope="col">Lokasi</th>
+            <th scope="col">Kondisi</th>
+
+        </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
@@ -48,12 +52,12 @@
                     <td><?= $opk['subkategori'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
                     <td><?= $opk['kondisi'] ?></td>
-                    
+
                 </tr>
             <?php endforeach; ?>
         </tbody>
-                    <?php endif; ?>
-  
+    <?php endif; ?>
+
     </table>
 </div>
 

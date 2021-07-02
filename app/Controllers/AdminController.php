@@ -11,7 +11,16 @@ class AdminController extends BaseController
         ];
         echo view('headerFixedTop', $data);
         echo view('adminpage', $data);
-        echo view('footer');    
+        echo view('footer');
+    }
+
+    function tambah()
+    {
+        $data = [
+            'title' => 'Tambah data'
+        ];
+
+        echo view('tambahDataView');
     }
     // function register()
     // {
@@ -29,5 +38,5 @@ class AdminController extends BaseController
     //     echo view('login', $data);
     //     echo view('footer');
     // }
-    
+
 }
