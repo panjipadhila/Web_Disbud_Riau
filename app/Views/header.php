@@ -19,6 +19,7 @@
     <title><?= $title; ?></title>
 
     <link href="/main.550dcf66.css" rel="stylesheet">
+    <script src="/DropdownMenu.js"></script>
 
 </head>
 

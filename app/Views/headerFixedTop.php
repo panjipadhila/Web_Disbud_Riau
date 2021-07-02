@@ -13,7 +13,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
     <link href="/assets/favicon.ico" rel="icon">
 
     <link href="" rel="stylesheet">
@@ -25,6 +25,7 @@
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="/DropdownMenu.js"></script>
 
 </head>
 
@@ -52,9 +53,9 @@
                         <li class ="nav-item dropdown">
                         <a class="nav-link dropdown toggle" href="#" id = "navbarDropdown" role = "button" data-Toggle="dropdown">Data</a>
                         <div class = "dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a href="opk" title="">OPK</a>
+                        <a href="/opk" title="">OPK</a>
                         <br>
-                        <a href="museum" title="">Museum</a>
+                        <a href="/museum" title="">Museum</a>
                         </div>
                         </li>
                         <!-- <li><a href="/opk" title="">OPK</a></li> -->
