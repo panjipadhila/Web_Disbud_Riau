@@ -4,23 +4,23 @@
             <div class="card">
                 <form id="save" action="" method="post">
                     <div class="form-group">
-                        <label for="save">Nama OPK</label>
+                        <label for="namaopk">Nama OPK</label>
                         <input type="text" class="form-control" name="namaopk" placeholder="nama OPK">
                     </div>
                     <div class="form-group">
-                        <label for="save">Deskripsi</label>
+                        <label for="deskripsi">Deskripsi</label>
                         <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi">
                     </div>
                     <div class="form-group">
-                        <label for="save">Kondisi</label>
+                        <label for="kondisi">Kondisi</label>
                         <input type="text" class="form-control" name="kondisi" placeholder="Kondisi">
                     </div>
                     <div class="form-group">
-                        <label for="save">Link Video</label>
+                        <label for="linkVideo">Link Video</label>
                         <input type="text" class="form-control" name="linkVideo" placeholder="Link Video">
                     </div>
                     <div class="form-group">
-                        <label for="save">Kategori</label>
+                        <label for="kategori">Kategori</label>
                         <select name="Kategori" id="kategori">
                             <option>Pilih Kategori</option>
                         </select>
