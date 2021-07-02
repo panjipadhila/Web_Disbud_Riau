@@ -19,8 +19,9 @@ class AdminController extends BaseController
         $data = [
             'title' => 'Tambah data'
         ];
-
+        echo view('headerFixedTop', $data);
         echo view('tambahDataView');
+        echo view('footer');
     }
     // function register()
     // {

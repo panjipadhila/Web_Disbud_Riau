@@ -5,7 +5,7 @@
 </div>
 <div class="container ">
     <?php if (logged_in()) : ?>
-        <a href="/AdminController/tambah" class="btn btn-primary">Tambah data</a>
+        <a href="/tambahdata" class="btn btn-primary">Tambah data</a>
         <br></br>
     <?php endif; ?>
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
