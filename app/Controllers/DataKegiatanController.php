@@ -14,6 +14,17 @@ class DataKegiatanController extends BaseController
         $this->KegiatanModel = new DataKegiatanModel();
     }
 
+    function getAllKegiatan()
+    {
+        $kegiatan = $this->KegiatanModel->getKegiatan();
+        $data = [
+            'title' => 'Kegiatan | Web Disbud Riau',
+            'kegiatan' => $kegiatan
+        ];
+        echo view('headerFixedTop', $data);
+        echo view('kegiatan', $data);
+        echo view('footer');
+    }
     // function index()
     // {
     //     $opk = $this->OpkModel->findAll();

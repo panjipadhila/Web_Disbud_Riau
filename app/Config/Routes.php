@@ -37,7 +37,7 @@ $routes->get('/', 'Home::index');
 $routes->get('news', 'Home::news');
 $routes->get('components', 'Home::components');
 $routes->get('opk', 'Home::opk');
-$routes->get('kegiatan', 'Home::kegiatan');
+$routes->get('kegiatan', 'DataKegiatanController::getAllKegiatan');
 //$routes->get('loginadmin', 'AdminController::loginadmin');
 $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('tambahdata', 'AdminController::tambah');

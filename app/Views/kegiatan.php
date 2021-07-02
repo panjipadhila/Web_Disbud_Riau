@@ -14,21 +14,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Kompetisi Olahraga Tradisional</td>
-                <td>26-27 Juli 2021</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Festival Film Pendek Melayu Riau</td>
-                <td>21 Juni - 31 Juli 2021</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Anugerah Budaya</td>
-                <td>9 Agustus 2021</td>
-            </tr>
+            <?php $i = 1; ?>
+            <?php foreach ($kegiatan as $kegiatan) : ?>
+                <tr class='clickable-row' data-href='/<?= $kegiatan['no_kegiatan']; ?>'>
+                    <th scope="row"><?= $i++ ?></th>
+                    <td><?= $kegiatan['nama_kegiatan'] ?></td>
+                    <td><?= $kegiatan['tanggal'] ?></td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </div>
