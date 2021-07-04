@@ -35,7 +35,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="./" title="">
+                    <a class="navbar-brand" href="/" title="">
+                        <img src="/assets/images/pngwing.com.png" class="navbar-logo-img" alt="">
+                        DINAS KEBUDAYAAN PROVINSI RIAU
+                        <img src="/assets/images/riaulogo.png" class="navbar-logo-img" alt="">
+                    </a>
 
                     </a>
                 </div>

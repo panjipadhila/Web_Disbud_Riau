@@ -4333,7 +4333,7 @@ tbody.collapse.in {
 
 .navbar-brand {
     float: left;
-    padding: 27.5px 15px;
+    padding: 10px 5px;
     font-size: 23px;
     line-height: 25px;
     height: 80px
@@ -4437,8 +4437,8 @@ tbody.collapse.in {
     }
 
     .navbar-nav>li>a {
-        padding-top: 27.5px;
-        padding-bottom: 27.5px
+        padding-top: 15px;
+        padding-bottom: 5px
     }
 }
 
@@ -5736,7 +5736,7 @@ button.close {
 
 .background-image-container {
     text-align: center;
-    background-image: url(./assets/images/header-web-12.svg);
+    background-image: url(./assets/images/header-web.png);
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -5744,7 +5744,7 @@ button.close {
 @media(max-width: 991px){
     .background-image-container {
         text-align: center;
-        background-image: url(./assets/images/header-web-12.svg);
+        background-image: url(./assets/images/header-web.png);
         background-size:cover;
     }
 }
@@ -5840,10 +5840,10 @@ button.close {
     /* width: 100px;
     height: 75px;
     margin-top: -5px */
-    height: 47px;
-width: 65px;
-left: 61px;
-top: 11px;
+    height: 37px;
+width: 55px;
+left: 51px;
+top: 1px;
 border-radius: 0px;
 
 }

@@ -18,7 +18,7 @@ class Home extends BaseController
 		$data = [
 			'title' => 'News'
 		];
-		echo view('header', $data);
+		echo view('headerFixedTop', $data);
 		echo view('news');
 		echo view('footer');
 	}

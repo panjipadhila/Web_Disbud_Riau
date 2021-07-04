@@ -44,7 +44,9 @@
                     <a class="navbar-brand" href="/" title="">
                         <img src="/assets/images/pngwing.com.png" class="navbar-logo-img" alt="">
                         DINAS KEBUDAYAAN PROVINSI RIAU
+                        <img src="/assets/images/riaulogo.png" class="navbar-logo-img" alt="">
                     </a>
+
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
