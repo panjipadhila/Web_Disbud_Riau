@@ -21,18 +21,21 @@
                     </div>
                     <div class="form-group">
                         <label for="kategori">Kategori</label>
+                        <span style="display:inline-block;width:44px;"></span>
                         <select name="Kategori" id="kategori">
                             <option>Pilih Kategori</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="save">sub-Kategori</label>
+                        <span style="display:inline-block;width:10px;"></span>
                         <select name="subKategori" id="subKategori">
                             <option>Pilih Sub Kategori</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="save">Kabupaten</label>
+                        <span style="display:inline-block;width:26px;"></span>
                         <select name="kabupaten" id="kabupaten">
                             <option>Pilih Kabupaten</option>
                             <option>Pilih Kabupaten</option>
@@ -50,8 +53,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                    <label for="save">Gambar OPK</label>
-                        <input type="file" id="myFile" name="filename" placeholder="">
+                    <label for="save" >Gambar OPK</label>
+                        <input style="display:inline-block"type="file" id="myFile" name="filename" placeholder="">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Save</button>
                 </form>
