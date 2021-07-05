@@ -4,6 +4,10 @@
     </div>
 </div>
 <div class="container ">
+    <?php if (logged_in()) : ?>
+        <a href="/tambahdata" class="btn btn-primary">Tambah data</a>
+        <br></br>
+    <?php endif; ?>
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
             <tr>
@@ -11,6 +15,7 @@
                 <th scope="col">nama</th>
                 <th scope="col">Lokasi</th>
                 <th scope="col">Kondisi</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -21,6 +26,7 @@
                     <td><?= $opk['nama'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
                     <td><?= $opk['kondisi'] ?></td>
+                    <td><a href="/AdminController/edit" class="btn btn-primary btn-sm">Edit</a> <a href="/AdminController/delete" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
