@@ -2,8 +2,16 @@
 
 namespace App\Controllers;
 
+use \App\Models\DataOpkModel;
+
 class AdminController extends BaseController
 {
+    protected $OpkModel;
+
+    public function __construct()
+    {
+        $this->OpkModel = new DataOpkModel();
+    }
     function adminpage()
     {
         $data = [
@@ -26,17 +34,32 @@ class AdminController extends BaseController
 
     function save()
     {
-        $this->DataOpkModel->save([
-            'nama' => $this->request->getVar('nama'),
-            'kategori' => $this->request->getVar('kategori'),
-            'subkategori' => $this->request->getVar('subkategori'),
-            'lokasi' => $this->request->getVar('lokasi'),
+        $foto = '';
+        $deskripsi = '';
+        if ($this->request->getVar('foto') == null) {
+            $foto = 'image-not-found.svg';
+        } else {
+            $foto = $this->request->getVar('foto');
+        }
+
+        if ($this->request->getVar('deskripsi') == null) {
+            $deskripsi = 'Belum ada deskripsi';
+        } else {
+            $deskripsi = $this->request->getVar('deskripsi');
+        }
+
+        $this->OpkModel->save([
+            'nama' => $this->request->getVar('namaopk'),
+            'kategori' => $this->request->getVar('Kategori'),
+            'subkategori' => $this->request->getVar('subKategori'),
+            'lokasi' => $this->request->getVar('kabupaten'),
             'kondisi' => $this->request->getVar('kondisi'),
-            'deskripsi' => $this->request->getVar('deskripsi'),
-            'foto' => $this->request->getVar('foto'),
-            'video' => $this->request->getVar('video')
+            'deskripsi' => $deskripsi,
+            'foto' => $foto,
+            'video' => $this->request->getVar('linkVideo')
 
         ]);
+        return redirect()->to('/opk');
     }
     // function register()
     // {

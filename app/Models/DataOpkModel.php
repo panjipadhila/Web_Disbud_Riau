@@ -8,7 +8,7 @@ class DataOpkModel extends Model
 {
     protected $table = 'opk';
     protected $primarykey = 'no';
-
+    protected $allowedFields = ['nama', 'kategori', 'subkategori', 'lokasi', 'kondisi', 'deskripsi', 'foto', 'video'];
     public function getOPK()
     {
         return $this->findAll();

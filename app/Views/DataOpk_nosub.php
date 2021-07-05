@@ -10,13 +10,14 @@
     <?php endif; ?>
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
-            <tr>
-                <th scope="col">no</th>
-                <th scope="col">nama</th>
-                <th scope="col">Lokasi</th>
-                <th scope="col">Kondisi</th>
-                <th scope="col"></th>
-            </tr>
+            <?php if (logged_in()) : ?>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Lokasi</th>
+                    <th scope="col">Kondisi</th>
+                    <th scope="col"></th>
+                </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
@@ -30,6 +31,29 @@
                 </tr>
             <?php endforeach; ?>
         </tbody>
+    <?php else : ?>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Lokasi</th>
+            <th scope="col">Kondisi</th>
+
+        </tr>
+        </thead>
+        <tbody>
+            <?php $i = 1; ?>
+            <?php foreach ($opk as $opk) : ?>
+                <tr class='clickable-row' data-href='/<?= $opk['no']; ?>'>
+                    <th scope="row"><?= $i++ ?></th>
+                    <td><?= $opk['nama'] ?></td>
+                    <td><?= $opk['lokasi'] ?></td>
+                    <td><?= $opk['kondisi'] ?></td>
+
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    <?php endif; ?>
+
     </table>
 </div>
 
