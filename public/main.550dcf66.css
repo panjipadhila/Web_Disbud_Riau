@@ -4333,7 +4333,7 @@ tbody.collapse.in {
 
 .navbar-main-brand {
     float: left;
-    padding: 27.5px 15px;
+    padding: 10px 15px;
     font-size: 23px;
     line-height: 25px;
     height: 80px
@@ -5116,17 +5116,29 @@ button.close {
     -webkit-appearance: none
 }
 
-.carousel,
-.carousel-inner {
+.carousel-item{
+    height: 600px;
+    size: fixed;
+}
+.carousel-item .carousel-caption{
+    margin-top: -400px ;
+}
+.carousel-item .h5-c{
+    margin-top: -400px;
+}
+
+
+.carousel-main,
+.carousel-main-inner {
     position: relative
 }
 
-.carousel-inner {
+.carousel-main-inner {
     overflow: hidden;
     width: 100%
 }
 
-.carousel-inner>.item {
+.carousel-main-inner>.item {
     display: none;
     position: relative;
     -webkit-transition: left .6s ease-in-out;
@@ -5134,8 +5146,8 @@ button.close {
     transition: left .6s ease-in-out
 }
 
-.carousel-inner>.item>a>img,
-.carousel-inner>.item>img {
+.carousel-main-inner>.item>a>img,
+.carousel-main-inner>.item>img {
     display: block;
     height: auto;
     line-height: 1
@@ -5143,7 +5155,7 @@ button.close {
 
 @media (-webkit-transform-3d),
 (transform-3d) {
-    .carousel-inner>.item {
+    .carousel-main-inner>.item {
         -webkit-transition: -webkit-transform .6s ease-in-out;
         -moz-transition: -moz-transform .6s ease-in-out;
         -o-transition: -o-transform .6s ease-in-out;
@@ -5156,68 +5168,68 @@ button.close {
         perspective: 1000px
     }
 
-    .carousel-inner>.item.active.right,
-    .carousel-inner>.item.next {
+    .carousel-main-inner>.item.active.right,
+    .carousel-main-inner>.item.next {
         -webkit-transform: translate3d(100%, 0, 0);
         transform: translate3d(100%, 0, 0);
         left: 0
     }
 
-    .carousel-inner>.item.active.left,
-    .carousel-inner>.item.prev {
+    .carousel-main-inner>.item.active.left,
+    .carousel-main-inner>.item.prev {
         -webkit-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0);
         left: 0
     }
 
-    .carousel-inner>.item.active,
-    .carousel-inner>.item.next.left,
-    .carousel-inner>.item.prev.right {
+    .carousel-main-inner>.item.active,
+    .carousel-main-inner>.item.next.left,
+    .carousel-main-inner>.item.prev.right {
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
         left: 0
     }
 }
 
-.carousel-inner>.active,
-.carousel-inner>.next,
-.carousel-inner>.prev {
+.carousel-main-inner>.active,
+.carousel-main-inner>.next,
+.carousel-main-inner>.prev {
     display: block
 }
 
-.carousel-inner>.active {
+.carousel-main-inner>.active {
     left: 0
 }
 
-.carousel-inner>.next,
-.carousel-inner>.prev {
+.carousel-main-inner>.next,
+.carousel-main-inner>.prev {
     position: absolute;
     top: 0;
     width: 100%
 }
 
-.carousel-inner>.next {
+.carousel-main-inner>.next {
     left: 100%
 }
 
-.carousel-inner>.prev {
+.carousel-main-inner>.prev {
     left: -100%
 }
 
-.carousel-inner>.next.left,
-.carousel-inner>.prev.right {
+.carousel-main-inner>.next.left,
+.carousel-main-inner>.prev.right {
     left: 0
 }
 
-.carousel-inner>.active.left {
+.carousel-main-inner>.active.left {
     left: -100%
 }
 
-.carousel-inner>.active.right {
+.carousel-main-inner>.active.right {
     left: 100%
 }
 
-.carousel-control {
+.carousel-main-control {
     position: absolute;
     top: 0;
     left: 0;
@@ -5232,7 +5244,7 @@ button.close {
     background-color: transparent
 }
 
-.carousel-control.left {
+.carousel-main-control.left {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .0001));
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
     background-image: linear-gradient(90deg, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001));
@@ -5240,7 +5252,7 @@ button.close {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#80000000", endColorstr="#00000000", GradientType=1)
 }
 
-.carousel-control.right {
+.carousel-main-control.right {
     left: auto;
     right: 0;
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001), rgba(0, 0, 0, .5));
@@ -5250,8 +5262,8 @@ button.close {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#80000000", GradientType=1)
 }
 
-.carousel-control:focus,
-.carousel-control:hover {
+.carousel-main-control:focus,
+.carousel-main-control:hover {
     outline: 0;
     color: #fff;
     text-decoration: none;
@@ -5259,10 +5271,10 @@ button.close {
     filter: alpha(opacity=90)
 }
 
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right,
-.carousel-control .icon-next,
-.carousel-control .icon-prev {
+.carousel-main-control .glyphicon-chevron-left,
+.carousel-main-control .glyphicon-chevron-right,
+.carousel-main-control .icon-next,
+.carousel-main-control .icon-prev {
     position: absolute;
     top: 50%;
     margin-top: -10px;
@@ -5270,35 +5282,35 @@ button.close {
     display: inline-block
 }
 
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .icon-prev {
+.carousel-main-control .glyphicon-chevron-left,
+.carousel-main-control .icon-prev {
     left: 50%;
     margin-left: -10px
 }
 
-.carousel-control .glyphicon-chevron-right,
-.carousel-control .icon-next {
+.carousel-main-control .glyphicon-chevron-right,
+.carousel-main-control .icon-next {
     right: 50%;
     margin-right: -10px
 }
 
-.carousel-control .icon-next,
-.carousel-control .icon-prev {
+.carousel-main-control .icon-next,
+.carousel-main-control .icon-prev {
     width: 20px;
     height: 20px;
     line-height: 1;
     font-family: serif
 }
 
-.carousel-control .icon-prev:before {
+.carousel-main-control .icon-prev:before {
     content: "\2039"
 }
 
-.carousel-control .icon-next:before {
+.carousel-main-control .icon-next:before {
     content: "\203A"
 }
 
-.carousel-indicators {
+.carousel-main-indicators {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -5310,7 +5322,7 @@ button.close {
     text-align: center
 }
 
-.carousel-indicators li {
+.carousel-main-indicators li {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -5323,14 +5335,14 @@ button.close {
     background-color: transparent
 }
 
-.carousel-indicators .active {
+.carousel-main-indicators .active {
     margin: 0;
     width: 12px;
     height: 12px;
     background-color: #fff
 }
 
-.carousel-caption {
+.carousel-main-caption {
     position: absolute;
     left: 15%;
     right: 15%;
@@ -5343,39 +5355,39 @@ button.close {
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6)
 }
 
-.carousel-caption .btn {
+.carousel-main-caption .btn {
     text-shadow: none
 }
 
 @media screen and (min-width:768px) {
 
-    .carousel-control .glyphicon-chevron-left,
-    .carousel-control .glyphicon-chevron-right,
-    .carousel-control .icon-next,
-    .carousel-control .icon-prev {
+    .carousel-main-control .glyphicon-chevron-left,
+    .carousel-main-control .glyphicon-chevron-right,
+    .carousel-main-control .icon-next,
+    .carousel-main-control .icon-prev {
         width: 30px;
         height: 30px;
         margin-top: -10px;
         font-size: 30px
     }
 
-    .carousel-control .glyphicon-chevron-left,
-    .carousel-control .icon-prev {
+    .carousel-main-control .glyphicon-chevron-left,
+    .carousel-main-control .icon-prev {
         margin-left: -10px
     }
 
-    .carousel-control .glyphicon-chevron-right,
-    .carousel-control .icon-next {
+    .carousel-main-control .glyphicon-chevron-right,
+    .carousel-main-control .icon-next {
         margin-right: -10px
     }
 
-    .carousel-caption {
+    .carousel-main-caption {
         left: 20%;
         right: 20%;
         padding-bottom: 30px
     }
 
-    .carousel-indicators {
+    .carousel-main-indicators {
         bottom: 20px
     }
 }
@@ -5710,7 +5722,7 @@ button.close {
 
 @media (min-width:992px) {
     .hero-full-container {
-        padding: 5% 0
+        padding: 0% 0
     }
 }
 
@@ -5822,7 +5834,7 @@ button.close {
     -webkit-transition: all .5s linear;
     -o-transition: all .5s linear;
     transition: all .5s linear;
-    background-image: url(./assets/images/wave-header1.svg);
+    /* background-image: url(./assets/images/wave-header1.svg); */
     background-position: 0 90%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -6028,52 +6040,52 @@ label {
     background-repeat: no-repeat
 }
 
-.carousel-fade .carousel-inner .item {
+.carousel-main-fade .carousel-main-inner .item {
     transition-property: opacity
 }
 
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right,
-.carousel-fade .carousel-inner .item {
+.carousel-main-fade .carousel-main-inner .active.left,
+.carousel-main-fade .carousel-main-inner .active.right,
+.carousel-main-fade .carousel-main-inner .item {
     opacity: 0
 }
 
-.carousel-fade .carousel-inner .active,
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
+.carousel-main-fade .carousel-main-inner .active,
+.carousel-main-fade .carousel-main-inner .next.left,
+.carousel-main-fade .carousel-main-inner .prev.right {
     opacity: 1
 }
 
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right,
-.carousel-fade .carousel-inner .next,
-.carousel-fade .carousel-inner .prev {
+.carousel-main-fade .carousel-main-inner .active.left,
+.carousel-main-fade .carousel-main-inner .active.right,
+.carousel-main-fade .carousel-main-inner .next,
+.carousel-main-fade .carousel-main-inner .prev {
     left: 0;
     transform: translateZ(0)
 }
 
-.carousel-fade .carousel-control {
+.carousel-main-fade .carousel-main-control {
     z-index: 2
 }
 
-.carousel-inner {
+.carousel-main-inner {
     overflow: inherit
 }
 
-.carousel-inner>.item>a>img,
-.carousel-inner>.item>img {
+.carousel-main-inner>.item>a>img,
+.carousel-main-inner>.item>img {
     max-width: 100%
 }
 
 @media (min-width:992px) {
 
-    .carousel-inner>.item>a>img,
-    .carousel-inner>.item>img {
+    .carousel-main-inner>.item>a>img,
+    .carousel-main-inner>.item>img {
         max-width: 80%
     }
 }
 
-.carousel-caption {
+.carousel-main-caption {
     color: #838383;
     text-shadow: none;
     position: relative;
@@ -6086,14 +6098,14 @@ label {
 }
 
 @media (min-width:992px) {
-    .carousel-caption {
+    .carousel-main-caption {
         padding: 5rem;
         margin-top: -20%;
         margin-left: 40%
     }
 }
 
-.carousel-control {
+.carousel-main-control {
     height: 32px;
     background: none;
     left: auto;
@@ -6106,22 +6118,22 @@ label {
 }
 
 @media (min-width:992px) {
-    .carousel-control {
+    .carousel-main-control {
         top: 75px
     }
 }
 
-.carousel-control:focus,
-.carousel-control:hover {
+.carousel-main-control:focus,
+.carousel-main-control:hover {
     color: #4ba54d
 }
 
-.carousel-control.right {
+.carousel-main-control.right {
     right: 5rem;
     background-image: none
 }
 
-.carousel-control.left {
+.carousel-main-control.left {
     margin-right: 32px;
     background-image: none
 }

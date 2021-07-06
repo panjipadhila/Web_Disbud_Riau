@@ -1,7 +1,7 @@
 <section class="container p-t-3">
   <div class="row">
     <div class="col-lg-12">
-      <h1><span style="color: crimson">Bootstrap 4 Card Slider</span> by webseotips</h1>
+      <h1><span style="color: crimson">Gallery</span><br>Dinas Kebudayaan</h1>
     </div>
   </div>
 </section>
@@ -61,6 +61,7 @@
           </div>
         </div>
       </div>
+      
 
     </div>
     <div class="row row-equal carousel-item m-t-0">
