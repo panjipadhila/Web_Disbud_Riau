@@ -8,6 +8,9 @@
         <a href="/tambahdata" class="btn btn-primary">Tambah data</a>
         <br></br>
     <?php endif; ?>
+    <?php if (session()->getFlashData('pesan')) : ?>
+        <div class="alert alert-success" role="alert"><?= session()->getFlashData('pesan'); ?></div>
+    <?php endif; ?>
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
             <?php if (logged_in()) : ?>
@@ -23,13 +26,13 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($opk as $opk) : ?>
-                <tr class='clickable-row' data-href='/<?= $opk['no']; ?>'>
+                <tr class='clickable-row' data-href='/<?= $opk['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $opk['nama'] ?></td>
                     <td><?= $opk['subkategori'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
                     <td><?= $opk['kondisi'] ?></td>
-                    <td><a href="/AdminController/edit" class="btn btn-primary btn-sm">Edit</a> <a href="/AdminController/delete" class="btn btn-info btn-sm">Delete</a></td>
+                    <td><a href="/opk/edit/<?= $opk['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/opk/delete/<?= $kategori; ?>/<?= $opk['id']; ?>" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -46,7 +49,7 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($opk as $opk) : ?>
-                <tr class='clickable-row' data-href='/<?= $opk['no']; ?>'>
+                <tr class='clickable-row' data-href='/<?= $opk['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $opk['nama'] ?></td>
                     <td><?= $opk['subkategori'] ?></td>

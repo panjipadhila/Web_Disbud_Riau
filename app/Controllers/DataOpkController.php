@@ -41,9 +41,9 @@ class DataOpkController extends BaseController
 		echo view('footer');
 	}
 
-	public function detail($no)
+	public function detail($id)
 	{
-		$opk = $this->OpkModel->getOPKByNo($no);
+		$opk = $this->OpkModel->getOPKByNo($id);
 		$data = [
 			'title' => 'Deskripsi | Web Disbud Riau',
 			'opk' => $opk
