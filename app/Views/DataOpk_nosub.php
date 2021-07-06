@@ -22,12 +22,12 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($opk as $opk) : ?>
-                <tr class='clickable-row' data-href='/<?= $opk['no']; ?>'>
+                <tr class='clickable-row' data-href='/<?= $opk['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $opk['nama'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
                     <td><?= $opk['kondisi'] ?></td>
-                    <td><a href="/AdminController/edit" class="btn btn-primary btn-sm">Edit</a> <a href="/AdminController/delete" class="btn btn-info btn-sm">Delete</a></td>
+                    <td><a href="/opk/edit/<?= $opk['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/opk/delete/<?= $kategori; ?>/<?= $opk['id']; ?>" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -43,7 +43,7 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($opk as $opk) : ?>
-                <tr class='clickable-row' data-href='/<?= $opk['no']; ?>'>
+                <tr class='clickable-row' data-href='/<?= $opk['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $opk['nama'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>

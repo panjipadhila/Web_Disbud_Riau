@@ -7,16 +7,16 @@ var kat_subKat = {
         "Seni Teater": [],
         "Seni Pertunjukan": []
     },
-    "bahasa": {
+    "Bahasa": {
         "Bahasa Indonesia": [],
         "Bahasa Daerah": [],
         "Dialek/Aksen/Logat": []
     },
     "Permainan Tradisional": {
-        "-":[]
+        "-": []
     },
     "Olahraga Tradisional": {
-        "-":[]
+        "-": []
     },
     "Warisan Budaya Bendawi": {
         "Struktur": [],
@@ -50,21 +50,21 @@ var kat_subKat = {
         "Upacara Kematian": [],
         "Ritual Kepercayaan": []
     },
-    "Pengetahuan Tradisional":{
+    "Pengetahuan Tradisional": {
         "kerajinan": [],
         "Busana": [],
         "Metode Penyehatan": [],
-        "Jamu/Ramuan Tradisional":[],
-        "Makanan Dan Minuman Tradisional":[],
-        "Pengetahuan/Kebiasaan Tentang Alam Semesta":[]
+        "Jamu/Ramuan Tradisional": [],
+        "Makanan Dan Minuman Tradisional": [],
+        "Pengetahuan/Kebiasaan Tentang Alam Semesta": []
     },
-    "Teknologi Tradisional":{
-        "Alat Tangkap":[],
-        "Arsitektur/Ornamen":[],
-        "Perkakas Pertanian":[],
-        "Alat Transportasi":[],
-        "Sistem Irigtasi":[],
-        "Peralatan Rumah Tangga":[]
+    "Teknologi Tradisional": {
+        "Alat Tangkap": [],
+        "Arsitektur/Ornamen": [],
+        "Perkakas Pertanian": [],
+        "Alat Transportasi": [],
+        "Sistem Irigtasi": [],
+        "Peralatan Rumah Tangga": []
 
     }
 }
@@ -75,14 +75,14 @@ window.onload = function () {
     for (var x in kat_subKat) {
         kategoriSel.options[kategoriSel.options.length] = new Option(x, x);
     }
-    kategoriSel.onchange = function() {
-            //empty Chapters- and Topics- dropdowns
-            subKategoriSel.length = 1;
-            //display correct values
-            for (var y in kat_subKat[this.value]) {
-              subKategoriSel.options[subKategoriSel.options.length] = new Option(y, y);
-            }
-          }
+    kategoriSel.onchange = function () {
+        //empty Chapters- and Topics- dropdowns
+        subKategoriSel.length = 1;
+        //display correct values
+        for (var y in kat_subKat[this.value]) {
+            subKategoriSel.options[subKategoriSel.options.length] = new Option(y, y);
+        }
+    }
 
 }
 
