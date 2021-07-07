@@ -67,36 +67,36 @@
             <div class="col-xs-12 col-md-4">
                 <img src="./assets/images/bahasa-seni.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
                 <h3>Bidang Bahasa & Seni</h3>
-                <p><a href="/" class="btn btn-primary">Detail </a></p>
+                <p><a href="/detailBidang/bahasaseni" class="btn btn-primary">Detail </a></p>
             </div>
 
             <div class="col-xs-12 col-md-4">
                 <img src="./assets/images/kepala-dinas.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
                 <h3>Kepala Dinas</h3>
-                <p><a href="/" class="btn btn-primary">Detail </a></p>
+                <p><a href="/detailBidang/kepaladinas" class="btn btn-primary">Detail </a></p>
             </div>
             <div class="col-xs-12 col-md-4">
                 <img src="./assets/images/sekretariat.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
                 <h3>Sekertariat</h3>
-                <p><a href="/" class="btn btn-primary">Detail </a></p>
+                <p><a href="/detailBidang/sekretariat" class="btn btn-primary">Detail </a></p>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <img src="./assets/images/rekayasa-budaya.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
-                <h3>Bidang Rekayasa Budaya</h3>
-                <p><a href="/" class="btn btn-primary">Detail </a></p>
+                <h3>Bidang Rekayasa Budaya</h3><br><br>
+                <p><a href="/detailBidang/rekayasabudaya" class="btn btn-primary">Detail </a></p>
             </div>
 
             <div class="col-xs-12 col-md-4">
                 <img src="./assets/images/pelestarian-adat.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
-                <h3>Bidang Pelestarian Adat dan Nilai Budaya</h3>
-                <p><a href="/" class="btn btn-primary">Detail </a></p>
+                <h3>Bidang Pelestarian Adat dan Nilai Budaya</h3><br>
+                <p><a href="/detailBidang/pelestarianadat" class="btn btn-primary">Detail </a></p>
             </div>
             <div class="col-xs-12 col-md-4">
                 <img src="./assets/images/sejarah.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
                 <h3>Bidang Sejarah Pelestarian Cagar Budaya dan Permuseuman</h3>
-                <p><a href="/" class="btn btn-primary">Detail </a></p>
+                <p><a href="/detailBidang/sejarah" class="btn btn-primary">Detail </a></p>
             </div>
         </div>
     </div>
