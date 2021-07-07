@@ -969,7 +969,8 @@ pre code {
 
 .row {
     margin-left: -20px;
-    margin-right: -15px
+    margin-right: -15px;
+    display:block;
 }
 
 
@@ -4083,7 +4084,8 @@ tbody.collapse.in {
 .nav {
     margin-bottom: 0;
     padding-left: 0;
-    list-style: none
+    list-style: none;
+    display:block;
 }
 
 .nav:after,

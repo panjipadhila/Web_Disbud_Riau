@@ -32,6 +32,10 @@ class AdminController extends BaseController
         echo view('footer');
     }
 
+    function tambahGallery(){
+        
+    }
+
     function save()
     {
         $foto = '';

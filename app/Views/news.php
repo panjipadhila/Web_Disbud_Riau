@@ -5,6 +5,15 @@
     </div>
   </div>
 </section>
+<div class="container">
+  <?php if (logged_in()) : ?>
+    <a href="/tambahgallery" class="btn btn-primary">Tambah Gallery</a>
+    <br></br>
+  <?php endif; ?>
+  <?php if (session()->getFlashData('pesan')) : ?>
+    <div class="alert alert-success" role="alert"><?= session()->getFlashData('pesan'); ?></div>
+  <?php endif; ?>
+</div>
 <section class="carousel slide" data-ride="carousel" id="postsCarousel">
   <div class="container">
     <div class="row">
@@ -61,7 +70,7 @@
           </div>
         </div>
       </div>
-      
+
 
     </div>
     <div class="row row-equal carousel-item m-t-0">
