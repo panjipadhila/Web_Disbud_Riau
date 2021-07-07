@@ -970,8 +970,12 @@ pre code {
 .row {
     margin-left: -20px;
     margin-right: -15px;
-    display:block
 }
+.row>.row-flex{
+    display:flex;
+}
+
+
 
 @media (min-width:1280px) {
     .row-hero-background {

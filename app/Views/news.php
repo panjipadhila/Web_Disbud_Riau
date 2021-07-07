@@ -16,7 +16,7 @@
 </div>
 <section class="carousel slide" data-ride="carousel" id="postsCarousel">
   <div class="container">
-    <div class="row">
+    <div class="row row-flex">
       <div class="col-12 text-right mb-4">
         <a class="btn btn-outline-secondary prev" href="" title="go back"><i class="fa fa-lg fa-chevron-left"></i></a>
         <a class="btn btn-outline-secondary next" href="" title="more"><i class="fa fa-lg fa-chevron-right"></i></a>
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="container p-t-0 m-t-2 carousel-inner">
-    <div class="row row-equal carousel-item active m-t-0">
+    <div class=" row row-flex row-equal carousel-item active m-t-0">
       <div class="col-md-4">
         <div class="card">
           <div class="card-img-top card-img-top-250">
@@ -73,7 +73,7 @@
 
 
     </div>
-    <div class="row row-equal carousel-item m-t-0">
+    <div class="row row-flex row-equal carousel-item m-t-0">
       <div class="col-md-4">
         <div class="card">
           <div class="card-img-top card-img-top-250">
