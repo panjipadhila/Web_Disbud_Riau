@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-6 col-offset-3" style="max-width:100%">
+        <div class="col-6 col-offset-3">
             <div class="card">
                 <form id="save" action="AdminController/save" method="post">
                     <div class="form-group">
