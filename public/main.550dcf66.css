@@ -3936,7 +3936,8 @@ tbody.collapse.in {
 .nav {
     margin-bottom: 0;
     padding-left: 0;
-    list-style: none
+    list-style: none;
+    display: block;
 }
 
 .nav:after,

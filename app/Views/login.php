@@ -31,30 +31,30 @@
 <body>
     <!-- Add your content of header -->
     <header>
-        <nav class="navbar navbar-default active">
+        <nav class="navbar-sec navbar-sec-default active">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                <div class="navbar-sec-header">
+                    <button type="button" class="navbar-sec-toggle collapsed" data-toggle="collapse" data-target="#navbar-sec-collapse" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/" title="">
-                        <img src="/assets/images/pngwing.com.png" class="navbar-logo-img" alt="">
+                    <a class="navbar-sec-brand" href="/" title="">
+                        <img src="/assets/images/pngwing.com.png" class="navbar-sec-logo-img" alt="">
                         DINAS KEBUDAYAAN PROVINSI RIAU
                     </a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                <div class="collapse navbar-sec-collapse" id="navbar-sec-collapse">
+                    <ul class="nav navbar-sec-nav navbar-sec-right">
                         <li><a href="/" title="">Home</a></li>
                         <li><a href="opk" title="">OPK</a></li>
                         <li><a href="news" title="">Gallery</a></li>
                         <li><a href="kegiatan" title="">Kegiatan</a></li>
                         <!-- <li>
                             <p>
-                                <a href="components" class="btn btn-default navbar-btn" title="">Components</a>
+                                <a href="components" class="btn btn-default navbar-sec-btn" title="">Components</a>
                             </p>
                         </li> -->
 
