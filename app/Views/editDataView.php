@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-6 col-offset-3">
+        <div class="col-6 col-offset-3" style="max-width:100%">
             <div class="card">
                 <?php foreach ($opk as $detail) : ?>
                     <form id="edit" action="/AdminController/do_edit/<?= $detail['id']; ?>" method="post">
