@@ -5118,7 +5118,7 @@ button.close {
 }
 
 .carousel-item{
-    height: 600px;
+    height: 710px;
     size: fixed;
 }
 .carousel-item .carousel-caption{
@@ -5126,6 +5126,9 @@ button.close {
 }
 .carousel-item .h5-c{
     margin-top: -400px;
+}
+.carousel-indicators{
+    height: 110px;
 }
 
 

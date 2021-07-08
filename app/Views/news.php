@@ -1,12 +1,13 @@
 <section class="container p-t-3">
   <div class="row">
     <div class="col-lg-12">
-      <h1><span style="color: crimson">Gallery</span><br>Dinas Kebudayaan</h1>
+      <h2 style="text-align : center">Gallery Dinas Kebudayaan Provinsi Riau</h2>
     </div>
   </div>
 </section>
 <div class="container">
   <?php if (logged_in()) : ?>
+  <br>
     <a href="/tambahgallery" class="btn btn-primary">Tambah Gallery</a>
     <br></br>
   <?php endif; ?>
@@ -28,7 +29,7 @@
       <div class="col-md-4">
         <div class="card">
           <div class="card-img-top card-img-top-250">
-            <img class="img-fluid" src="img/29223655865_4b8b01989e.jpg" alt="Carousel 1">
+            <img style="height: 300px; width: 300px;" class="img-fluid" src="assets/images/img-04.jpg" alt="Carousel 1">
           </div>
           <div class="card-block p-t-2">
             <div class="card-header">
@@ -40,85 +41,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-top card-img-top-250">
-            <img class="img-fluid" src="img/35515203036_f8006072b8.jpg" alt="Carousel 1">
-          </div>
-          <div class="card-block p-t-2">
-            <div class="card-header">
-              <h3>flower2</h3>
-            </div>
-            <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
-              animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt
-              hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-top card-img-top-250">
-            <img class="img-fluid" src="img/3d75927b210409af8582828c4049fcd0.jpg" alt="Carousel 1">
-          </div>
-          <div class="card-block p-t-2">
-            <div class="card-header">
-              <h3>flower1</h3>
-            </div>
-            <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
-              animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt
-              hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-    <div class="row row-flex row-equal carousel-item m-t-0">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-top card-img-top-250">
-            <img class="img-fluid" src="img/45590771a1ee18248a49bd399ef99bf1--posts.jpg" alt="Carousel 1">
-          </div>
-          <div class="card-block p-t-2">
-            <div class="card-header">
-              <h3>flower1</h3>
-            </div>
-            <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
-              animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt
-              hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-top card-img-top-250">
-            <img class="img-fluid" src="img/917d7b69ebd58d0ef0e561cdcb016303--red-rose-bouquet-red-rose-flower.jpg" alt="Carousel 1">
-          </div>
-          <div class="card-block p-t-2">
-            <div class="card-header">
-              <h3>flower1</h3>
-            </div>
-            <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
-              animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt
-              hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-img-top card-img-top-250">
-            <img class="img-fluid" src="img/29223655865_4b8b01989e.jpg" alt="Carousel 1">
-          </div>
-          <div class="card-block p-t-2">
-            <div class="card-header">
-              <h3>flower1</h3>
-            </div>
-            <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium
-              animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt
-              hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   </div>
 </section>

@@ -26,24 +26,24 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src=".\assets\images\header-web.png" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
+      <!-- <div class="carousel-caption d-none d-md-block">
       <h5>Objek Pemajuan Kebudayaan</h5>
       <p>Website ini memuat data mengenai objek-objek pemajuan kebudayaan daerah provinsi riau</p>
-    </div>
+    </div> -->
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src=".\assets\images\header-web-12.svg" alt="Second slide">
-      <div class="carousel-caption d-none d-md-block">
+      <!-- <div class="carousel-caption d-none d-md-block">
     <h5>Merawat Budaya Melayu</h5>
     <p>Dengan adanya website ini memberikan edukasi terkait informasi mengenai budaya melayu</p>
-  </div>
+  </div> -->
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src=".\assets\images\header-web.png" alt="Third slide">
-      <div class="carousel-caption d-none d-md-block" style="text-align:center;">
+      <!-- <div class="carousel-caption d-none d-md-block" style="text-align:center;">
     <h3>Jom kita ke Museum Sang Nila Utama</h3>
     <p>Museum ini terletak pada kota pekanbaru yang memuat aset budaya melayu</p>
-  </div>
+  </div> -->
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -84,7 +84,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <img src="./assets/images/rekayasa-budaya.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
-                <h3>Bidang Rekayasa Budaya</h3><br><br>
+                <h3>Bidang Diplomasi dan Promosi Budaya</h3><br><br>
                 <p><a href="/detailBidang/rekayasabudaya" class="btn btn-primary">Detail </a></p>
             </div>
 
