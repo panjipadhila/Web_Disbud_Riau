@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use \App\Models\DataOpkModel;
+use App\Models\GalleryModel;
 
 class AdminController extends BaseController
 {
@@ -10,7 +11,9 @@ class AdminController extends BaseController
 
     public function __construct()
     {
+        //helper('form');
         $this->OpkModel = new DataOpkModel();
+        $this->galleryModel = new GalleryModel();
     }
     function adminpage()
     {
@@ -36,10 +39,14 @@ class AdminController extends BaseController
     {
         $foto = '';
         $deskripsi = '';
-        if ($this->request->getVar('foto') == null) {
+
+        if ($this->request->getFile("foto") == null) {
             $foto = 'image-not-found.svg';
         } else {
-            $foto = $this->request->getVar('foto');
+            $filefoto = $this->request->getFile("foto");
+            $filefoto->getRandomName();
+            $filefoto->move('assets/opk-images');
+            $foto = $filefoto->getName();
         }
 
         if ($this->request->getVar('deskripsi') == null) {
@@ -89,7 +96,9 @@ class AdminController extends BaseController
         if ($this->request->getVar('foto') == null) {
             $foto = 'image-not-found.svg';
         } else {
-            $foto = $this->request->getVar('foto');
+            $filefoto = $this->request->getFile('foto');
+            $filefoto->move('assets/opk-images');
+            $foto = $filefoto->getName();
         }
 
         if ($this->request->getVar('deskripsi') == null) {
@@ -118,6 +127,36 @@ class AdminController extends BaseController
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
     }
+
+    function tambahGallery()
+    {
+        $data = [
+            'title' => 'Tambah data'
+        ];
+        echo view('headerFixedTop', $data);
+        echo view('tambahGalleryView');
+        echo view('footer');
+    }
+
+    function saveGallery()
+    {
+        if ($this->request->getVar('foto') == null) {
+            $foto = 'image-not-found.svg';
+        } else {
+            $foto = $this->request->getVar('foto');
+        }
+
+        $this->galleryModel->save([
+            'judul' => $this->request->getVar('judul'),
+            'isi' => $this->request->getVar('isi'),
+            'penulis' => $this->request->getVar('penulis'),
+            'foto' => $foto
+        ]);
+        $target = '/news';
+        session()->setFlashData('pesan', 'Gallery berhasil diinputkan');
+        return redirect()->to($target);
+    }
+
     // function register()
     // {
     //     $data = [
