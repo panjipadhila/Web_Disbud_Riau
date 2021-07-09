@@ -32,7 +32,7 @@
                     <td><?= $opk['subkategori'] ?></td>
                     <td><?= $opk['lokasi'] ?></td>
                     <td><?= $opk['kondisi'] ?></td>
-                    <td><a href="/opk/edit/<?= $opk['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/opk/delete/<?= $kategori; ?>/<?= $opk['id']; ?>" onclick="deleteAlert()" class="btn btn-info btn-sm">Delete</a></td>
+                    <td><a href="/opk/edit/<?= $opk['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/opk/delete/<?= $kategori; ?>/<?= $opk['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -66,14 +66,14 @@
 
 <script>
 
-fucntion deleteAlert(){
-    var alert;
-    if(confirm("Delete Item?")){
-        alert = ;
-    }else{
-        alert = ;
-    }
-}
+// function deleteAlert(){
+//     var alert=confirm("Delete Item?");
+//     if(alert){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
 
     $(document).ready(function() {
         $('#dataTabelOpk').DataTable({
