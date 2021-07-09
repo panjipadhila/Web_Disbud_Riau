@@ -47,7 +47,11 @@ $routes->get('kategori/(:any)', 'DataOpkController::opkByKategori/$1');
 $routes->get('museum', 'Home::museum');
 $routes->get('opk/delete/(:any)/(:num)', 'AdminController::delete/$1/$2');
 $routes->get('opk/edit/(:num)', 'AdminController::edit/$1');
+<<<<<<< HEAD
 $routes->get('/tambahgallery', 'AdminController::tambahGallery');
+=======
+$routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
+>>>>>>> 6ce880fb992d119a279fbfa981e26a5c976e6c46
 /*
 $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('adminpage', 'AdminController::adminpage');
