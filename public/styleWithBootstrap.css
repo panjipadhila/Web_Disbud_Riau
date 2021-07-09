@@ -6147,15 +6147,17 @@ label {
 
 .card {
     background: #fff;
-    padding: 2rem;
+    padding: 5rem;
     position: relative;
-    z-index: 1
+    z-index: 1;
+    margin-bottom: 5rem;
+    
 }
 
-@media (min-width:992px) {
+/* @media (min-width:992px) {
     .card {
-        padding: 5rem
-    }
+        padding: 10rem
+    } */
 }
 
 .card-container .card-image {
