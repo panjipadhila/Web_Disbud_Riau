@@ -38,6 +38,7 @@ $routes->get('news', 'GalleryController::index');
 $routes->get('components', 'Home::components');
 $routes->get('opk', 'Home::opk');
 $routes->get('kegiatan', 'DataKegiatanController::getAllKegiatan');
+$routes->get('dokumen', 'DokumenController::index');
 //$routes->get('loginadmin', 'AdminController::loginadmin');
 $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('tambahdata', 'AdminController::tambah');
