@@ -44,9 +44,8 @@ class AdminController extends BaseController
             $foto = 'image-not-found.svg';
         } else {
             $filefoto = $this->request->getFile("foto");
-            $filefoto->getRandomName();
-            $filefoto->move('assets/opk-images');
-            $foto = $filefoto->getName();
+            $foto = $filefoto->getRandomName();
+            $filefoto->move('assets/opk-images', $foto);
         }
 
         if ($this->request->getVar('deskripsi') == null) {
@@ -76,7 +75,12 @@ class AdminController extends BaseController
     }
     function delete($kategori, $id)
     {
+        $opk = $this->OpkModel->find($id);
+        if ($opk['foto'] != 'image-not-found.svg') {
+            unlink('assets/opk-images/' . $opk['foto']);
+        }
         $this->OpkModel->delete($id);
+        session()->setFlashData('pesan', 'Data berhasil dihapus');
         return redirect()->to('/kategori/' . $kategori);
     }
 
@@ -93,13 +97,25 @@ class AdminController extends BaseController
     }
     function do_edit($id)
     {
-        if ($this->request->getVar('foto') == null) {
-            $foto = 'image-not-found.svg';
+        $opk = $this->OpkModel->find($id);
+        if ($opk['foto'] == 'image-not-found.svg') {
+            if ($this->request->getVar('foto') == null) {
+                $foto = 'image-not-found.svg';
+            } else {
+                $filefoto = $this->request->getFile("foto");
+                $foto = $filefoto->getRandomName();
+                $filefoto->move('assets/opk-images', $foto);
+            }
         } else {
-            $filefoto = $this->request->getFile('foto');
-            $filefoto->move('assets/opk-images');
-            $foto = $filefoto->getName();
+            if ($this->request->getVar('foto') != null) {
+                $filefoto = $this->request->getFile("foto");
+                $foto = $filefoto->getRandomName();
+                $filefoto->move('assets/opk-images', $foto);
+            } else {
+                $foto = $opk['foto'];
+            }
         }
+
 
         if ($this->request->getVar('deskripsi') == null) {
             $deskripsi = 'Belum ada deskripsi';
