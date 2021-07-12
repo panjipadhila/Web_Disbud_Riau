@@ -54,16 +54,19 @@
                     <ul class="nav navbar-main-nav navbar-main-right">
                         <li><a href="/" title="">Home</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown toggle" href="#" id="navbar-mainDropdown" role="button" data-Toggle="dropdown">Data</a>
+                            <a class="nav-link dropdown" href="#" id="navbar-mainDropdown" role="button" data-Toggle="dropdown">Data</a>
                             <div class="dropdown-menu" aria-labelledby="navbar-mainDropdown">
-                                <a href="opk" title="">OPK</a>
-                                <br>
-                                <a href="museum" title="">Museum</a>
+                                <ul class="list-unstyled">
+                                    <li><a href="opk" title="">OPK</a></li>
+                                    <li><a href="museum" title="">Museum</a></li>
+                                    <li><a href="dokumen" title="">Dokumen</a></li>
+                                </ul>
                             </div>
                         </li>
                         <!-- <li><a href="opk" title="">OPK</a></li> -->
                         <li><a href="news" title="">Gallery</a></li>
                         <li><a href="kegiatan" title="">Kegiatan</a></li>
+
                         <!-- <li>
                             <p>
                                 <a href="components" class="btn btn-default navbar-main-btn" title="">Components</a>

@@ -57,13 +57,15 @@
                 <div class="collapse navbar-sec-collapse" id="navbar-sec-collapse">
                     <ul class="nav navbar-sec-nav navbar-sec-right">
                         <li><a href="/" title="">Home</a></li>
-                        <li class ="nav-item dropdown">
-                        <a class="nav-link dropdown toggle" href="#" id = "navbar-secDropdown" role = "button" data-Toggle="dropdown">Data</a>
-                        <div class = "dropdown-menu" aria-labelledby="navbar-secDropdown">
-                        <a href="/opk" title="">OPK</a>
-                        <br>
-                        <a href="/museum" title="">Museum</a>
-                        </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown toggle" href="#" id="navbar-secDropdown" role="button" data-Toggle="dropdown">Data</a>
+                            <div class="dropdown-menu" aria-labelledby="navbar-secDropdown">
+                                <ul class="list-unstyled">
+                                    <li><a href="opk" title="">OPK</a></li>
+                                    <li><a href="museum" title="">Museum</a></li>
+                                    <li><a href="dokumen" title="">Dokumen</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <!-- <li><a href="/opk" title="">OPK</a></li> -->
                         <li><a href="/news" title="">Gallery</a></li>
