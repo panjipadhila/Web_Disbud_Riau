@@ -5133,7 +5133,7 @@ button.close {
     margin-top: -400px;
 }
 .carousel-indicators{
-    height: 110px;
+    height: 11rem;
 }
 
 
@@ -6031,7 +6031,7 @@ label {
 
 .card {
     background: #fff;
-    padding: 2rem;
+    padding: 0rem;
     position: relative;
     z-index: 1
 }
