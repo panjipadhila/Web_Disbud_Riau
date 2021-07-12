@@ -13,15 +13,7 @@ class Home extends BaseController
 		echo view('homepage');
 		echo view('footer');
 	}
-	function news()
-	{
-		$data = [
-			'title' => 'News'
-		];
-		echo view('headerWithBootstrap', $data);
-		echo view('news');
-		echo view('footer');
-	}
+	
 	function components()
 	{
 		$data = [

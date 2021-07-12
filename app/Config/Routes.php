@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('news', 'Home::news');
+$routes->get('news', 'GalleryController::index');
 $routes->get('components', 'Home::components');
 $routes->get('opk', 'Home::opk');
 $routes->get('kegiatan', 'DataKegiatanController::getAllKegiatan');
