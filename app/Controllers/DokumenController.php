@@ -30,5 +30,11 @@ class DokumenController extends BaseController
 		$dokumenfile = $this->DokumenModel->find($id);
 		return $this->response->download('assets/dokumen/'.$dokumenfile['file'], null);
 	}
+
+	public function open($id){
+		$dokumenfile = $this->DokumenModel->find($id);
+		header("Content-Type: application/pdf");
+		header("Content-Disposition: inline; filename=\"".$dokumenfile['file']."\";");
+	}
 	
 }

@@ -40,6 +40,7 @@ $routes->get('opk', 'Home::opk');
 $routes->get('kegiatan', 'DataKegiatanController::getAllKegiatan');
 $routes->get('dokumen', 'DokumenController::index');
 $routes->get('dokumen/download/(:num)', 'DokumenController::download/$1');
+$routes->get('dokumen/readOnline/(:num)', 'DokumenController::open/$1');
 //$routes->get('loginadmin', 'AdminController::loginadmin');
 $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('tambahdata', 'AdminController::tambah');
