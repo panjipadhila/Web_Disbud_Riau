@@ -36,17 +36,16 @@
         <tr>
             <th scope="col">No</th>
             <th scope="col">Nama</th>
-            <th scope="col">Download</th>
+            <th scope="col">File</th>
 
         </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($dokumen as $dokumen) : ?>
-                <tr class='clickable-row' data-href='/<?= $opk['id']; ?>'>
+                <tr class='clickable-row' data-href='#'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $dokumen['nama'] ?></td>
-                    <td><?= $dokumen['namaFile'] ?></td>
                     <td><a href="/dokumen/download/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Download</a> <a href="/dokumen/readOnline/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Read Online</a></td>
 
                 </tr>

@@ -25,5 +25,10 @@ class DokumenController extends BaseController
 		echo view('dokumen', $data);
 		echo view('footer');
 	}
+
+	public function download($id){
+		$dokumenfile = $this->DokumenModel->find($id);
+		return $this->response->download('assets/dokumen/'.$dokumenfile['file'], null);
+	}
 	
 }
