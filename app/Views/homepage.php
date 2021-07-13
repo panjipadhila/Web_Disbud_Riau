@@ -96,7 +96,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <img src="./assets/images/rekayasa-budaya.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
-                <h3>Bidang Diplomasi dan Promosi Budaya</h3><br><br>
+                <h3>Bidang Diplomasi dan Promosi Budaya</h3><br>
                 <p><a href="/detailBidang/rekayasabudaya" class="btn btn-primary">Detail </a></p>
             </div>
 
