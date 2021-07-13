@@ -4149,8 +4149,8 @@ tbody.collapse.in {
 .navbar-main {
     position: relative;
     min-height: 80px;
-    margin-bottom: 0px;
-    border: 0px solid transparent
+    margin-bottom: 25px;
+    border: 1px solid
 }
 
 .navbar-main:after,
@@ -4165,7 +4165,7 @@ tbody.collapse.in {
 
 @media (min-width:768px) {
     .navbar-main {
-        /* border-radius: 2px */
+        border-radius: 2px
     }
 }
 
@@ -4334,12 +4334,12 @@ tbody.collapse.in {
 .navbar-main-fixed-bottom {
     bottom: 0;
     margin-bottom: 0;
-    border-width: 1px 0 0
+    border-width: 0px 0 0
 }
 
 .navbar-main-brand {
     float: left;
-    padding: 10px 15px;
+    padding: 27.5px 15px;
     font-size: 23px;
     line-height: 25px;
     height: 80px
@@ -4443,8 +4443,8 @@ tbody.collapse.in {
     }
 
     .navbar-main-nav>li>a {
-        padding-top: 15px;
-        padding-bottom: 5px
+        padding-top: 27.5px;
+        padding-bottom: 15px
     }
 }
 
@@ -5123,8 +5123,13 @@ button.close {
 }
 
 .carousel-item{
-    height: 710px;
+    margin-top: 81px;
+    height: 700px;
     size: fixed;
+}
+
+.carousel-caption{
+    height: 45rem;
 }
 .carousel-item .carousel-caption{
     margin-top: -400px ;
@@ -5843,11 +5848,11 @@ button.close {
     -webkit-transition: all .5s linear;
     -o-transition: all .5s linear;
     transition: all .5s linear;
-    /* background-image: url(./assets/images/wave-header1.svg); */
-    background-position: 0 90%;
+    background-image: url(./assets/images/header-carousel.svg); 
+    background-position: 0 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 0px
+    padding-bottom: 1px
 }
 
 @media (max-width:768px) {
@@ -5903,7 +5908,7 @@ h2:after {
 
 .h3,
 h3 {
-    color: #000
+    color: black
 }
 
 .h4,

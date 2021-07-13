@@ -18,7 +18,12 @@
         
 
     <?php endforeach; ?>
-    <?= $pager->links('bootstrap','bootstrap_pagination') ?>
+    
     </div>
+    
 </div>
+<div class="container">
+<?= $pager->links('bootstrap','bootstrap_pagination') ?>
+</div>
+
 </div>
