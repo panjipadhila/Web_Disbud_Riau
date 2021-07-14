@@ -51,6 +51,7 @@ $routes->get('museum', 'Home::museum');
 $routes->get('opk/delete/(:any)/(:num)', 'AdminController::delete/$1/$2');
 $routes->get('opk/edit/(:num)', 'AdminController::edit/$1');
 $routes->get('/tambahgallery', 'AdminController::tambahGallery');
+$routes->get('/tambahdokumen', 'AdminController::tambahDokumen');
 $routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
 /*
 $routes->group('', ['filter' => 'login'], function($routes){

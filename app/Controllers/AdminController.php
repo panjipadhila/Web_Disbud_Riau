@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use \App\Models\DataOpkModel;
 use App\Models\GalleryModel;
+use App\Models\DataDokumenModel;
 
 class AdminController extends BaseController
 {
@@ -14,6 +15,7 @@ class AdminController extends BaseController
         //helper('form');
         $this->OpkModel = new DataOpkModel();
         $this->galleryModel = new GalleryModel();
+        $this->dokumenModel = new DataDokumenModel();
     }
     function adminpage()
     {
@@ -152,6 +154,30 @@ class AdminController extends BaseController
         echo view('headerFixedTop', $data);
         echo view('tambahGalleryView');
         echo view('footer');
+    }
+    function tambahDokumen()
+    {
+        $data = [
+            'title' => 'Tambah data'
+        ];
+        echo view('headerFixedTop', $data);
+        echo view('tambahDokumenView');
+        echo view('footer');
+    }
+
+    function saveDokumen()
+    {
+        $file = $this->request->getfile('file');
+        $namafile = $file->getName();
+        $file->move('assets/dokumen',$namafile);
+
+        $this->dokumenModel->save([
+            'nama' => $this->request->getVar('judul'),
+            'file' => $namafile
+        ]);
+        $target = '/dokumen';
+        session()->setFlashData('pesan', 'Dokumen berhasil diinputkan');
+        return redirect()->to($target);
     }
 
     function saveGallery()

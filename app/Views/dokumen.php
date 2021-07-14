@@ -5,7 +5,7 @@
 </div>
 <div class="container ">
     <?php if (logged_in()) : ?>
-        <a href="/tambahdata" class="btn btn-primary">Tambah data</a>
+        <a href="/tambahdokumen" class="btn btn-primary">Tambah data</a>
         <br></br>
     <?php endif; ?>
     <?php if (session()->getFlashData('pesan')) : ?>
@@ -24,11 +24,11 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($dokumen as $dokumen) : ?>
-                <tr class='clickable-row' data-href='/<?= $dokumen['id']; ?>'>
+                <tr class='clickable-row' data-href='#'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $dokumen['nama'] ?></td>
                     <td><?= $dokumen['file'] ?></td>
-                    <td><a href="/dokumen/download/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Delete</a></td>
+                    <td><a href="/dokumen/download/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Download</a> <a href="/dokumen/readOnline/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Read Online</a> <a href="/dokumen/download/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
