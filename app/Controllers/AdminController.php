@@ -180,6 +180,15 @@ class AdminController extends BaseController
         return redirect()->to($target);
     }
 
+    function deleteDokumen($id)
+    {
+        $file = $this->dokumenModel->find($id);
+        unlink('assets/dokumen/' . $file['file']);
+        $this->dokumenModel->delete($id);
+        session()->setFlashData('pesan', 'Dokumen berhasil dihapus');
+        return redirect()->to('/dokumen');
+    }
+
     function saveGallery()
     {
         if ($this->request->getVar('foto') == null) {
