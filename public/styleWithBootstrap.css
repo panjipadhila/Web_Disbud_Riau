@@ -6146,6 +6146,7 @@ label {
 }
 
 .card {
+    margin-top: 2rem;
     background: #fff;
     padding: 2rem;
     position: relative;
@@ -6907,6 +6908,15 @@ label {
     background-color: #1b1e21;
     border-color: #1b1e21
 }
+.page-item.active .page-link{
+    background-color: green;
+    border-color: green;
+    
+}
+.page-link{
+    color: green;
+}
+
 
 
 /*# sourceMappingURL=main.0cf8b554.map*/
