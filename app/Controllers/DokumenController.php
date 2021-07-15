@@ -33,8 +33,23 @@ class DokumenController extends BaseController
 
 	public function open($id){
 		$dokumenfile = $this->DokumenModel->find($id);
-		header("Content-Type: application/pdf");
-		header("Content-Disposition: inline; filename=\"".$dokumenfile['file']."\";");
+		$fileOpen = 'assets/dokumen/'.$dokumenfile['file'];
+		// //echo $fileOpen;
+		// header("Content-Type: application/pdf");
+		// header("Content-length: ". filesize($fileOpen) );
+		// readfile($fileOpen);
+
+		$url = "assets/dokumen/".$dokumenfile['file'];
+		$content = file_get_contents($url);
+	
+		header('Content-Type: application/pdf');
+		header('Content-Length: ' . strlen($content));
+		header('Content-Disposition: inline; filename='.$dokumenfile['file']);
+		header('Cache-Control: private, max-age=0, must-revalidate');
+		header('Pragma: public');
+		ini_set('zlib.output_compression','0');
+	
+		die($content);
 	}
 	
 }

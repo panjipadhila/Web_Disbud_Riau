@@ -18,7 +18,7 @@ class GalleryController extends BaseController
         $gallery = $this->GalleryModel->getGallery();
         $data = [
 			'title' => 'News',
-            'news' => $this->GalleryModel->paginate(3,'bootstrap'),
+            'news' => $this->GalleryModel->paginate(3,'news'),
             'pager' => $this->GalleryModel->pager,
             
 		];

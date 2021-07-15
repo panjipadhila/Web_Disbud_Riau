@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Controllers\AdminController;
 use App\Controllers\DataOpkController;
 
 // Create a new instance of our RouteCollection class.
@@ -41,6 +42,7 @@ $routes->get('kegiatan', 'DataKegiatanController::getAllKegiatan');
 $routes->get('dokumen', 'DokumenController::index');
 $routes->get('dokumen/download/(:num)', 'DokumenController::download/$1');
 $routes->get('dokumen/readOnline/(:num)', 'DokumenController::open/$1');
+$routes->get('dokumen/delete/(:num)', 'AdminController::deleteDokumen/$1');
 //$routes->get('loginadmin', 'AdminController::loginadmin');
 $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('tambahdata', 'AdminController::tambah');
@@ -52,6 +54,7 @@ $routes->get('museum', 'Home::museum');
 $routes->get('opk/delete/(:any)/(:num)', 'AdminController::delete/$1/$2');
 $routes->get('opk/edit/(:num)', 'AdminController::edit/$1');
 $routes->get('/tambahgallery', 'AdminController::tambahGallery');
+$routes->get('/tambahdokumen', 'AdminController::tambahDokumen');
 $routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
 /*
 $routes->group('', ['filter' => 'login'], function($routes){
