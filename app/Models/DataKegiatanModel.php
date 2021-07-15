@@ -7,14 +7,6 @@ use CodeIgniter\Model;
 class DataKegiatanModel extends Model
 {
     protected $table = 'kegiatan';
-    protected $primarykey = 'no_kegiatan';
-
-    public function getKegiatan()
-    {
-        return $this->findAll();
-    }
-    public function getKegiatanByNo($no)
-    {
-        return $this->where('no_kegiatan', $no)->findAll();
-    }
+    protected $primarykey = 'id';
+    protected $allowedFields = ['nama_kegiatan', 'tanggal', 'deskripsi', 'foto'];
 }

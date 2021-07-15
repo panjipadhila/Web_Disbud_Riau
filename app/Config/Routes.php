@@ -46,6 +46,7 @@ $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('tambahdata', 'AdminController::tambah');
 //$routes->get('register', 'AdminController::register');
 $routes->get('(:num)', 'DataOpkController::detail/$1');
+$routes->get('kegiatan/(:num)', 'DataKegiatanController::detail/$1');
 $routes->get('kategori/(:any)', 'DataOpkController::opkByKategori/$1');
 $routes->get('museum', 'Home::museum');
 $routes->get('opk/delete/(:any)/(:num)', 'AdminController::delete/$1/$2');

@@ -16,13 +16,24 @@ class DataKegiatanController extends BaseController
 
     function getAllKegiatan()
     {
-        $kegiatan = $this->KegiatanModel->getKegiatan();
+        $kegiatan = $this->KegiatanModel->findAll();
         $data = [
             'title' => 'Kegiatan | Web Disbud Riau',
             'kegiatan' => $kegiatan
         ];
         echo view('headerFixedTop', $data);
         echo view('kegiatan', $data);
+        echo view('footer');
+    }
+    function detail($id)
+    {
+        $kegiatan = $this->KegiatanModel->find($id);
+        $data = [
+            'title' => 'Kegiatan | Web Disbud Riau',
+            'kegiatan' => $kegiatan
+        ];
+        echo view('headerFixedTop', $data);
+        echo view('detailKegiatan', $data);
         echo view('footer');
     }
     // function index()
