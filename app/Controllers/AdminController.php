@@ -5,6 +5,7 @@ namespace App\Controllers;
 use \App\Models\DataOpkModel;
 use App\Models\GalleryModel;
 use App\Models\DataDokumenModel;
+use DateTime;
 
 class AdminController extends BaseController
 {
@@ -169,7 +170,7 @@ class AdminController extends BaseController
     {
         $file = $this->request->getfile('file');
         $namafile = $file->getName();
-        $file->move('assets/dokumen',$namafile);
+        $file->move('assets/dokumen', $namafile);
 
         $this->dokumenModel->save([
             'nama' => $this->request->getVar('judul'),
@@ -191,15 +192,22 @@ class AdminController extends BaseController
 
     function saveGallery()
     {
-        if ($this->request->getVar('foto') == null) {
+        // if ($this->request->getVar('foto') == null) {
+        //     $foto = 'image-not-found.svg';
+        // } else {
+        //     $foto = $this->request->getVar('foto');
+        // }
+        if ($this->request->getFile("foto") == null) {
             $foto = 'image-not-found.svg';
         } else {
-            $foto = $this->request->getVar('foto');
+            $filefoto = $this->request->getFile("foto");
+            $foto = $filefoto->getRandomName();
+            $filefoto->move('doc/gallery', $foto);
         }
-
         $this->galleryModel->save([
             'judul' => $this->request->getVar('judul'),
             'isi' => $this->request->getVar('isi'),
+            'created_at' => date("Y/m/d"),
             'penulis' => $this->request->getVar('penulis'),
             'foto' => $foto
         ]);
@@ -207,7 +215,14 @@ class AdminController extends BaseController
         session()->setFlashData('pesan', 'Gallery berhasil diinputkan');
         return redirect()->to($target);
     }
-
+    function deleteGallery($id)
+    {
+        $file = $this->galleryModel->find($id);
+        unlink('doc/gallery/' . $file['foto']);
+        $this->galleryModel->delete($id);
+        session()->setFlashData('pesan', 'Gallery berhasil dihapus');
+        return redirect()->to('/news');
+    }
     // function register()
     // {
     //     $data = [

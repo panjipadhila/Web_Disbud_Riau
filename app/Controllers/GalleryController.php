@@ -13,17 +13,18 @@ class GalleryController extends BaseController
     {
         $this->GalleryModel = new GalleryModel();
     }
-    function index(){
+    function index()
+    {
         $pager = \Config\Services::pager();
         $gallery = $this->GalleryModel->getGallery();
         $data = [
-			'title' => 'News',
-            'news' => $this->GalleryModel->paginate(3,'news'),
+            'title' => 'News',
+            'news' => $this->GalleryModel->paginate(3, 'news'),
             'pager' => $this->GalleryModel->pager,
-            
-		];
-		echo view('headerWithBootstrap', $data);
-		echo view('news', $data);
-		echo view('footer');
+
+        ];
+        echo view('headerWithBootstrap', $data);
+        echo view('news', $data);
+        echo view('footer');
     }
 }

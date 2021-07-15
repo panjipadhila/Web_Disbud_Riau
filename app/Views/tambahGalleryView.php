@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 col-offset-3" style="max-width:100%">
             <div class="card">
-                <form id="save" action="AdminController/saveGallery" method="post">
+                <form id="save" action="AdminController/saveGallery" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                         <label for="judul">Judul</label>
                         <input type="text" class="form-control" name="judul" placeholder="Judul">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <label for="save">Foto</label>
-                        <input style="display:inline-block" type="file" id="myFile" name="foto" placeholder="">
+                        <input style="display:inline-block" type="file" id="foto" name="foto" placeholder="">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Save</button>
                 </form>
