@@ -207,7 +207,7 @@ class AdminController extends BaseController
         $this->galleryModel->save([
             'judul' => $this->request->getVar('judul'),
             'isi' => $this->request->getVar('isi'),
-            'created_at' => date("Y/m/d"),
+            'created_at' => date("Y-m-d H:i:s"),
             'penulis' => $this->request->getVar('penulis'),
             'foto' => $foto
         ]);
