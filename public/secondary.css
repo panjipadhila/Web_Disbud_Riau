@@ -5922,6 +5922,30 @@ button.close {
     border-color: #EA6969
 }
 
+.btn-normal{
+    border-color:#5cb85c ;
+}
+
+.btn-normal:focus,
+.btn-normal:hover {
+    background-color: #5cb85c;
+    color: #fff;
+    border-color: #5cb85c
+}
+
+.btn-normal-blue{
+    color:#4158db;
+    border-color:#4158db ;
+    
+}
+
+.btn-normal-blue:focus,
+.btn-normal-blue:hover {
+    background-color: #4158db;
+    color: #fff;
+    border-color: #4158db
+}
+
 .btn-success:focus,
 .btn-success:hover {
     background-color: #5cb85c;

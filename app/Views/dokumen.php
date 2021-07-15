@@ -28,7 +28,7 @@
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $dokumen['nama'] ?></td>
                     <td><?= $dokumen['file'] ?></td>
-                    <td><a href="/dokumen/download/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Download</a> <a href="/dokumen/readOnline/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Read Online</a> <a href="/dokumen/delete/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Delete</a></td>
+                    <td><a href="/dokumen/download/<?= $dokumen['id']; ?>" class="btn btn-normal btn-sm">Download</a> <a href="/dokumen/readOnline/<?= $dokumen['id']; ?>" class="btn btn-normal-blue btn-sm">Read Online</a> <a href="/dokumen/delete/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -46,7 +46,7 @@
                 <tr class='clickable-row' data-href='#'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $dokumen['nama'] ?></td>
-                    <td><a href="/dokumen/download/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Download</a> <a href="/dokumen/readOnline/<?= $dokumen['id']; ?>" class="btn btn-info btn-sm">Read Online</a></td>
+                    <td><a href="/dokumen/download/<?= $dokumen['id']; ?>" class="btn btn-normal btn-sm">Download</a> <a href="/dokumen/readOnline/<?= $dokumen['id']; ?>" class="btn btn-normal-blue btn-sm">Read Online</a></td>
 
                 </tr>
             <?php endforeach; ?>
