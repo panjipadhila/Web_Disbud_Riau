@@ -57,6 +57,7 @@ $routes->get('tambahGallery', 'AdminController::tambahGallery');
 $routes->get('/tambahdokumen', 'AdminController::tambahDokumen');
 $routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
 $routes->get('deleteGallery/(:num)', 'AdminController::deleteGallery/$1');
+$routes->get('detailGallery/(:num)', 'GalleryController::detailGallery/$1');
 /*
 $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('adminpage', 'AdminController::adminpage');

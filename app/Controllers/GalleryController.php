@@ -7,7 +7,7 @@ use \App\Models\GalleryModel;
 class GalleryController extends BaseController
 {
 
-    protected $KegiatanModel;
+    protected $GalleryModel;
 
     public function __construct()
     {
@@ -27,4 +27,15 @@ class GalleryController extends BaseController
         echo view('news', $data);
         echo view('footer');
     }
+    public function detailGallery($id)
+	{
+		$news = $this->GalleryModel->find($id);
+		$data = [
+			'title' => 'Deskripsi | Web Disbud Riau',
+			'news' => $news
+		];
+		echo view('headerWithBootstrap', $data);
+		echo view('detailGallery', $data);
+		echo view('footer');
+	}
 }

@@ -20,7 +20,7 @@
                                 <p style="width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" class="card-text"><?= $elements['isi']; ?></p>
                             </div>
                             <div class="card-footer">
-                                <a href="#" class="btn btn-primary">Full Details</a>
+                                <a href="/detailGallery/<?= $elements['id']; ?>" class="btn btn-primary">Full Details</a>
                                 <a href="/deleteGallery/<?= $elements['id']; ?>" class="btn btn-info">Hapus data</a>
                             </div>
                         </div>
@@ -53,8 +53,7 @@
                             <p style="width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" class="card-text"><?= $elements['isi']; ?></p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Full Details</a>
-
+<a href="/detailGallery/<?= $elements['id']; ?>" class="btn btn-primary">Full Details</a>
                         </div>
                     </div>
                 </div>
