@@ -19,34 +19,31 @@
             </div>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Geologika</a></p>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Biologika</a></p>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Etnografika</a></p>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Arkeologika</a></p>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-leftmargin">Historika</a></p>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Katalogisasi Naskah</a></p>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Keramik</a></p>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Seni Rupa</a></p>
         </div>
         <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Objek Museum X</a></p>
-        </div>
-        <div class="row">
-            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Objek Museum X</a></p>
+            <p><a href="" class="btn btn-primary btn-lg-rightmargin">Teknologika</a></p>
         </div>
         
     </div>
