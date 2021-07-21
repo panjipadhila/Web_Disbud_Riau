@@ -26,6 +26,7 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <div class="container text-center">
     <h2>Kategori Inventaris Museum</h2>
     <div class="row">
