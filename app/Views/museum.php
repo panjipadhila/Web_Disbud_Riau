@@ -65,6 +65,6 @@
     <div class="container text-center">
         <div class="map-wrapper">
             <h2>Lokasi Museum</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1133.3898224889053!2d101.45375669061521!3d0.4942603853171591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5aec1abc92bbf%3A0x86661f92518af062!2sMuseum%20Daerah%20Riau%20Sang%20Nila%20Utama!5e0!3m2!1sid!2sid!4v1626854108758!5m2!1sid!2sid" width="1100" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        </div>
+            <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1133.3898224889053!2d101.45375669061521!3d0.4942603853171591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5aec1abc92bbf%3A0x86661f92518af062!2sMuseum%20Daerah%20Riau%20Sang%20Nila%20Utama!5e0!3m2!1sid!2sid!4v1626854108758!5m2!1sid!2sid" width="1100" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        </div>
     </div>
 </div>
