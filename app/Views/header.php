@@ -60,6 +60,9 @@
                                     <li><a href="opk" title="">OPK</a></li>
                                     <li><a href="museum" title="">Museum</a></li>
                                     <li><a href="dokumen" title="">Dokumen</a></li>
+                                    <?php if (logged_in()) ?>
+                                    <li><a href="adminpage" title="">Admin</a></li>
+
                                 </ul>
                             </div>
                         </li>

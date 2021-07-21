@@ -36,21 +36,27 @@
                     <div class="form-group">
                         <label for="save">Kabupaten</label>
                         <span style="display:inline-block;width:24px;"></span>
-                        <select name="kabupaten" id="kabupaten">
-                            <option>Pilih Kabupaten</option>
-                            <option>Pekanbaru</option>
-                            <option>Kampar</option>
-                            <option>Siak Sri Indrapura</option>
-                            <option>Rokan Hulu</option>
-                            <option>Rokan Hilir</option>
-                            <option>Indragiri Hulu</option>
-                            <option>Indragiri Hilir</option>
-                            <option>Bengkalis</option>
-                            <option>Dumai</option>
-                            <option>Pelalawan</option>
-                            <option>Kuantan Singingi</option>
-                            <option>Kepulauan Meranti</option>
-                        </select>
+                        <?php if (in_groups('admin-kabupaten')) : ?>
+                            <select name="kabupaten" id="kabupaten">
+                                <option><?= user()->lokasi; ?></option>
+                            </select>
+                        <?php else : ?>
+                            <select name="kabupaten" id="kabupaten">
+                                <option>Pilih Kabupaten</option>
+                                <option>Pekanbaru</option>
+                                <option>Kampar</option>
+                                <option>Siak Sri Indrapura</option>
+                                <option>Rokan Hulu</option>
+                                <option>Rokan Hilir</option>
+                                <option>Indragiri Hulu</option>
+                                <option>Indragiri Hilir</option>
+                                <option>Bengkalis</option>
+                                <option>Dumai</option>
+                                <option>Pelalawan</option>
+                                <option>Kuantan Singingi</option>
+                                <option>Kepulauan Meranti</option>
+                            </select>
+                        <?php endif; ?>
                     </div>
                     <div class="form-group">
                         <label for="save">Gambar OPK</label>
