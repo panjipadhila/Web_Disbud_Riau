@@ -57,7 +57,7 @@
                             <a class="nav-link dropdown" href="#" id="navbar-mainDropdown" role="button" data-Toggle="dropdown">Data</a>
                             <div class="dropdown-menu" aria-labelledby="navbar-mainDropdown">
                                 <ul class="list-unstyled">
-                                    <li><a href="opk" title="">OPK</a></li>
+                                    <li><a href="/opk" title="">OPK</a></li>
                                     <li><a href="museum" title="">Museum</a></li>
                                     <li><a href="dokumen" title="">Dokumen</a></li>
 
@@ -67,9 +67,9 @@
                         <!-- <li><a href="opk" title="">OPK</a></li> -->
                         <li><a href="news" title="">Gallery</a></li>
                         <li><a href="kegiatan" title="">Kegiatan</a></li>
-                        <?php if (logged_in()) ?>
-                        <li><a href="adminpage" title="">Admin</a></li>
-
+                        <?php if (logged_in()) : ?>
+                            <li><a href="adminpage" title="">Admin</a></li>
+                        <?php endif; ?>
                         <!-- <li>
                             <p>
                                 <a href="components" class="btn btn-default navbar-main-btn" title="">Components</a>
