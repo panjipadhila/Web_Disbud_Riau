@@ -27,18 +27,33 @@ class DataOpkController extends BaseController
 	}
 	function opkByKategori($kategori)
 	{
-		$opk = $this->OpkModel->getOPKByKategori($kategori);
-		$data = [
-			'title' => 'Data OPK | Web Disbud Riau',
-			'opk' => $opk,
-			'kategori' => $kategori
-		];
-		echo view('headerFixedTop', $data);
-		if ($kategori == 'Permainan Tradisional' || $kategori == 'Olahraga Tradisional')
-			echo view('DataOpk_nosub', $data);
-		else
-			echo view('DataOpk');
-		echo view('footer');
+		if (logged_in() || in_groups('admin-kabupaten')) {
+			$opk = $this->OpkModel->getOPKByKategoriLokasi(user()->lokasi, $kategori);
+			$data = [
+				'title' => 'Data OPK | Web Disbud Riau',
+				'opk' => $opk,
+				'kategori' => $kategori
+			];
+			echo view('headerFixedTop', $data);
+			if ($kategori == 'Permainan Tradisional' || $kategori == 'Olahraga Tradisional')
+				echo view('DataOpk_nosub', $data);
+			else
+				echo view('DataOpk');
+			echo view('footer');
+		} else {
+			$opk = $this->OpkModel->getOPKByKategori($kategori);
+			$data = [
+				'title' => 'Data OPK | Web Disbud Riau',
+				'opk' => $opk,
+				'kategori' => $kategori
+			];
+			echo view('headerFixedTop', $data);
+			if ($kategori == 'Permainan Tradisional' || $kategori == 'Olahraga Tradisional')
+				echo view('DataOpk_nosub', $data);
+			else
+				echo view('DataOpk');
+			echo view('footer');
+		}
 	}
 
 	public function detail($id)

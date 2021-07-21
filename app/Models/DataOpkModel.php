@@ -31,4 +31,8 @@ class DataOpkModel extends Model
     {
         return $this->where('id', $id)->findAll();
     }
+    function getOPKByKategoriLokasi($lokasi, $kategori)
+    {
+        return $this->where('lokasi', $lokasi)->where('kategori', $kategori)->findAll();
+    }
 }

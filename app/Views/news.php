@@ -1,7 +1,7 @@
 <div class="container">
     <h2 style="text-align:center;">GALLERY</h2>
 
-    <?php if (logged_in()) : ?>
+    <?php if (logged_in() && in_groups('admin-pusat')) : ?>
         <a style="margin-left:1.3%;" href="/tambahGallery" class="btn btn-primary">Tambah data</a>
         <br></br>
         <?php if (session()->getFlashData('pesan')) : ?>
@@ -53,7 +53,7 @@
                             <p style="width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" class="card-text"><?= $elements['isi']; ?></p>
                         </div>
                         <div class="card-footer">
-<a href="/detailGallery/<?= $elements['id']; ?>" class="btn btn-primary">Full Details</a>
+                            <a href="/detailGallery/<?= $elements['id']; ?>" class="btn btn-primary">Full Details</a>
                         </div>
                     </div>
                 </div>

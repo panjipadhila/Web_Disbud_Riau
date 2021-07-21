@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="container ">
-    <?php if (logged_in()) : ?>
+    <?php if (logged_in() && in_groups('admin-pusat')) : ?>
         <a href="/tambahdokumen" class="btn btn-primary">Tambah data</a>
         <br></br>
     <?php endif; ?>
@@ -13,7 +13,7 @@
     <?php endif; ?>
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
-            <?php if (logged_in()) : ?>
+            <?php if (logged_in() && in_groups('admin-pusat')) : ?>
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>

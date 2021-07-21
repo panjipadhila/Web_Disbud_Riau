@@ -4,12 +4,12 @@
     </div>
 </div>
 <div class="container ">
-    <?php if (logged_in()) : ?>
+    <?php if (logged_in() && in_groups('admin-pusat')) : ?>
         <a href="kegiatan/tambahKegiatan" class="btn btn-primary">Tambah kegiatan</a>
         <br></br>
     <?php endif; ?>
 
-    <?php if (logged_in()) : ?>
+    <?php if (logged_in() && in_groups('admin-pusat')) : ?>
         <table class="table table-color table-border-radius10 " id="dataTabelOpk">
             <thead class="thead thead-white-font">
                 <tr>
