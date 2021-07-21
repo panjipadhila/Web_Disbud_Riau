@@ -27,7 +27,7 @@ class DataOpkController extends BaseController
 	}
 	function opkByKategori($kategori)
 	{
-		if (logged_in() || in_groups('admin-kabupaten')) {
+		if (logged_in() && in_groups('admin-kabupaten')) {
 			$opk = $this->OpkModel->getOPKByKategoriLokasi(user()->lokasi, $kategori);
 			$data = [
 				'title' => 'Data OPK | Web Disbud Riau',
