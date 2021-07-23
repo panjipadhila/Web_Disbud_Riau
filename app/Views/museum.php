@@ -30,35 +30,35 @@
     <h2>Kategori Inventaris Museum</h2>
     <div class="row">
         <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary"></a></p>
+            <p><a href="kategoriMuseum/Geologika" class="btn btn-primary">Geologika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary">Objek Museum</a></p>
+            <p><a href="kategoriMuseum/Biologika" class="btn btn-primary">Biologika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary">Objek Museum</a></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary">Objek Museum</a></p>
-        </div>
-        <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary">Objek Museum</a></p>
-        </div>
-        <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary">Objek Museum</a></p>
+            <p><a href="kategoriMuseum/Etnologika" class="btn btn-primary">EtnoLogika</a></p>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary">Objek Museum</a></p>
+            <p><a href="kategoriMuseum/Arkeologika" class="btn btn-primary">Arkeologika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary">Objek Museum</a></p>
+            <p><a href="kategoriMuseum/Historika" class="btn btn-primary">Historika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="#" class="btn btn-primary">Objek Museum</a></p>
+            <p><a href="kategoriMuseum/Katalogisasi" class="btn btn-primary">Katalogisasi Nasional</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <p><a href="kategoriMuseum/Keramik" class="btn btn-primary">Keramik</a></p>
+        </div>
+        <div class="col-sm-4">
+            <p><a href="kategoriMuseum/Senirupa" class="btn btn-primary">Seni Rupa</a></p>
+        </div>
+        <div class="col-sm-4">
+            <p><a href="kategoriMuseum/Teknologika" class="btn btn-primary">Teknologika</a></p>
         </div>
     </div>
 </div>

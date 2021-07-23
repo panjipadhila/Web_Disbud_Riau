@@ -50,6 +50,7 @@ $routes->get('tambahdata', 'AdminController::tambah');
 $routes->get('(:num)', 'DataOpkController::detail/$1');
 $routes->get('kegiatan/(:num)', 'DataKegiatanController::detail/$1');
 $routes->get('kategori/(:any)', 'DataOpkController::opkByKategori/$1');
+$routes->get('kategoriMuseum/(:any)', 'DataMuseumController::MuseumByJenis/$1');
 $routes->get('museum', 'Home::museum');
 $routes->get('opk/delete/(:any)/(:num)', 'AdminController::delete/$1/$2');
 $routes->get('opk/edit/(:num)', 'AdminController::edit/$1');

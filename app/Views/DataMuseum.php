@@ -1,6 +1,6 @@
 <div class="container text-center">
     <div class="col-xs-12 col-md-12">
-        <h2><?= $kategori; ?></h2>
+        <h2><?= $jenis; ?></h2>
     </div>
 </div>
 <div class="container ">
@@ -17,22 +17,22 @@
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">Sub-kategori</th>
-                    <th scope="col">Lokasi</th>
-                    <th scope="col">Kondisi</th>
+                    <th scope="col">Kondisi Benda</th>
+                    <th scope="col">Tanggal Masuk</th>
+                    <th scope="col">Tempat Penyimpanan</th>
                     <th scope="col"></th>
                 </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
-            <?php foreach ($opk as $opk) : ?>
+            <?php foreach ($museum as $museum) : ?>
                 <tr class='clickable-row' data-href='/<?= $opk['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
-                    <td><?= $opk['nama'] ?></td>
-                    <td><?= $opk['subkategori'] ?></td>
-                    <td><?= $opk['lokasi'] ?></td>
-                    <td><?= $opk['kondisi'] ?></td>
-                    <td><a href="/opk/edit/<?= $opk['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/opk/delete/<?= $kategori; ?>/<?= $opk['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a></td>
+                    <td><?= $opk['namaBenda'] ?></td>
+                    <td><?= $opk['kondisiBenda'] ?></td>
+                    <td><?= $opk['tanggalMasuk'] ?></td>
+                    <td><?= $opk['tempatPenyimpanan'] ?></td>
+                    <td><a href="/museum/edit/<?= $museum['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/museum/delete/<?= $jenis; ?>/<?= $museum['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -40,21 +40,21 @@
         <tr>
             <th scope="col">No</th>
             <th scope="col">Nama</th>
-            <th scope="col">Sub-kategori</th>
-            <th scope="col">Lokasi</th>
-            <th scope="col">Kondisi</th>
+            <th scope="col">Kondisi Benda</th>
+            <th scope="col">Tanggal Masuk</th>
+            <th scope="col">Tempat Penyimpanan</th>
 
         </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
-            <?php foreach ($opk as $opk) : ?>
-                <tr class='clickable-row' data-href='/<?= $opk['id']; ?>'>
+            <?php foreach ($museum as $museum) : ?>
+                <tr class='clickable-row' data-href='/<?= $museum['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
-                    <td><?= $opk['nama'] ?></td>
-                    <td><?= $opk['subkategori'] ?></td>
-                    <td><?= $opk['lokasi'] ?></td>
-                    <td><?= $opk['kondisi'] ?></td>
+                    <td><?= $opk['namaBenda'] ?></td>
+                    <td><?= $opk['kondisiBenda'] ?></td>
+                    <td><?= $opk['tanggalMasuk'] ?></td>
+                    <td><?= $opk['tempatPenyimpanan'] ?></td>
 
                 </tr>
             <?php endforeach; ?>
@@ -65,15 +65,14 @@
 </div>
 
 <script>
-
-// function deleteAlert(){
-//     var alert=confirm("Delete Item?");
-//     if(alert){
-//         return true;
-//     }else{
-//         return false;
-//     }
-// }
+    // function deleteAlert(){
+    //     var alert=confirm("Delete Item?");
+    //     if(alert){
+    //         return true;
+    //     }else{
+    //         return false;
+    //     }
+    // }
 
     $(document).ready(function() {
         $('#dataTabelOpk').DataTable({
