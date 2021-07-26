@@ -64,6 +64,17 @@ class Filters extends BaseConfig
 	 * @var array
 	 */
 	public $filters = [
-		'login' => ['before' => ['adminpage', 'tambahdata', 'tambahGallery', 'tambahdokumen']],
+		'login' => [
+			'before' => [
+				'adminpage',
+				'tambahdata',
+				'opk/edit/*',
+				'opk/delete/*/*',
+				'tambahGallery',
+				'tambahdokumen',
+				'deleteGallery/*',
+				'dokumen/delete/*'
+			]
+		],
 	];
 }
