@@ -5,7 +5,7 @@
 </div>
 <div class="container ">
     <?php if (logged_in()) : ?>
-        <a href="/tambahdata" class="btn btn-primary">Tambah data</a>
+        <a href="/tambahdatamuseum" class="btn btn-primary">Tambah data</a>
         <br></br>
     <?php endif; ?>
     <?php if (session()->getFlashData('pesan')) : ?>

@@ -56,6 +56,7 @@ $routes->get('opk/delete/(:any)/(:num)', 'AdminController::delete/$1/$2');
 $routes->get('opk/edit/(:num)', 'AdminController::edit/$1');
 $routes->get('tambahGallery', 'AdminController::tambahGallery', ['filter' => 'role:admin-pusat']);
 $routes->get('/tambahdokumen', 'AdminController::tambahDokumen', ['filter' => 'role:admin-pusat']);
+$routes->get('/tambahdatamuseum', 'AdminController::tambahMuseum', ['filter' => 'role:admin-pusat']);
 $routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
 $routes->get('deleteGallery/(:num)', 'AdminController::deleteGallery/$1');
 $routes->get('detailGallery/(:num)', 'GalleryController::detailGallery/$1');
