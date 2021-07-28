@@ -26,12 +26,12 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($museum as $museum) : ?>
-                <tr class='clickable-row' data-href='/<?= $opk['id']; ?>'>
+                <tr class='clickable-row' data-href='/<?= $museum['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
-                    <td><?= $opk['namaBenda'] ?></td>
-                    <td><?= $opk['kondisiBenda'] ?></td>
-                    <td><?= $opk['tanggalMasuk'] ?></td>
-                    <td><?= $opk['tempatPenyimpanan'] ?></td>
+                    <td><?= $museum['namaBenda'] ?></td>
+                    <td><?= $museum['kondisiBenda'] ?></td>
+                    <td><?= $museum['tanggalMasuk'] ?></td>
+                    <td><?= $museum['tempatPenyimpanan'] ?></td>
                     <td><a href="/museum/edit/<?= $museum['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/museum/delete/<?= $museum['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
