@@ -13,4 +13,8 @@ class AdminKabupatenModel extends Model
     {
         return $this->where('lokasi', $lokasi)->findAll();
     }
+    function getOtherAdmin($id){
+        $query = "SELECT * FROM users WHERE 'id' != '$id'";
+        return $this->query($query);
+    }
 }

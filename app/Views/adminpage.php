@@ -1,4 +1,3 @@
-<br><br><br>
 <div class="section-container text-center">
     <h2>WELCOME</h2>
     <a href="/" class="btn btn-primary btn-sm admin-view">Kembali ke Home</a>
@@ -6,14 +5,14 @@
     <a href="/tambahdata" class="btn btn-primary btn-sm admin-view">Tambah Data OPK</a>
     <br></br>
     <?php if (in_groups('admin-pusat')) : ?>
-        <a href="/" class="btn btn-primary btn-sm admin-view">List Admin Kabupaten/Kota</a>
+        <a href="/listAdmin" class="btn btn-primary btn-sm admin-view">List Admin Kabupaten/Kota</a>
         <br></br>
         <a href="<?= route_to('register') ?>" class="btn btn-primary btn-sm admin-view">Tambah Admin Kabupaten/Kota</a>
         <br></br>
-        <a href="/" class="btn btn-primary btn-sm admin-view">Tambah Dokumen</a>
+        <a href="/dokumen" class="btn btn-primary btn-sm admin-view">Tambah Dokumen</a>
         <br></br>
-        <a href="/" class="btn btn-primary btn-sm admin-view">Tambah Gallery</a>
+        <a href="/news" class="btn btn-primary btn-sm admin-view">Tambah Gallery</a>
         <br></br>
-        <a href="/" class="btn btn-primary btn-sm admin-view">Tambah Kegiatan</a>
+        <a href="/kegiatan" class="btn btn-primary btn-sm admin-view">Tambah Kegiatan</a>
     <?php endif; ?>
 </div>

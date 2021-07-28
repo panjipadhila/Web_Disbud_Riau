@@ -46,6 +46,7 @@ $routes->get('dokumen/delete/(:num)', 'AdminController::deleteDokumen/$1');
 //$routes->get('loginadmin', 'AdminController::loginadmin');
 $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('tambahdata', 'AdminController::tambah');
+$routes->get('listAdmin', 'AdminController::listAdmin');
 //$routes->get('register', 'AdminController::register');
 $routes->get('(:num)', 'DataOpkController::detail/$1');
 $routes->get('kegiatan/(:num)', 'DataKegiatanController::detail/$1');
@@ -59,6 +60,7 @@ $routes->get('/tambahdokumen', 'AdminController::tambahDokumen', ['filter' => 'r
 $routes->get('/tambahdatamuseum', 'AdminController::tambahMuseum', ['filter' => 'role:admin-pusat']);
 $routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
 $routes->get('deleteGallery/(:num)', 'AdminController::deleteGallery/$1');
+$routes->get('deleteUsers/(:num)', 'AdminController::deleteUsers/$1');
 $routes->get('detailGallery/(:num)', 'GalleryController::detailGallery/$1');
 $routes->get('museum/delete/(:num)', 'AdminController::deleteMuseum/$1');
 $routes->get('museum/edit/(:num)', 'AdminController::editMuseum/$1');

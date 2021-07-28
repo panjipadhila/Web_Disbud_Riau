@@ -6,6 +6,7 @@ use \App\Models\DataOpkModel;
 use App\Models\GalleryModel;
 use App\Models\DataDokumenModel;
 use App\Models\DataMuseumModel;
+use App\Models\AdminKabupatenModel;
 use DateTime;
 
 class AdminController extends BaseController
@@ -19,6 +20,7 @@ class AdminController extends BaseController
         $this->galleryModel = new GalleryModel();
         $this->dokumenModel = new DataDokumenModel();
         $this->museumModel = new DataMuseumModel();
+        $this->adminModel = new AdminKabupatenModel();
     }
     function adminpage()
     {
@@ -29,7 +31,20 @@ class AdminController extends BaseController
         echo view('adminpage', $data);
         echo view('footer');
     }
-
+    public function listAdmin()
+	{
+        $session = session();
+		// $users = $this->adminModel->getOtherAdmin($session->get('id'));
+        $users = $this->adminModel->findAll();
+		$data = [
+			'title' => 'Deskripsi | Web Disbud Riau',
+			'users' => $users
+		];
+		echo view('headerWithBootstrap', $data);
+		echo $this->userdata();
+        //echo view('listAdmin', $data);
+		echo view('footer');
+	}
     function tambah()
     {
         $data = [
@@ -550,5 +565,12 @@ class AdminController extends BaseController
         
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
+    }
+    function deleteUsers($id)
+    {
+        $users = $this->adminModel->find($id);
+        $this->adminModel->delete($id);
+        session()->setFlashData('pesan', 'User berhasil dihapus');
+        return redirect()->to('/listAdmin');
     }
 }
