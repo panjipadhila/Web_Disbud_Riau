@@ -32,19 +32,17 @@ class AdminController extends BaseController
         echo view('footer');
     }
     public function listAdmin()
-	{
-        $session = session();
-		// $users = $this->adminModel->getOtherAdmin($session->get('id'));
+    {
+        // $users = $this->adminModel->getOtherAdmin($session->get('id'));
         $users = $this->adminModel->findAll();
-		$data = [
-			'title' => 'Deskripsi | Web Disbud Riau',
-			'users' => $users
-		];
-		echo view('headerWithBootstrap', $data);
-		echo $this->userdata();
-        //echo view('listAdmin', $data);
-		echo view('footer');
-	}
+        $data = [
+            'title' => 'Deskripsi | Web Disbud Riau',
+            'users' => $users
+        ];
+        echo view('headerWithBootstrap', $data);
+        echo view('listAdmin', $data);
+        echo view('footer');
+    }
     function tambah()
     {
         $data = [
@@ -163,7 +161,7 @@ class AdminController extends BaseController
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
     }
-    
+
     function tambahGallery()
     {
         $data = [
@@ -182,13 +180,13 @@ class AdminController extends BaseController
         echo view('tambahDokumenView');
         echo view('footer');
     }
-    
+
     function saveDokumen()
     {
         $file = $this->request->getfile('file');
         $namafile = $file->getName();
         $file->move('assets/dokumen', $namafile);
-        
+
         $this->dokumenModel->save([
             'nama' => $this->request->getVar('judul'),
             'file' => $namafile
@@ -197,7 +195,7 @@ class AdminController extends BaseController
         session()->setFlashData('pesan', 'Dokumen berhasil diinputkan');
         return redirect()->to($target);
     }
-    
+
     function deleteDokumen($id)
     {
         $file = $this->dokumenModel->find($id);
@@ -206,50 +204,50 @@ class AdminController extends BaseController
         session()->setFlashData('pesan', 'Dokumen berhasil dihapus');
         return redirect()->to('/dokumen');
     }
-    
+
     function saveGallery()
     {
         // if ($this->request->getVar('foto') == null) {
-            //     $foto = 'image-not-found.svg';
-            // } else {
-                //     $foto = $this->request->getVar('foto');
-                // }
-                if ($this->request->getFile("foto") == null) {
-                    $foto = 'image-not-found.svg';
-                } else {
-                    $filefoto = $this->request->getFile("foto");
-                    $foto = $filefoto->getRandomName();
-                    $filefoto->move('doc/gallery', $foto);
-                }
-                $this->galleryModel->save([
-                    'judul' => $this->request->getVar('judul'),
-                    'isi' => $this->request->getVar('isi'),
-                    'created_at' => date("Y-m-d H:i:s"),
-                    'penulis' => $this->request->getVar('penulis'),
-                    'foto' => $foto
-                ]);
-                $target = '/news';
-                session()->setFlashData('pesan', 'Gallery berhasil diinputkan');
-                return redirect()->to($target);
-            }
-            function deleteGallery($id)
-            {
-                $file = $this->galleryModel->find($id);
-                unlink('doc/gallery/' . $file['foto']);
-                $this->galleryModel->delete($id);
-                session()->setFlashData('pesan', 'Gallery berhasil dihapus');
-                return redirect()->to('/news');
-            }
-            // function register()
-            // {
-                //     $data = [
-                    //         'title' => 'Admin | Web Disbud Riau',
-                    //     ];
-                    //     echo view('register', $data);
-                    // }
-                    // function login()
-                    // {
-                        //     $data = [
+        //     $foto = 'image-not-found.svg';
+        // } else {
+        //     $foto = $this->request->getVar('foto');
+        // }
+        if ($this->request->getFile("foto") == null) {
+            $foto = 'image-not-found.svg';
+        } else {
+            $filefoto = $this->request->getFile("foto");
+            $foto = $filefoto->getRandomName();
+            $filefoto->move('doc/gallery', $foto);
+        }
+        $this->galleryModel->save([
+            'judul' => $this->request->getVar('judul'),
+            'isi' => $this->request->getVar('isi'),
+            'created_at' => date("Y-m-d H:i:s"),
+            'penulis' => $this->request->getVar('penulis'),
+            'foto' => $foto
+        ]);
+        $target = '/news';
+        session()->setFlashData('pesan', 'Gallery berhasil diinputkan');
+        return redirect()->to($target);
+    }
+    function deleteGallery($id)
+    {
+        $file = $this->galleryModel->find($id);
+        unlink('doc/gallery/' . $file['foto']);
+        $this->galleryModel->delete($id);
+        session()->setFlashData('pesan', 'Gallery berhasil dihapus');
+        return redirect()->to('/news');
+    }
+    // function register()
+    // {
+    //     $data = [
+    //         'title' => 'Admin | Web Disbud Riau',
+    //     ];
+    //     echo view('register', $data);
+    // }
+    // function login()
+    // {
+    //     $data = [
     //         'title' => 'Login Admin | Web Disbud Riau',
     //     ];
     //     echo view('headerFixedTop', $data);
@@ -267,8 +265,8 @@ class AdminController extends BaseController
     }
     function saveMuseum()
     {
-        
-    
+
+
         if ($this->request->getFile("gambar") == null) {
             $foto = 'image-not-found.svg';
         } else {
@@ -276,7 +274,7 @@ class AdminController extends BaseController
             $foto = $filefoto->getRandomName();
             $filefoto->move('assets/museum-images', $foto);
         }
-    
+
         if ($this->request->getVar('namaBenda') == null) {
             $namaBenda = 'Belum ada deskripsi';
         } else {
@@ -372,7 +370,7 @@ class AdminController extends BaseController
         } else {
             $gambar = $this->request->getVar('gambar');
         }
-    
+
         $this->museumModel->save([
             'namaBenda' => $namaBenda,
             'uraian' => $uraian,
@@ -393,10 +391,10 @@ class AdminController extends BaseController
             'tanggal' => $tanggal,
             'lainnya' => $lainnya,
             'gambar' => $gambar
-    
+
         ]);
-            $target = '/museum';
-        
+        $target = '/museum';
+
         session()->setFlashData('pesan', 'Data berhasil diinputkan');
         return redirect()->to($target);
     }
@@ -410,7 +408,7 @@ class AdminController extends BaseController
         session()->setFlashData('pesan', 'Data berhasil dihapus');
         return redirect()->to('/dataMuseum/');
     }
-    
+
     function editMuseum($id)
     {
         $museum = $this->museumModel->find($id);
@@ -537,7 +535,7 @@ class AdminController extends BaseController
         } else {
             $gambar = $this->request->getVar('gambar');
         }
-    
+
         $this->museumModel->save([
             'namaBenda' => $namaBenda,
             'uraian' => $uraian,
@@ -558,19 +556,22 @@ class AdminController extends BaseController
             'tanggal' => $tanggal,
             'lainnya' => $lainnya,
             'gambar' => $gambar
-    
+
         ]);
-        
-            $target = '/DataMuseum';
-        
+
+        $target = '/DataMuseum';
+
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
     }
     function deleteUsers($id)
     {
-        $users = $this->adminModel->find($id);
-        $this->adminModel->delete($id);
-        session()->setFlashData('pesan', 'User berhasil dihapus');
-        return redirect()->to('/listAdmin');
+        if (user_id() != $id) {
+            $this->adminModel->delete($id);
+            session()->setFlashData('pesan', 'Admin berhasil dihapus');
+        } else {
+            session()->setFlashData('pesan', 'Tidak bisa menghapus akun sendiri');
+            return redirect()->back();
+        }
     }
 }
