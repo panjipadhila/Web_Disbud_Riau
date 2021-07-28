@@ -30,35 +30,40 @@
     <h2>Kategori Inventaris Museum</h2>
     <div class="row">
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Geologika" class="btn btn-primary">Geologika</a></p>
+            <p><a href="kategoriMuseum/Geologika" class="btn btn-primary museum-btn-view">Geologika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Biologika" class="btn btn-primary">Biologika</a></p>
+            <p><a href="kategoriMuseum/Biologika" class="btn btn-primary museum-btn-view">Biologika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Etnologika" class="btn btn-primary">EtnoLogika</a></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Arkeologika" class="btn btn-primary">Arkeologika</a></p>
-        </div>
-        <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Historika" class="btn btn-primary">Historika</a></p>
-        </div>
-        <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Katalogisasi" class="btn btn-primary">Katalogisasi Nasional</a></p>
+            <p><a href="kategoriMuseum/Etnologika" class="btn btn-primary museum-btn-view">EtnoLogika</a></p>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Keramik" class="btn btn-primary">Keramik</a></p>
+            <p><a href="kategoriMuseum/Arkeologika" class="btn btn-primary museum-btn-view">Arkeologika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Senirupa" class="btn btn-primary">Seni Rupa</a></p>
+            <p><a href="kategoriMuseum/Historika" class="btn btn-primary museum-btn-view">Historika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Teknologika" class="btn btn-primary">Teknologika</a></p>
+            <p><a href="kategoriMuseum/Katalogisasi" class="btn btn-primary museum-btn-view">Katalogisasi Nasional</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <p><a href="kategoriMuseum/Keramik" class="btn btn-primary museum-btn-view">Keramik</a></p>
+        </div>
+        <div class="col-sm-4">
+            <p><a href="kategoriMuseum/Senirupa" class="btn btn-primary museum-btn-view">Seni Rupa</a></p>
+        </div>
+        <div class="col-sm-4">
+            <p><a href="kategoriMuseum/Teknologika" class="btn btn-primary museum-btn-view">Teknologika</a></p>
+        </div>
+    </div>
+    <div class="row text-center" >
+        <div style="width:100%;" >
+            <p><a href="kategoriMuseum/NumismatikaDanHeraldika" class="btn btn-primary museum-btn-view" >Numismatika dan Heraldika</a></p>
         </div>
     </div>
 </div>
