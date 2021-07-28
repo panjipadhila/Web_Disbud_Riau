@@ -39,7 +39,7 @@
                             <div class="card-footer">
                                 <b><?= $elements['username']; ?></b><br>
                                 <p style="width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" class="card-text"><?= $elements['email']; ?></p>
-                                <a href="/deleteUsers/<?= $elements['id']; ?>" class="btn btn-info" onclick="return confirm('Yakin ingin menghapus Admin ini?')">Hapus user</a>
+                                <a href="/deleteUsers/<?= $elements['id']; ?>" class="btn btn-info" onclick="return confirm('Yakin ingin menghapus Admin ini?')">Hapus Admin</a>
                             </div>
                         </div>
                     </div>
