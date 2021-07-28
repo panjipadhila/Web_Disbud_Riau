@@ -67,6 +67,26 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="save">Jenis</label>
+                        <span style="display:inline-block;width:24px;"></span>
+                            <select name="jenis" id="jenis">
+                                <option>Pilih Kabupaten</option>
+                                <option>Biologika</option>
+                                <option>Arkeologika</option>
+                                <option>Geologika</option>
+                                <option>Keramik</option>
+                                <option>Historika</option>
+                                <option>Seni Rupa</option>
+                                <option>EtnoLogika</option>
+                                <option>Katalogisasi Nasional</option>
+                                <option>Teknologika</option>
+                                <option>Pelalawan</option>
+                                <option>Kuantan Singingi</option>
+                                <option>Kepulauan Meranti</option>
+                            </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="save">Asal Buat</label>
                         <span style="display:inline-block;width:24px;"></span>
                         <?php if (in_groups('admin-kabupaten')) : ?>
