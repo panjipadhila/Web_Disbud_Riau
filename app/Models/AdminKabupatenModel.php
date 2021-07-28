@@ -8,7 +8,6 @@ class AdminKabupatenModel extends Model
 {
     protected $table = 'users';
     protected $primarykey = 'id';
-    protected $allowedFields = ['username', 'lokasi'];
 
     function getDataKabupaten($lokasi)
     {
