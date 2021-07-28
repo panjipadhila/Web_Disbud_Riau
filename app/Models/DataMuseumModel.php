@@ -8,7 +8,7 @@ class DataMuseumModel extends Model
 {
     protected $table = 'museum';
     protected $primarykey = 'id';
-    protected $allowedFields = ['namaBenda', 'uraian', 'noInvestarisLama', 'noInvestarisBaru', 'noRegister', 'bahan', 'bentuk', 'fungsi', 'ukuran', 'asalBuat', 'asalDapat', 'caraDapat', 'tanggalMasuk','kondisiBenda', 'tempatPenyimpanan', 'dicatatOleh', 'tanggal', 'lainnya', 'gambar'];
+    protected $allowedFields = ['namaBenda', 'uraian', 'noInventarisLama', 'noInventarisBaru', 'noRegister', 'bahan', 'bentuk', 'fungsi', 'ukuran', 'asalBuat', 'asalDapat', 'caraDapat', 'tanggalMasuk','kondisiBenda', 'tempatPenyimpanan', 'dicatatOleh', 'tanggal', 'lainnya', 'gambar'];
     public function getMuseum()
     {
         return $this->findAll();

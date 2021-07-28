@@ -5,6 +5,7 @@ namespace App\Controllers;
 use \App\Models\DataOpkModel;
 use App\Models\GalleryModel;
 use App\Models\DataDokumenModel;
+use App\Models\DataMuseumModel;
 use DateTime;
 
 class AdminController extends BaseController
@@ -246,7 +247,7 @@ class AdminController extends BaseController
             'title' => 'Tambah data'
         ];
         echo view('headerFixedTop', $data);
-        echo view('tambahMuseumView');
+        echo view('TambahMuseumView');
         echo view('footer');
     }
     function saveMuseum()
@@ -271,12 +272,12 @@ class AdminController extends BaseController
         } else {
             $uraian = $this->request->getVar('uraian');
         }
-        if ($this->request->getVar('noInvestarisLama') == null) {
+        if ($this->request->getVar('noInventarisLama') == null) {
             $noInvestarisLama = 'Belum ada deskripsi';
         } else {
             $noInvestarisLama = $this->request->getVar('noInvestarisLama');
         }
-        if ($this->request->getVar('noInvestarisBaru') == null) {
+        if ($this->request->getVar('noInventarisBaru') == null) {
             $noInvestarisBaru = 'Belum ada deskripsi';
         } else {
             $noInvestarisBaru = $this->request->getVar('noInvestarisBaru');
@@ -379,7 +380,7 @@ class AdminController extends BaseController
             'gambar' => $gambar
     
         ]);
-            $target = '/dataMuseum';
+            $target = '/museum';
         
         session()->setFlashData('pesan', 'Data berhasil diinputkan');
         return redirect()->to($target);
