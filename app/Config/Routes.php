@@ -42,11 +42,11 @@ $routes->get('kegiatan', 'DataKegiatanController::getAllKegiatan');
 $routes->get('dokumen', 'DokumenController::index');
 $routes->get('dokumen/download/(:num)', 'DokumenController::download/$1');
 $routes->get('dokumen/readOnline/(:num)', 'DokumenController::open/$1');
-$routes->get('dokumen/delete/(:num)', 'AdminController::deleteDokumen/$1');
+$routes->get('dokumen/delete/(:num)', 'AdminController::deleteDokumen/$1', ['filter' => 'role:admin-pusat']);
 //$routes->get('loginadmin', 'AdminController::loginadmin');
 $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('tambahdata', 'AdminController::tambah');
-$routes->get('listAdmin', 'AdminController::listAdmin');
+$routes->get('listAdmin', 'AdminController::listAdmin', ['filter' => 'role:admin-pusat']);
 //$routes->get('register', 'AdminController::register');
 $routes->get('(:num)', 'DataOpkController::detail/$1');
 $routes->get('kegiatan/(:num)', 'DataKegiatanController::detail/$1');
@@ -59,11 +59,11 @@ $routes->get('tambahGallery', 'AdminController::tambahGallery', ['filter' => 'ro
 $routes->get('/tambahdokumen', 'AdminController::tambahDokumen', ['filter' => 'role:admin-pusat']);
 $routes->get('/tambahdatamuseum', 'AdminController::tambahMuseum', ['filter' => 'role:admin-pusat']);
 $routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
-$routes->get('deleteGallery/(:num)', 'AdminController::deleteGallery/$1');
-$routes->get('deleteUsers/(:num)', 'AdminController::deleteUsers/$1');
+$routes->get('deleteGallery/(:num)', 'AdminController::deleteGallery/$1', ['filter' => 'role:admin-pusat']);
+$routes->get('deleteUsers/(:num)', 'AdminController::deleteUsers/$1', ['filter' => 'role:admin-pusat']);
 $routes->get('detailGallery/(:num)', 'GalleryController::detailGallery/$1');
-$routes->get('museum/delete/(:num)', 'AdminController::deleteMuseum/$1');
-$routes->get('museum/edit/(:num)', 'AdminController::editMuseum/$1');
+$routes->get('museum/delete/(:num)', 'AdminController::deleteMuseum/$1', ['filter' => 'role:admin-pusat']);
+$routes->get('museum/edit/(:num)', 'AdminController::editMuseum/$1', ['filter' => 'role:admin-pusat']);
 /*
 $routes->group('', ['filter' => 'login'], function($routes){
     $routes->get('adminpage', 'AdminController::adminpage');

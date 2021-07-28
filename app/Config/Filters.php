@@ -73,7 +73,8 @@ class Filters extends BaseConfig
 				'tambahGallery',
 				'tambahdokumen',
 				'deleteGallery/*',
-				'dokumen/delete/*'
+				'dokumen/delete/*',
+				'deleteUsers/*',
 			]
 		],
 	];
