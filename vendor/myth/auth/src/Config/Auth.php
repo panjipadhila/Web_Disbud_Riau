@@ -17,7 +17,7 @@ class Auth extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $defaultUserGroup = 'admin-pusat';
+	public $defaultUserGroup;
 
 	/**
 	 * --------------------------------------------------------------------
@@ -67,6 +67,7 @@ class Auth extends BaseConfig
 	 * @var string[]
 	 */
 	public $validFields = [
+		'lokasi',
 		'email',
 		'username'
 	];
@@ -165,8 +166,8 @@ class Auth extends BaseConfig
 	 *
 	 * @var string|null Name of the ResetterInterface class
 	 */
-	// public $activeResetter = 'Myth\Auth\Authentication\Resetters\EmailResetter';
-	public $activeResetter = false;
+	public $activeResetter = 'Myth\Auth\Authentication\Resetters\EmailResetter';
+	//public $activeResetter = false;
 
 	/**
 	 * --------------------------------------------------------------------

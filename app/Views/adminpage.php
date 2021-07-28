@@ -1,17 +1,19 @@
 <br><br><br>
 <div class="section-container text-center">
     <h2>WELCOME</h2>
-    <a href="/" class="btn btn-primary btn-sm">Kembali ke Home</a>
+    <a href="/" class="btn btn-primary btn-sm admin-view">Kembali ke Home</a>
     <br></br>
-    <a href="/tambahdata" class="btn btn-primary btn-sm">Tambah Data OPK</a>
+    <a href="/tambahdata" class="btn btn-primary btn-sm admin-view">Tambah Data OPK</a>
     <br></br>
     <?php if (in_groups('admin-pusat')) : ?>
-        <a href="/" class="btn btn-primary btn-sm">List Admin Kabupaten/Kota</a>
+        <a href="/" class="btn btn-primary btn-sm admin-view">List Admin Kabupaten/Kota</a>
         <br></br>
-        <a href="/" class="btn btn-primary btn-sm">Tambah Dokumen</a>
+        <a href="<?= route_to('register') ?>" class="btn btn-primary btn-sm admin-view">Tambah Admin Kabupaten/Kota</a>
         <br></br>
-        <a href="/" class="btn btn-primary btn-sm">Tambah Gallery</a>
+        <a href="/" class="btn btn-primary btn-sm admin-view">Tambah Dokumen</a>
         <br></br>
-        <a href="/" class="btn btn-primary btn-sm">Tambah Kegiatan</a>
+        <a href="/" class="btn btn-primary btn-sm admin-view">Tambah Gallery</a>
+        <br></br>
+        <a href="/" class="btn btn-primary btn-sm admin-view">Tambah Kegiatan</a>
     <?php endif; ?>
 </div>

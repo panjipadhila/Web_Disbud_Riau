@@ -11,7 +11,7 @@ use Myth\Auth\Models\UserModel;
 class AuthController extends Controller
 {
 	protected $auth;
-
+	protected $helpers = ['auth'];
 	/**
 	 * @var AuthConfig
 	 */
@@ -121,7 +121,7 @@ class AuthController extends Controller
 	public function register()
 	{
 		// check if already logged in.
-		if ($this->auth->check()) {
+		if (!in_groups('admin-pusat')) {
 			return redirect()->back();
 		}
 
@@ -148,6 +148,7 @@ class AuthController extends Controller
 		// Validate here first, since some things,
 		// like the password, can only be validated properly here.
 		$rules = [
+			'lokasi'		=> 'required',
 			'username'  	=> 'required|alpha_numeric_space|min_length[3]|max_length[30]|is_unique[users.username]',
 			'email'			=> 'required|valid_email|is_unique[users.email]',
 			'password'	 	=> 'required',
@@ -164,9 +165,11 @@ class AuthController extends Controller
 
 		$this->config->requireActivation === null ? $user->activate() : $user->generateActivateHash();
 
-		// Ensure default group gets assigned if set
-		if (!empty($this->config->defaultUserGroup)) {
-			$users = $users->withGroup($this->config->defaultUserGroup);
+		// Set group sesuai lokasi
+		if ($this->request->getVar('lokasi') == "Admin Provinsi") {
+			$users = $users->withGroup('admin-pusat');
+		} else {
+			$users = $users->WithGroup('admin-kabupaten');
 		}
 
 		if (!$users->save($user)) {

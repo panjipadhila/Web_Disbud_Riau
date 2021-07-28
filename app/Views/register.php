@@ -63,92 +63,113 @@
             </div>
         </nav>
     </header>
-<div class="section-container">
-    <div class="container text-left">
+    <div class="section-container">
+        <div class="container text-left">
 
-        <h2 class="card-header"><?=lang('Auth.register')?></h2>
-        <div class="card-small">
-                    <?= view('Myth\Auth\Views\_message_block') ?>
-                    <form action="<?= route_to('register') ?>" method="post">
-                        <?= csrf_field() ?>
-                        <div class="form-group">
-                            <label for="email"><?=lang('Auth.email')?></label>
-                            <input type="email" class="form-control <?php if(session('errors.email')) : ?>is-invalid<?php endif ?>"
-                                   name="email" aria-describedby="emailHelp" placeholder="<?=lang('Auth.email')?>" value="<?= old('email') ?>">
-                            <small id="emailHelp" class="form-text text-muted"><?=lang('Auth.weNeverShare')?></small>
-                        </div>
+            <h2 class="card-header" style="text-align:center;"><?= lang('Auth.register') ?></h2>
+            <div class="card-small">
+                <?= view('Myth\Auth\Views\_message_block') ?>
+                <form action="<?= route_to('register') ?>" method="post">
+                    <?= csrf_field() ?>
 
-                        <div class="form-group">
-                            <label for="username"><?=lang('Auth.username')?></label>
-                            <input type="text" class="form-control <?php if(session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password"><?=lang('Auth.password')?></label>
-                            <input type="password" name="password" class="form-control <?php if(session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>" autocomplete="off">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="pass_confirm"><?=lang('Auth.repeatPassword')?></label>
-                            <input type="password" name="pass_confirm" class="form-control <?php if(session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.repeatPassword')?>" autocomplete="off">
-                        </div>
-
-                        <br>
-
-                        <button type="submit" class="btn btn-primary btn-block"><?=lang('Auth.register')?></button>
-                    </form>
-
-
-                    <hr>
-
-                    <p><?=lang('Auth.alreadyRegistered')?> <a href="<?= route_to('login') ?>"><?=lang('Auth.signIn')?></a></p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<footer class="footer-container white-text-container">
-    <div class="container">
-        <div class="row">
-
-
-            <div class="col-xs-12">
-                <h5>DINAS KEBUDAYAAN PROVINSI RIAU</h5>
-                <p>Jln. Jenderal Sudirman No. 194 <br> Tangkerang - Pekanbaru - Riau <br> Kode Pos 28128 <br> Email: <a href="mailto:disbud@riau.go.id">disbud@riau.go.id</a>
-                </p>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-7">
-                        <!-- <p><small>Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small>
-                        </p> -->
-                        <p class="text-left">
-                            <a href="https://facebook.com/Dinas-Kebudayaan-Provinsi-Riau-251250921989219/" class="social-round-icon white-round-icon fa-icon" title="">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-
-                            <a href="https://www.instagram.com/disbud.provriau/" class="social-round-icon white-round-icon fa-icon" title="">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </p>
+                    <div class="form-group">
+                        <label for="lokasi">Lokasi Admin</label>
+                        <span style="display:inline-block;width:24px;"></span>
+                        <select name="lokasi" id="lokasi">
+                            <option>Admin Provinsi</option>
+                            <option>Pekanbaru</option>
+                            <option>Kampar</option>
+                            <option>Siak Sri Indrapura</option>
+                            <option>Rokan Hulu</option>
+                            <option>Rokan Hilir</option>
+                            <option>Indragiri Hulu</option>
+                            <option>Indragiri Hilir</option>
+                            <option>Bengkalis</option>
+                            <option>Dumai</option>
+                            <option>Pelalawan</option>
+                            <option>Kuantan Singingi</option>
+                            <option>Kepulauan Meranti</option>
+                        </select>
                     </div>
-                   
-                </div>
 
 
+                    <div class="form-group">
+                        <label for="email"><?= lang('Auth.email') ?></label>
+                        <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" aria-describedby="emailHelp" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">
+                        <small id="emailHelp" class="form-text text-muted"><?= lang('Auth.weNeverShare') ?></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username"><?= lang('Auth.username') ?></label>
+                        <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"><?= lang('Auth.password') ?></label>
+                        <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass_confirm"><?= lang('Auth.repeatPassword') ?></label>
+                        <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.repeatPassword') ?>" autocomplete="off">
+                    </div>
+
+                    <br>
+
+                    <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.register') ?></button>
+                </form>
+
+
+                <hr>
+
+                <p><?= lang('Auth.alreadyRegistered') ?> <a href="<?= route_to('login') ?>"><?= lang('Auth.signIn') ?></a></p>
             </div>
         </div>
+
     </div>
-</footer>
+    </div>
+    </div>
+    <footer class="footer-container white-text-container">
+        <div class="container">
+            <div class="row">
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        navActivePage();
-        scrollRevelation('.reveal');
-    });
-</script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+                <div class="col-xs-12">
+                    <h5>DINAS KEBUDAYAAN PROVINSI RIAU</h5>
+                    <p>Jln. Jenderal Sudirman No. 194 <br> Tangkerang - Pekanbaru - Riau <br> Kode Pos 28128 <br> Email: <a href="mailto:disbud@riau.go.id">disbud@riau.go.id</a>
+                    </p>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-7">
+                            <!-- <p><small>Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small>
+                        </p> -->
+                            <p class="text-left">
+                                <a href="https://facebook.com/Dinas-Kebudayaan-Provinsi-Riau-251250921989219/" class="social-round-icon white-round-icon fa-icon" title="">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/disbud.provriau/" class="social-round-icon white-round-icon fa-icon" title="">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            navActivePage();
+            scrollRevelation('.reveal');
+        });
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
 
 <script>
   (function (i, s, o, g, r, a, m) {
@@ -162,7 +183,7 @@
 </script>
 
 -->
-<script type="text/javascript" src="./main.0cf8b554.js"></script>
+    <script type="text/javascript" src="./main.0cf8b554.js"></script>
 </body>
 
 </html>
