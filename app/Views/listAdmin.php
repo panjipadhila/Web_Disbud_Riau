@@ -20,7 +20,9 @@
     </div>
 </div>
 <div class="container">
-
+    <?php if (session()->getFlashData('pesan')) : ?>
+        <div class="alert alert-success" role="alert"><?= session()->getFlashData('pesan'); ?></div>
+    <?php endif; ?>
     <div class=" row-fluid ">
 
         <?php foreach ($users as $elements) : ?>
@@ -37,7 +39,7 @@
                             <div class="card-footer">
                                 <b><?= $elements['username']; ?></b><br>
                                 <p style="width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" class="card-text"><?= $elements['email']; ?></p>
-                                <a href="/deleteUsers/<?= $elements['id']; ?>" class="btn btn-info">Hapus user</a>
+                                <a href="/deleteUsers/<?= $elements['id']; ?>" class="btn btn-info" onclick="return confirm('Yakin ingin menghapus Admin ini?')">Hapus user</a>
                             </div>
                         </div>
                     </div>

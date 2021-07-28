@@ -569,6 +569,7 @@ class AdminController extends BaseController
         if (user_id() != $id) {
             $this->adminModel->delete($id);
             session()->setFlashData('pesan', 'Admin berhasil dihapus');
+            return redirect()->to('/listAdmin');
         } else {
             session()->setFlashData('pesan', 'Tidak bisa menghapus akun sendiri');
             return redirect()->back();

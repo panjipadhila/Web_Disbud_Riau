@@ -185,11 +185,13 @@ class AuthController extends Controller
 			}
 
 			// Success!
-			return redirect()->route('login')->with('message', lang('Auth.activationSuccess'));
+			session()->setFlashData('pesan', 'Admin berhasil ditambah');
+			return redirect()->to('/listAdmin');
 		}
 
 		// Success!
-		return redirect()->route('login')->with('message', lang('Auth.registerSuccess'));
+		session()->setFlashData('pesan', 'Admin berhasil ditambah');
+		return redirect()->to('/listAdmin');
 	}
 
 	//--------------------------------------------------------------------
