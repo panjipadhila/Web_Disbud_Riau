@@ -8,7 +8,7 @@
           <li class="list-group-item"><?= $news['created_at'] ?></li>
         </ul>
 
-        <img src="/doc/gallery/<?= $news['foto']; ?>" class="card-img-bottom">
+        <img style="width:70rem" src="/doc/gallery/<?= $news['foto']; ?>" class="card-img-bottom">
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><?= $news['isi'] ?></li>
         </ul>

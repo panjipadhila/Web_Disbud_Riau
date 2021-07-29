@@ -16,7 +16,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
     <link href="/assets/favicon.ico" rel="icon">
 
-    <link href="" rel="stylesheet">
 
     <title><?= $title; ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
