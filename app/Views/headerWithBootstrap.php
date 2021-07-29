@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="/DropdownMenu.js"></script>
+    
+
 
 </head>
 
@@ -61,8 +63,8 @@
                             <div class="dropdown-menu" aria-labelledby="navbar-secDropdown">
                                 <ul class="list-unstyled">
                                     <li><a href="/opk" title="">OPK</a></li>
-                                    <li><a href="museum" title="">Museum</a></li>
-                                    <li><a href="dokumen" title="">Dokumen</a></li>
+                                    <li><a href="/museum" title="">Museum</a></li>
+                                    <li><a href="/dokumen" title="">Dokumen</a></li>
                                 </ul>
                             </div>
                         </li>

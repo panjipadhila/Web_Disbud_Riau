@@ -36,7 +36,7 @@
             <p><a href="kategoriMuseum/Biologika" class="btn btn-primary museum-btn-view">Biologika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Etnologika" class="btn btn-primary museum-btn-view">EtnoLogika</a></p>
+            <p><a href="kategoriMuseum/Etnografika" class="btn btn-primary museum-btn-view">Etnografika</a></p>
         </div>
     </div>
     <div class="row">
@@ -47,15 +47,15 @@
             <p><a href="kategoriMuseum/Historika" class="btn btn-primary museum-btn-view">Historika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Katalogisasi" class="btn btn-primary museum-btn-view">Katalogisasi Nasional</a></p>
+            <p><a href="kategoriMuseum/Katalogisasi" class="btn btn-primary museum-btn-view">Katalogisasi Naskah</a></p>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Keramik" class="btn btn-primary museum-btn-view">Keramik</a></p>
+            <p><a href="kategoriMuseum/Keramologika" class="btn btn-primary museum-btn-view">Keramik</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Senirupa" class="btn btn-primary museum-btn-view">Seni Rupa</a></p>
+            <p><a href="kategoriMuseum/Seni Rupa" class="btn btn-primary museum-btn-view">Seni Rupa</a></p>
         </div>
         <div class="col-sm-4">
             <p><a href="kategoriMuseum/Teknologika" class="btn btn-primary museum-btn-view">Teknologika</a></p>

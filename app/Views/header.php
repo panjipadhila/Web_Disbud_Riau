@@ -58,8 +58,8 @@
                             <div class="dropdown-menu" aria-labelledby="navbar-mainDropdown">
                                 <ul class="list-unstyled">
                                     <li><a href="/opk" title="">OPK</a></li>
-                                    <li><a href="museum" title="">Museum</a></li>
-                                    <li><a href="dokumen" title="">Dokumen</a></li>
+                                    <li><a href="/museum" title="">Museum</a></li>
+                                    <li><a href="/dokumen" title="">Dokumen</a></li>
 
                                 </ul>
                             </div>
