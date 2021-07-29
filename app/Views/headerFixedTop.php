@@ -62,8 +62,8 @@
                             <div class="dropdown-menu" aria-labelledby="navbar-secDropdown">
                                 <ul class="list-unstyled">
                                     <li><a href="/opk" title="">OPK</a></li>
-                                    <li><a href="museum" title="">Museum</a></li>
-                                    <li><a href="dokumen" title="">Dokumen</a></li>
+                                    <li><a href="/museum" title="">Museum</a></li>
+                                    <li><a href="/dokumen" title="">Dokumen</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -71,7 +71,7 @@
                         <li><a href="/news" title="">Gallery</a></li>
                         <li><a href="/kegiatan" title="">Kegiatan</a></li>
                         <?php if (logged_in()) : ?>
-                            <li><a href="adminpage" title="">Admin</a></li>
+                            <li><a href="/adminpage" title="">Admin</a></li>
                         <?php endif; ?>
                         <!-- <li>
                             <p>
