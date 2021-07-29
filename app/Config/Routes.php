@@ -62,6 +62,7 @@ $routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
 $routes->get('deleteGallery/(:num)', 'AdminController::deleteGallery/$1', ['filter' => 'role:admin-pusat']);
 $routes->get('deleteUsers/(:num)', 'AdminController::deleteUsers/$1', ['filter' => 'role:admin-pusat']);
 $routes->get('detailGallery/(:num)', 'GalleryController::detailGallery/$1');
+$routes->get('museum/(:num)', 'DataMuseumController::detail/$1');
 $routes->get('museum/delete/(:num)', 'AdminController::deleteMuseum/$1', ['filter' => 'role:admin-pusat']);
 $routes->get('museum/edit/(:num)', 'AdminController::editMuseum/$1', ['filter' => 'role:admin-pusat']);
 /*

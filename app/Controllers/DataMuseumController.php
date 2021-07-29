@@ -19,7 +19,7 @@ class DataMuseumController extends BaseController
 		$museum = $this->MuseumModel->findAll();
 		$data = [
 			'title' => 'Data OPK | Web Disbud Riau',
-			'opk' => $museum
+			'museums' => $museum
 		];
 		echo view('headerFixedTop', $data);
 		echo view('DataMuseum', $data);
@@ -27,23 +27,23 @@ class DataMuseumController extends BaseController
 	}
 	function MuseumByJenis($jenis)
 	{
-			$museum = $this->MuseumModel->getMuseumByJenis($jenis);
-			$data = [
-				'title' => 'Data Museum | Web Disbud Riau',
-				'museum' => $museum,
-				'jenis' => $jenis
-			];
-			echo view('headerFixedTop', $data);
-			echo view('DataMuseum');
-			echo view('footer');
+		$museum = $this->MuseumModel->getMuseumByJenis($jenis);
+		$data = [
+			'title' => 'Data Museum | Web Disbud Riau',
+			'museums' => $museum,
+			'jenis' => $jenis
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DataMuseum', $data);
+		echo view('footer');
 	}
 
 	public function detail($id)
 	{
-		$museum = $this->MuseumModel->getMuseumByNo($id);
+		$museum = $this->MuseumModel->find($id);
 		$data = [
 			'title' => 'Deskripsi | Web Disbud Riau',
-			'opk' => $museum
+			'museum' => $museum
 		];
 		echo view('headerFixedTop', $data);
 		echo view('deskripsi', $data);

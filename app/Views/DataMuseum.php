@@ -25,8 +25,8 @@
         </thead>
         <tbody>
             <?php $i = 1; ?>
-            <?php foreach ($museum as $museum) : ?>
-                <tr class='clickable-row' data-href='/<?= $museum['id']; ?>'>
+            <?php foreach ($museums as $museum) : ?>
+                <tr class='clickable-row' data-href='/museum/<?= $museum['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $museum['namaBenda'] ?></td>
                     <td><?= $museum['kondisiBenda'] ?></td>
@@ -48,13 +48,13 @@
         </thead>
         <tbody>
             <?php $i = 1; ?>
-            <?php foreach ($museum as $museum) : ?>
-                <tr class='clickable-row' data-href='/<?= $museum['id']; ?>'>
+            <?php foreach ($museums as $museum) : ?>
+                <tr class='clickable-row' data-href='/museum/<?= $museum['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
-                    <td><?= $opk['namaBenda'] ?></td>
-                    <td><?= $opk['kondisiBenda'] ?></td>
-                    <td><?= $opk['tanggalMasuk'] ?></td>
-                    <td><?= $opk['tempatPenyimpanan'] ?></td>
+                    <td><?= $museum['namaBenda'] ?></td>
+                    <td><?= $museum['kondisiBenda'] ?></td>
+                    <td><?= $museum['tanggalMasuk'] ?></td>
+                    <td><?= $museum['tempatPenyimpanan'] ?></td>
 
                 </tr>
             <?php endforeach; ?>
@@ -77,7 +77,7 @@
     $(document).ready(function() {
         $('#dataTabelOpk').DataTable({
             language: {
-                searchPlaceholder: "Nama/SubKategori/Lokasi"
+                searchPlaceholder: "Nama/Jenis"
             }
         });
     });
