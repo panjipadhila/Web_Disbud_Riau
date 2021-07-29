@@ -72,7 +72,7 @@
                         <li><a href="/news" title="">Gallery</a></li>
                         <li><a href="/kegiatan" title="">Kegiatan</a></li>
                         <?php if (logged_in()) : ?>
-                            <li><a href="adminpage" title="">Admin</a></li>
+                            <li><a href="/adminpage" title="">Admin</a></li>
                         <?php endif; ?>
                         <!-- <li>
                             <p>
