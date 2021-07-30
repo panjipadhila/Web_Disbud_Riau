@@ -13,7 +13,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+    <link rel="icon" href="/assets/logo.png">
     <link href="/assets/favicon.ico" rel="icon">
 
 
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="/DropdownMenu.js"></script>
-    
+
 
 
 </head>
