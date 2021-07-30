@@ -46,7 +46,7 @@ class DataMuseumController extends BaseController
 			'museum' => $museum
 		];
 		echo view('headerFixedTop', $data);
-		echo view('deskripsi', $data);
+		echo view('DetailMuseum', $data);
 		echo view('footer');
 	}
 }

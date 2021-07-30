@@ -6930,5 +6930,11 @@ label {
     width: 230px;
 }
 
+.mini-header{
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 1%;
+    display: inline-block;
+}
 
 /*# sourceMappingURL=main.0cf8b554.map*/

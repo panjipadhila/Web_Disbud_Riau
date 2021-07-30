@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 col-offset-3" style="max-width:100%">
             <div class="card">
-                <form id="save" action="AdminController/saveMuseum" enctype="multipart/form-data" method="post">
+                <form id="saveMuseum" action="AdminController/saveMuseum" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                         <label for="namaopk">Nama Benda</label>
                         <input type="text" class="form-control" name="namaBenda" placeholder="nama OPK">
@@ -40,8 +40,9 @@
                         <input type="text" class="form-control" name="ukuran" placeholder="Link Video">
                     </div>
                     <div class="form-group">
-                        <label for="linkVideo">Tanggal Masuk</label>
-                        <input type="text" class="form-control" name="tanggalMasuk" placeholder="Link Video">
+                        <label for="start">Tanggal Masuk Barang</label>
+                        <span style="display:inline-block;width:10px;"></span>
+                        <input type="date" id="start" name="tanggal">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Kondisi Benda</label>
@@ -61,29 +62,26 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="start">Tanggal</label>
+                        <label for="saveMuseum">Tanggal Pencatatan</label>
                         <span style="display:inline-block;width:10px;"></span>
                         <input type="date" id="start" name="tanggal">
                     </div>
 
                     <div class="form-group">
-                        <label for="save">Jenis</label>
+                        <label for="saveMuseum">Jenis</label>
                         <span style="display:inline-block;width:24px;"></span>
-                            <select name="jenis" id="jenis">
-                                <option>Pilih Kabupaten</option>
-                                <option>Biologika</option>
-                                <option>Arkeologika</option>
-                                <option>Geologika</option>
-                                <option>Keramik</option>
-                                <option>Historika</option>
-                                <option>Seni Rupa</option>
-                                <option>EtnoLogika</option>
-                                <option>Katalogisasi Nasional</option>
-                                <option>Teknologika</option>
-                                <option>Pelalawan</option>
-                                <option>Kuantan Singingi</option>
-                                <option>Kepulauan Meranti</option>
-                            </select>
+                        <select name="jenis" id="jenis">
+                            <option>Pilih jenis inventaris</option>
+                            <option>Biologika</option>
+                            <option>Arkeologika</option>
+                            <option>Geologika</option>
+                            <option>Keramik</option>
+                            <option>Historika</option>
+                            <option>Seni Rupa</option>
+                            <option>EtnoLogika</option>
+                            <option>Katalogisasi Nasional</option>
+                            <option>Teknologika</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
@@ -94,7 +92,7 @@
                                 <option><?= user()->lokasi; ?></option>
                             </select>
                         <?php else : ?>
-                            <select name="kabupaten" id="kabupaten">
+                            <select name="asalBuat" id="kabupaten">
                                 <option>Pilih Kabupaten</option>
                                 <option>Pekanbaru</option>
                                 <option>Kampar</option>
@@ -120,7 +118,7 @@
                                 <option><?= user()->lokasi; ?></option>
                             </select>
                         <?php else : ?>
-                            <select name="kabupaten" id="kabupaten">
+                            <select name="asalDapat" id="kabupaten">
                                 <option>Pilih Kabupaten</option>
                                 <option>Pekanbaru</option>
                                 <option>Kampar</option>

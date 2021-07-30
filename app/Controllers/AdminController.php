@@ -275,6 +275,12 @@ class AdminController extends BaseController
             $filefoto->move('assets/museum-images', $foto);
         }
 
+        if ($this->request->getVar('jenis') == null) {
+            $jenis = 'Belum ada deskripsi';
+        } else {
+            $jenis = $this->request->getVar('jenis');
+        }
+
         if ($this->request->getVar('namaBenda') == null) {
             $namaBenda = 'Belum ada deskripsi';
         } else {
@@ -288,12 +294,12 @@ class AdminController extends BaseController
         if ($this->request->getVar('noInventarisLama') == null) {
             $noInvestarisLama = 'Belum ada deskripsi';
         } else {
-            $noInvestarisLama = $this->request->getVar('noInvestarisLama');
+            $noInvestarisLama = $this->request->getVar('noInventarisLama');
         }
         if ($this->request->getVar('noInventarisBaru') == null) {
             $noInvestarisBaru = 'Belum ada deskripsi';
         } else {
-            $noInvestarisBaru = $this->request->getVar('noInvestarisBaru');
+            $noInvestarisBaru = $this->request->getVar('noInventarisBaru');
         }
         if ($this->request->getVar('noRegister') == null) {
             $noRegister = 'Belum ada deskripsi';
@@ -373,6 +379,7 @@ class AdminController extends BaseController
 
         $this->museumModel->save([
             'namaBenda' => $namaBenda,
+            'jenis' => $jenis,
             'uraian' => $uraian,
             'noInvestarisLama' => $noInvestarisLama,
             'noInvestarisBaru' => $noInvestarisBaru,
