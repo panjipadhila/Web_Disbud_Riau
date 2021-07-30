@@ -6067,6 +6067,17 @@ label {
     
 }
 
+.card-opk-home{
+    height: 250px;
+    margin: 0 10% 0 10%;
+    border-radius: 10%;
+    background-color: #4ba54d;
+}
+
+.text-opk-home, h3{
+    color: white;
+}
+
 @media (min-width:992px) {
     .card {
         padding: 5rem

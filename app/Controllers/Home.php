@@ -2,18 +2,29 @@
 
 namespace App\Controllers;
 
+use \App\Models\DataOpkModel;
+
 class Home extends BaseController
 {
+	protected $OpkModel;
+
+	public function __construct()
+	{
+		$this->OpkModel = new DataOpkModel();
+	}
+
 	function index()
 	{
+		$opk = $this->OpkModel->countAll();
 		$data = [
-			'title' => 'Home | Web Disbud Riau'
+			'title' => 'Home | Web Disbud Riau',
+			'opk' => $opk
 		];
 		echo view('header', $data);
-		echo view('homepage');
+		echo view('homepage', $data);
 		echo view('footer');
 	}
-	
+
 	function components()
 	{
 		$data = [
@@ -59,8 +70,7 @@ class Home extends BaseController
 			'bidang' => $bidang
 		];
 		echo view('headerFixedTop', $data);
-		echo view('detailBidang',$data);
+		echo view('detailBidang', $data);
 		echo view('footer');
 	}
-
 }

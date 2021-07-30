@@ -64,7 +64,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-md-4">
+      <div class="col-sm-12 col-md-4">
         <img src="./assets/images/bahasa-seni.svg" alt="" class="reveal img-responsive reveal-content image-center image-size-125">
         <h3>Bidang Bahasa & Seni</h3>
         <p><a href="/detailBidang/bahasaseni" class="btn btn-primary">Detail </a></p>
@@ -101,16 +101,47 @@
     </div>
   </div>
 </div>
-<div class="container text-center">
-  <div class="map-wrapper">
-    <h2>Lokasi Dinas Kebudayaan Provinsi Riau</h2>
-    <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1571.5004993708194!2d101.4533128700024!3d0.49467570388239357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5aec052f966bf%3A0x1dd2d0617977a3ae!2sDinas%20Kebudayaan%20Provinsi%20Riau!5e0!3m2!1sid!2sid!4v1626854028784!5m2!1sid!2sid" width="1100" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<div class="section-container">
+  <div class="container text-center">
+    <div class="row section-container-spacer">
+      <div class="col-xs-12 col-md-12">
+        <h2>OBJEK PEMAJUAN KEBUDAYAAN</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card card-opk-home">
+          <h3>Jumlah Objek</h3>
+          <h3><?= $opk; ?></h3>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card card-opk-home">
+          <h3>Kategori</h3>
+          <h3>11</h3>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card card-opk-home">
+          <h3>Subkategori</h3>
+          <h3>44</h3>
+        </div>
+      </div>
+    </div>
+
   </div>
-</div>
+  <div class="row section-container-spacer">
+  </div>
+  <div class="container text-center">
+    <div class="map-wrapper">
+      <h2>LOKASI DINAS KEBUDAYAAN PROVINSI RIAU</h2>
+      <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1571.5004993708194!2d101.4533128700024!3d0.49467570388239357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5aec052f966bf%3A0x1dd2d0617977a3ae!2sDinas%20Kebudayaan%20Provinsi%20Riau!5e0!3m2!1sid!2sid!4v1626854028784!5m2!1sid!2sid" width="1100" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    navbarFixedTopAnimation();
-  });
-</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      navbarFixedTopAnimation();
+    });
+  </script>
