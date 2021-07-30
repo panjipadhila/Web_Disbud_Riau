@@ -4336,13 +4336,26 @@ tbody.collapse.in {
     margin-bottom: 0;
     border-width: 0px 0 0
 }
+@media(min-width:701px){
+    .navbar-main-brand {
+        float: left;
+        padding: 27.5px 15px;
+        font-size: 20px;
+        line-height: 25px;
+        height: 80px
+    }    
+}
 
-.navbar-main-brand {
-    float: left;
-    padding: 27.5px 15px;
-    font-size: 23px;
-    line-height: 25px;
-    height: 80px
+
+@media(max-width:700px){
+    .navbar-main-brand{
+        float: left;
+        padding: 27.5px 15px;
+        font-size: 15px;
+        line-height: 25px;
+        height: 80px
+
+    }
 }
 
 .navbar-main-brand:focus,
@@ -5121,24 +5134,35 @@ button.close {
     border: 0;
     -webkit-appearance: none
 }
+@media(min-width:694px){
+
 
 .carousel-item{
-    margin-top: 81px;
-    height: 701px;
-    size: fixed;
+    margin-top: 4.5%;
+    height:75%;
+    margin-bottom: 1px;
+    size: inherit;
 }
+}
+ @media(max-width:693px){
+    .carousel-item
+    {
+        margin-top: 15%;
+    }
+} 
+ 
 
 .carousel-caption{
-    height: 45rem;
+    height: 45%;
 }
 .carousel-item .carousel-caption{
-    margin-top: -400px ;
+    margin-top: -40% ;
 }
 .carousel-item .h5-c{
-    margin-top: -400px;
+    margin-top: -40%;
 }
 .carousel-indicators{
-    height: 11rem;
+    height: 11%;
 }
 
 
@@ -5762,7 +5786,7 @@ button.close {
 
 .background-image-container {
     text-align: center;
-    background-image: url(./assets/images/header-web.png);
+    background-image: url(./assets/images/header-web.png); 
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -6211,5 +6235,6 @@ label {
 .museum-btn-view{
     width: 250px;
 }
+
 
 /*# sourceMappingURL=main.0cf8b554.map*/
