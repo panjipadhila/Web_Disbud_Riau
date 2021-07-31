@@ -447,96 +447,121 @@ class AdminController extends BaseController
                 $foto = $museum['gambar'];
             }
         }
+        
         if ($this->request->getVar('namaBenda') == null) {
             $namaBenda = 'Belum ada deskripsi';
         } else {
             $namaBenda = $this->request->getVar('namaBenda');
         }
+
+        if ($this->request->getVar('jenis') == null) {
+            $jenis = 'Belum ada deskripsi';
+        } else {
+            $jenis = $this->request->getVar('jenis');
+        }
+
         if ($this->request->getVar('uraian') == null) {
             $uraian = 'Belum ada deskripsi';
         } else {
             $uraian = $this->request->getVar('uraian');
         }
+
         if ($this->request->getVar('noInvestarisLama') == null) {
             $noInvestarisLama = 'Belum ada deskripsi';
         } else {
             $noInvestarisLama = $this->request->getVar('noInvestarisLama');
         }
+
         if ($this->request->getVar('noInvestarisBaru') == null) {
             $noInvestarisBaru = 'Belum ada deskripsi';
         } else {
             $noInvestarisBaru = $this->request->getVar('noInvestarisBaru');
         }
+
         if ($this->request->getVar('noRegister') == null) {
             $noRegister = 'Belum ada deskripsi';
         } else {
             $noRegister = $this->request->getVar('noRegister');
         }
+
         if ($this->request->getVar('bahan') == null) {
             $bahan = 'Belum ada deskripsi';
         } else {
             $bahan = $this->request->getVar('bahan');
         }
+
         if ($this->request->getVar('bentuk') == null) {
             $bentuk = 'Belum ada deskripsi';
         } else {
             $bentuk = $this->request->getVar('bentuk');
         }
+
         if ($this->request->getVar('fungsi') == null) {
             $fungsi = 'Belum ada deskripsi';
         } else {
             $fungsi = $this->request->getVar('fungsi');
         }
+
         if ($this->request->getVar('ukuran') == null) {
             $ukuran = 'Belum ada deskripsi';
         } else {
             $ukuran = $this->request->getVar('ukuran');
         }
+
         if ($this->request->getVar('asalBuat') == null) {
             $asalBuat = 'Belum ada deskripsi';
         } else {
             $asalBuat = $this->request->getVar('asalBuat');
         }
+
         if ($this->request->getVar('asalDapat') == null) {
             $asalDapat = 'Belum ada deskripsi';
         } else {
             $asalDapat = $this->request->getVar('asalDapat');
         }
+
         if ($this->request->getVar('caraDapat') == null) {
             $caraDapat = 'Belum ada deskripsi';
         } else {
             $caraDapat = $this->request->getVar('caraDapat');
         }
+
         if ($this->request->getVar('tanggalMasuk') == null) {
             $tanggalMasuk = 'Belum ada deskripsi';
         } else {
             $tanggalMasuk = $this->request->getVar('tanggalMasuk');
         }
+
         if ($this->request->getVar('kondisiBenda') == null) {
             $kondisiBenda = 'Belum ada deskripsi';
         } else {
             $kondisiBenda = $this->request->getVar('kondisiBenda');
         }
+
         if ($this->request->getVar('tempatPenyimpanan') == null) {
             $tempatPenyimpanan = 'Belum ada deskripsi';
         } else {
             $tempatPenyimpanan = $this->request->getVar('tempatPenyimpanan');
         }
+
         if ($this->request->getVar('dicatatOleh') == null) {
             $dicatatOleh = 'Belum ada deskripsi';
         } else {
             $dicatatOleh = $this->request->getVar('dicatatOleh');
         }
+
         if ($this->request->getVar('tanggal') == null) {
             $tanggal = 'Belum ada deskripsi';
         } else {
             $tanggal = $this->request->getVar('tanggal');
         }
+
         if ($this->request->getVar('lainnya') == null) {
             $lainnya = 'Belum ada deskripsi';
         } else {
             $lainnya = $this->request->getVar('lainnya');
         }
+
         if ($this->request->getVar('gambar') == null) {
             $gambar = 'Belum ada deskripsi';
         } else {
@@ -545,6 +570,7 @@ class AdminController extends BaseController
 
         $this->museumModel->save([
             'namaBenda' => $namaBenda,
+            'jenis' => $jenis,
             'uraian' => $uraian,
             'noInvestarisLama' => $noInvestarisLama,
             'noInvestarisBaru' => $noInvestarisBaru,
