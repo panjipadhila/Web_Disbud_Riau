@@ -8,6 +8,7 @@ use App\Models\DataDokumenModel;
 use App\Models\DataMuseumModel;
 use App\Models\AdminKabupatenModel;
 use App\Models\DataNaskahModel;
+use App\Models\DataNumismatikaModel;
 use DateTime;
 
 class AdminController extends BaseController
@@ -23,6 +24,7 @@ class AdminController extends BaseController
         $this->museumModel = new DataMuseumModel();
         $this->adminModel = new AdminKabupatenModel();
         $this->NaskahModel = new DataNaskahModel();
+        $this->NumismatikaModel = new DataNumismatikaModel();
     }
     function adminpage()
     {
@@ -815,89 +817,106 @@ class AdminController extends BaseController
             'title' => 'Tambah data'
         ];
         echo view('headerFixedTop', $data);
-        echo view('TambahNaskahView');
+        echo view('TambahNumismatikaView');
         echo view('footer');
     }
     function saveNumismatika()
     {
-
-        if ($this->request->getVar('kodeNaskah') == null) {
-            $kodeNaskah = 'Belum ada deskripsi';
+        if ($this->request->getFile("foto") == null) {
+            $foto = 'image-not-found.svg';
         } else {
-            $kodeNaskah = $this->request->getVar('kodeNaskah');
+            $filefoto = $this->request->getFile("foto");
+            $foto = $filefoto->getRandomName();
+            $filefoto->move('doc/numismatika', $foto);
         }
 
-        if ($this->request->getVar('judulNaskah') == null) {
-            $judulNaskah = 'Belum ada deskripsi';
+        if ($this->request->getVar('namaKoleksi') == null) {
+            $namaKoleksi = 'Belum ada deskripsi';
         } else {
-            $judulNaskah = $this->request->getVar('judulNaskah');
+            $namaKoleksi = $this->request->getVar('namaKoleksi');
         }
-        if ($this->request->getVar('ukuranNaskah') == null) {
-            $ukuranNaskah = 'Belum ada deskripsi';
+
+        if ($this->request->getVar('noInventaris') == null) {
+            $noInventaris = 'Belum ada deskripsi';
         } else {
-            $ukuranNaskah = $this->request->getVar('ukuranNaskah');
+            $noInventaris = $this->request->getVar('noInventaris');
         }
-        if ($this->request->getVar('watermark') == null) {
-            $watermark = 'Belum ada deskripsi';
+        if ($this->request->getVar('sisiMuka') == null) {
+            $sisiMuka = 'Belum ada deskripsi';
         } else {
-            $watermark = $this->request->getVar('watermark');
+            $sisiMuka = $this->request->getVar('sisiMuka');
         }
-        if ($this->request->getVar('kondisiNaskah') == null) {
-            $kondisiNaskah = 'Belum ada deskripsi';
+        if ($this->request->getVar('sisiBelakang') == null) {
+            $sisiBelakang = 'Belum ada deskripsi';
         } else {
-            $kondisiNaskah = $this->request->getVar('kondisiNaskah');
+            $sisiBelakang = $this->request->getVar('sisiBelakang');
         }
-        if ($this->request->getVar('jumlahHalaman') == null) {
-            $jumlahHalaman = 'Belum ada deskripsi';
+        if ($this->request->getVar('emisi') == null) {
+            $emisi = 'Belum ada deskripsi';
         } else {
-            $jumlahHalaman = $this->request->getVar('jumlahHalaman');
+            $emisi = $this->request->getVar('emisi');
         }
-        if ($this->request->getVar('jumlahBarisPerHalaman') == null) {
-            $jumlahBarisPerHalaman = 'Belum ada deskripsi';
+        if ($this->request->getVar('seri') == null) {
+            $seri = 'Belum ada deskripsi';
         } else {
-            $jumlahBarisPerHalaman = $this->request->getVar('jumlahBarisPerHalaman');
+            $seri = $this->request->getVar('seri');
         }
-        if ($this->request->getVar('ilumiinasi') == null) {
-            $iluminasi = 'Belum ada deskripsi';
+
+        if ($this->request->getVar('tandaTangan') == null) {
+            $tandaTangan = 'Belum ada deskripsi';
         } else {
-            $iluminasi = $this->request->getVar('iluminasi');
+            $tandaTangan = $this->request->getVar('tandaTangan');
         }
-        if ($this->request->getVar('aksara') == null) {
-            $aksara = 'Belum ada deskripsi';
+        if ($this->request->getVar('pengaman') == null) {
+            $pengaman = 'Belum ada deskripsi';
         } else {
-            $aksara = $this->request->getVar('aksara');
+            $pengaman = $this->request->getVar('pengaman');
         }
-        if ($this->request->getVar('rubrikasi') == null) {
-            $rubrikasi = 'Belum ada deskripsi';
+        if ($this->request->getVar('mintmaster') == null) {
+            $mintmaster = 'Belum ada deskripsi';
         } else {
-            $rubrikasi = $this->request->getVar('rubrikasi');
+            $mintmaster = $this->request->getVar('mintmaster');
         }
-        if ($this->request->getVar('bahasa') == null) {
-            $bahasa = 'Belum ada deskripsi';
+        if ($this->request->getVar('mintmark') == null) {
+            $mintmark = 'Belum ada deskripsi';
         } else {
-            $bahasa = $this->request->getVar('bahasa');
+            $mintmark = $this->request->getVar('mintmark');
         }
-        if ($this->request->getVar('kolofon') == null) {
-            $kolofon = 'Belum ada deskripsi';
+        if ($this->request->getVar('masaPeredaran') == null) {
+            $masaPeredaran = 'Belum ada deskripsi';
         } else {
-            $kolofon = $this->request->getVar('kolofon');
+            $masaPeredaran = $this->request->getVar('masaPeredaran');
         }
-       
+
+        if ($this->request->getVar('delinavit') == null) {
+            $delinavit = 'Belum ada deskripsi';
+        } else {
+            $delinavit = $this->request->getVar('delinavit');
+        }
+
+        if ($this->request->getVar('ukuran') == null) {
+            $ukuran = 'Belum ada deskripsi';
+        } else {
+            $ukuran = $this->request->getVar('ukuran');
+        }
+
 
         $this->NaskahModel->save([
-            'kodeNaskah' => $kodeNaskah,
-            'judulNaskah' => $judulNaskah,
-            'ukuranNaskah' => $ukuranNaskah,
-            'watermark' => $watermark,
-            'kondisiNaskah' => $kondisiNaskah,
-            'jumlahHalaman' => $jumlahHalaman,
-            'jumlahBarisPerHalaman' => $jumlahBarisPerHalaman,
-            'iluminasi' => $iluminasi,
-            'aksara' => $aksara,
-            'rubrikasi' => $rubrikasi,
-            'bahasa' => $bahasa,
-            'kolofon' => $kolofon,
-        
+            'foto' => $foto,
+            'namaKoleksi' => $namaKoleksi,
+            'noInventaris' => $noInventaris,
+            'sisiMuka' => $sisiMuka,
+            'sisiBelakang' => $sisiBelakang,
+            'emisi' => $emisi,
+            'seri' => $seri,
+            'tandaTangan' => $tandaTangan,
+            'pengaman' => $pengaman,
+            'mintmaster' => $mintmaster,
+            'mintmark' => $mintmark,
+            'masaPeredaran' => $masaPeredaran,
+            'delinavit' => $delinavit,
+            'ukuran' => $ukuran,
+
 
         ]);
         $target = '/museum';
@@ -907,9 +926,17 @@ class AdminController extends BaseController
     }
     function deleteNumismatika($id)
     {
-        $this->museumModel->delete($id);
-        session()->setFlashData('pesan', 'Data berhasil dihapus');
-        return redirect()->to('/dataMuseum/');
+        $numismatika = $this->NumismatikaModel->find($id);
+        if ($numismatika['gambar'] != 'image-not-found.svg') {
+            unlink('assets/museum-images/' . $numismatika['foto']);
+            $this->museumModel->delete($id);
+            session()->setFlashData('pesan', 'Data berhasil dihapus');
+            return redirect()->to('/kategoriMuseum/' . $numismatika['jenis']);
+        } else {
+            $this->museumModel->delete($id);
+            session()->setFlashData('pesan', 'Data berhasil dihapus');
+            return redirect()->to('/kategoriMuseum/' . $numismatika['jenis']);
+        }
     }
 
     function editNumismatika($id)
@@ -925,88 +952,107 @@ class AdminController extends BaseController
     }
     function do_editNumismatika($id)
     {
-        if ($this->request->getVar('kodeNaskah') == null) {
-            $kodeNaskah = 'Belum ada deskripsi';
+        if ($this->request->getFile("foto") == null) {
+            $foto = 'image-not-found.svg';
         } else {
-            $kodeNaskah = $this->request->getVar('kodeNaskah');
+            $filefoto = $this->request->getFile("foto");
+            $foto = $filefoto->getRandomName();
+            $filefoto->move('doc/numismatika', $foto);
         }
 
-        if ($this->request->getVar('judulNaskah') == null) {
-            $judulNaskah = 'Belum ada deskripsi';
+        if ($this->request->getVar('namaKoleksi') == null) {
+            $namaKoleksi = 'Belum ada deskripsi';
         } else {
-            $judulNaskah = $this->request->getVar('judulNaskah');
-        }
-        if ($this->request->getVar('ukuranNaskah') == null) {
-            $ukuranNaskah = 'Belum ada deskripsi';
-        } else {
-            $ukuranNaskah = $this->request->getVar('ukuranNaskah');
-        }
-        if ($this->request->getVar('watermark') == null) {
-            $watermark = 'Belum ada deskripsi';
-        } else {
-            $watermark = $this->request->getVar('watermark');
-        }
-        if ($this->request->getVar('kondisiNaskah') == null) {
-            $kondisiNaskah = 'Belum ada deskripsi';
-        } else {
-            $kondisiNaskah = $this->request->getVar('kondisiNaskah');
-        }
-        if ($this->request->getVar('jumlahHalaman') == null) {
-            $jumlahHalaman = 'Belum ada deskripsi';
-        } else {
-            $jumlahHalaman = $this->request->getVar('jumlahHalaman');
-        }
-        if ($this->request->getVar('jumlahBarisPerHalaman') == null) {
-            $jumlahBarisPerHalaman = 'Belum ada deskripsi';
-        } else {
-            $jumlahBarisPerHalaman = $this->request->getVar('jumlahBarisPerHalaman');
-        }
-        if ($this->request->getVar('ilumiinasi') == null) {
-            $iluminasi = 'Belum ada deskripsi';
-        } else {
-            $iluminasi = $this->request->getVar('iluminasi');
-        }
-        if ($this->request->getVar('aksara') == null) {
-            $aksara = 'Belum ada deskripsi';
-        } else {
-            $aksara = $this->request->getVar('aksara');
-        }
-        if ($this->request->getVar('rubrikasi') == null) {
-            $rubrikasi = 'Belum ada deskripsi';
-        } else {
-            $rubrikasi = $this->request->getVar('rubrikasi');
-        }
-        if ($this->request->getVar('bahasa') == null) {
-            $bahasa = 'Belum ada deskripsi';
-        } else {
-            $bahasa = $this->request->getVar('bahasa');
-        }
-        if ($this->request->getVar('kolofon') == null) {
-            $kolofon = 'Belum ada deskripsi';
-        } else {
-            $kolofon = $this->request->getVar('kolofon');
+            $namaKoleksi = $this->request->getVar('namaKoleksi');
         }
 
-       $this->NaskahModel->save([
-           'id' => $id,
-            'kodeNaskah' => $kodeNaskah,
-            'judulNaskah' => $judulNaskah,
-            'ukuranNaskah' => $ukuranNaskah,
-            'watermark' => $watermark,
-            'kondisiNaskah' => $kondisiNaskah,
-            'jumlahHalaman' => $jumlahHalaman,
-            'jumlahBarisPerHalaman' => $jumlahBarisPerHalaman,
-            'iluminasi' => $iluminasi,
-            'aksara' => $aksara,
-            'rubrikasi' => $rubrikasi,
-            'bahasa' => $bahasa,
-            'kolofon' => $kolofon,
+        if ($this->request->getVar('noInventaris') == null) {
+            $noInventaris = 'Belum ada deskripsi';
+        } else {
+            $noInventaris = $this->request->getVar('noInventaris');
+        }
+        if ($this->request->getVar('sisiMuka') == null) {
+            $sisiMuka = 'Belum ada deskripsi';
+        } else {
+            $sisiMuka = $this->request->getVar('sisiMuka');
+        }
+        if ($this->request->getVar('sisiBelakang') == null) {
+            $sisiBelakang = 'Belum ada deskripsi';
+        } else {
+            $sisiBelakang = $this->request->getVar('sisiBelakang');
+        }
+        if ($this->request->getVar('emisi') == null) {
+            $emisi = 'Belum ada deskripsi';
+        } else {
+            $emisi = $this->request->getVar('emisi');
+        }
+        if ($this->request->getVar('seri') == null) {
+            $seri = 'Belum ada deskripsi';
+        } else {
+            $seri = $this->request->getVar('seri');
+        }
+
+        if ($this->request->getVar('tandaTangan') == null) {
+            $tandaTangan = 'Belum ada deskripsi';
+        } else {
+            $tandaTangan = $this->request->getVar('tandaTangan');
+        }
+        if ($this->request->getVar('pengaman') == null) {
+            $pengaman = 'Belum ada deskripsi';
+        } else {
+            $pengaman = $this->request->getVar('pengaman');
+        }
+        if ($this->request->getVar('mintmaster') == null) {
+            $mintmaster = 'Belum ada deskripsi';
+        } else {
+            $mintmaster = $this->request->getVar('mintmaster');
+        }
+        if ($this->request->getVar('mintmark') == null) {
+            $mintmark = 'Belum ada deskripsi';
+        } else {
+            $mintmark = $this->request->getVar('mintmark');
+        }
+        if ($this->request->getVar('masaPeredaran') == null) {
+            $masaPeredaran = 'Belum ada deskripsi';
+        } else {
+            $masaPeredaran = $this->request->getVar('masaPeredaran');
+        }
+
+        if ($this->request->getVar('delinavit') == null) {
+            $delinavit = 'Belum ada deskripsi';
+        } else {
+            $delinavit = $this->request->getVar('delinavit');
+        }
+
+        if ($this->request->getVar('ukuran') == null) {
+            $ukuran = 'Belum ada deskripsi';
+        } else {
+            $ukuran = $this->request->getVar('ukuran');
+        }
+
+
+        $this->NaskahModel->save([
+            'id' => $id,
+            'foto' => $foto,
+            'namaKoleksi' => $namaKoleksi,
+            'noInventaris' => $noInventaris,
+            'sisiMuka' => $sisiMuka,
+            'sisiBelakang' => $sisiBelakang,
+            'emisi' => $emisi,
+            'seri' => $seri,
+            'tandaTangan' => $tandaTangan,
+            'pengaman' => $pengaman,
+            'mintmaster' => $mintmaster,
+            'mintmark' => $mintmark,
+            'masaPeredaran' => $masaPeredaran,
+            'delinavit' => $delinavit,
+            'ukuran' => $ukuran,
+
 
         ]);
+        $target = '/museum';
 
-        $target = '/DataMuseum';
-
-        session()->setFlashData('pesan', 'Data berhasil diedit');
+        session()->setFlashData('pesan', 'Data berhasil diinputkan');
         return redirect()->to($target);
     }
 
