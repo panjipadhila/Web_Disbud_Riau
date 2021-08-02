@@ -449,7 +449,7 @@ class AdminController extends BaseController
                 $foto = $museum['gambar'];
             }
         }
-        
+
         if ($this->request->getVar('namaBenda') == null) {
             $namaBenda = 'Belum ada deskripsi';
         } else {
@@ -594,7 +594,7 @@ class AdminController extends BaseController
 
         ]);
 
-        $target = '/DataMuseum';
+        $target = '/kategoriMuseum/' . $jenis;
 
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
@@ -673,7 +673,7 @@ class AdminController extends BaseController
         } else {
             $kolofon = $this->request->getVar('kolofon');
         }
-       
+
 
         $this->NaskahModel->save([
             'kodeNaskah' => $kodeNaskah,
@@ -688,7 +688,7 @@ class AdminController extends BaseController
             'rubrikasi' => $rubrikasi,
             'bahasa' => $bahasa,
             'kolofon' => $kolofon,
-        
+
 
         ]);
         $target = '/museum';
