@@ -17,6 +17,7 @@
     </div>
 </div> -->
 
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -128,10 +129,9 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-  </div>
-  <div class="row section-container-spacer">
-  </div>
   <div class="container text-center">
     <div class="map-wrapper">
       <h2>LOKASI DINAS KEBUDAYAAN PROVINSI RIAU</h2>
