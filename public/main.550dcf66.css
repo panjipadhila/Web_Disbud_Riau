@@ -6074,13 +6074,13 @@ label {
     background-color: #4ba54d;
 }
 .text-opk-home{
-    color: black;
+    color: white;
    
 }
 .card-opk-home:hover,
 .text-opk-home:hover{
-    background-color:transparent;
-    color: black;
+    background-color:gray;
+    color: white;
     transition: 0.5s;
 }
 
