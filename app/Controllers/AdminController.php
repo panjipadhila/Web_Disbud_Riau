@@ -700,7 +700,7 @@ class AdminController extends BaseController
     {
         $this->museumModel->delete($id);
         session()->setFlashData('pesan', 'Data berhasil dihapus');
-        return redirect()->to('/museum/');
+        return redirect()->to('/dataMuseum/');
     }
 
     function editNaskah($id)
@@ -778,23 +778,23 @@ class AdminController extends BaseController
             $kolofon = $this->request->getVar('kolofon');
         }
 
-        $this->NaskahModel->save([
-            'kodeNaskah' => $this->request->getVar('namaopk'),,
-            'judulNaskah' => $this->request->getVar('namaopk'),,
-            'ukuranNaskah' => $this->request->getVar('namaopk'),,
-            'watermark' => $this->request->getVar('namaopk'),,
-            'kondisiNaskah' => $this->request->getVar('namaopk'),,
-            'jumlahHalaman' => $this->request->getVar('namaopk'),,
-            'jumlahBarisPerHalaman' => $this->request->getVar('namaopk'),,
-            'iluminasi' => $this->request->getVar('namaopk'),,
-            'aksara' => $this->request->getVar('namaopk'),,
-            'rubrikasi' => $this->request->getVar('namaopk'),,
-            'bahasa' => $this->request->getVar('namaopk'),,
-            'kolofon' => $this->request->getVar('namaopk'),,
+       $this->NaskahModel->save([
+            'kodeNaskah' => $kodeNaskah,
+            'judulNaskah' => $judulNaskah,
+            'ukuranNaskah' => $ukuranNaskah,
+            'watermark' => $watermark,
+            'kondisiNaskah' => $kondisiNaskah,
+            'jumlahHalaman' => $jumlahHalaman,
+            'jumlahBarisPerHalaman' => $jumlahBarisPerHalaman,
+            'iluminasi' => $iluminasi,
+            'aksara' => $aksara,
+            'rubrikasi' => $rubrikasi,
+            'bahasa' => $bahasa,
+            'kolofon' => $kolofon,
 
         ]);
 
-        $target = '/museum';
+        $target = '/DataMuseum';
 
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
