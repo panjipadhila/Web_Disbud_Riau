@@ -374,7 +374,7 @@ class AdminController extends BaseController
             $lainnya = $this->request->getVar('lainnya');
         }
         if ($this->request->getVar('gambar') == null) {
-            $gambar = 'Belum ada deskripsi';
+            $gambar = 'image-not-found.svg';
         } else {
             $gambar = $this->request->getVar('gambar');
         }
@@ -410,12 +410,20 @@ class AdminController extends BaseController
     function deleteMuseum($id)
     {
         $museum = $this->museumModel->find($id);
-        if ($museum['gambar'] != 'image-not-found.svg') {
+        if ($museum['gambar'] == 'Belum ada deskripsi') {
+            $this->museumModel->delete($id);
+            session()->setFlashData('pesan', 'Data berhasil dihapus');
+            return redirect()->to('/kategoriMuseum/' . $museum['jenis']);
+        } elseif ($museum['gambar'] != 'image-not-found.svg') {
             unlink('assets/museum-images/' . $museum['gambar']);
+            $this->museumModel->delete($id);
+            session()->setFlashData('pesan', 'Data berhasil dihapus');
+            return redirect()->to('/kategoriMuseum/' . $museum['jenis']);
+        } else {
+            $this->museumModel->delete($id);
+            session()->setFlashData('pesan', 'Data berhasil dihapus');
+            return redirect()->to('/kategoriMuseum/' . $museum['jenis']);
         }
-        $this->museumModel->delete($id);
-        session()->setFlashData('pesan', 'Data berhasil dihapus');
-        return redirect()->to('/dataMuseum/');
     }
 
     function editMuseum($id)
@@ -449,7 +457,7 @@ class AdminController extends BaseController
                 $foto = $museum['gambar'];
             }
         }
-        
+
         if ($this->request->getVar('namaBenda') == null) {
             $namaBenda = 'Belum ada deskripsi';
         } else {
@@ -565,12 +573,13 @@ class AdminController extends BaseController
         }
 
         if ($this->request->getVar('gambar') == null) {
-            $gambar = 'Belum ada deskripsi';
+            $gambar = 'image-not-found.svg';
         } else {
             $gambar = $this->request->getVar('gambar');
         }
 
         $this->museumModel->save([
+            'id' => $id,
             'namaBenda' => $namaBenda,
             'jenis' => $jenis,
             'uraian' => $uraian,
@@ -594,7 +603,7 @@ class AdminController extends BaseController
 
         ]);
 
-        $target = '/DataMuseum';
+        $target = '/kategoriMuseum/' . $jenis;
 
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
@@ -673,7 +682,7 @@ class AdminController extends BaseController
         } else {
             $kolofon = $this->request->getVar('kolofon');
         }
-       
+
 
         $this->NaskahModel->save([
             'kodeNaskah' => $kodeNaskah,
@@ -688,7 +697,7 @@ class AdminController extends BaseController
             'rubrikasi' => $rubrikasi,
             'bahasa' => $bahasa,
             'kolofon' => $kolofon,
-        
+
 
         ]);
         $target = '/museum';
@@ -778,8 +787,7 @@ class AdminController extends BaseController
             $kolofon = $this->request->getVar('kolofon');
         }
 
-       $this->NaskahModel->save([
-           'id' => $id,
+        $this->NaskahModel->save([
             'kodeNaskah' => $kodeNaskah,
             'judulNaskah' => $judulNaskah,
             'ukuranNaskah' => $ukuranNaskah,
