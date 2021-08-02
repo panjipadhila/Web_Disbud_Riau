@@ -7,6 +7,7 @@ use App\Models\GalleryModel;
 use App\Models\DataDokumenModel;
 use App\Models\DataMuseumModel;
 use App\Models\AdminKabupatenModel;
+use App\Models\DataNaskahModel;
 use DateTime;
 
 class AdminController extends BaseController
@@ -21,6 +22,7 @@ class AdminController extends BaseController
         $this->dokumenModel = new DataDokumenModel();
         $this->museumModel = new DataMuseumModel();
         $this->adminModel = new AdminKabupatenModel();
+        $this->NaskahModel = new DataNaskahModel();
     }
     function adminpage()
     {
@@ -597,6 +599,207 @@ class AdminController extends BaseController
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
     }
+
+    function tambahNaskah()
+    {
+        $data = [
+            'title' => 'Tambah data'
+        ];
+        echo view('headerFixedTop', $data);
+        echo view('TambahNaskahView');
+        echo view('footer');
+    }
+    function saveNaskah()
+    {
+
+        if ($this->request->getVar('kodeNaskah') == null) {
+            $kodeNaskah = 'Belum ada deskripsi';
+        } else {
+            $kodeNaskah = $this->request->getVar('kodeNaskah');
+        }
+
+        if ($this->request->getVar('judulNaskah') == null) {
+            $judulNaskah = 'Belum ada deskripsi';
+        } else {
+            $judulNaskah = $this->request->getVar('judulNaskah');
+        }
+        if ($this->request->getVar('ukuranNaskah') == null) {
+            $ukuranNaskah = 'Belum ada deskripsi';
+        } else {
+            $ukuranNaskah = $this->request->getVar('ukuranNaskah');
+        }
+        if ($this->request->getVar('watermark') == null) {
+            $watermark = 'Belum ada deskripsi';
+        } else {
+            $watermark = $this->request->getVar('watermark');
+        }
+        if ($this->request->getVar('kondisiNaskah') == null) {
+            $kondisiNaskah = 'Belum ada deskripsi';
+        } else {
+            $kondisiNaskah = $this->request->getVar('kondisiNaskah');
+        }
+        if ($this->request->getVar('jumlahHalaman') == null) {
+            $jumlahHalaman = 'Belum ada deskripsi';
+        } else {
+            $jumlahHalaman = $this->request->getVar('jumlahHalaman');
+        }
+        if ($this->request->getVar('jumlahBarisPerHalaman') == null) {
+            $jumlahBarisPerHalaman = 'Belum ada deskripsi';
+        } else {
+            $jumlahBarisPerHalaman = $this->request->getVar('jumlahBarisPerHalaman');
+        }
+        if ($this->request->getVar('ilumiinasi') == null) {
+            $iluminasi = 'Belum ada deskripsi';
+        } else {
+            $iluminasi = $this->request->getVar('iluminasi');
+        }
+        if ($this->request->getVar('aksara') == null) {
+            $aksara = 'Belum ada deskripsi';
+        } else {
+            $aksara = $this->request->getVar('aksara');
+        }
+        if ($this->request->getVar('rubrikasi') == null) {
+            $rubrikasi = 'Belum ada deskripsi';
+        } else {
+            $rubrikasi = $this->request->getVar('rubrikasi');
+        }
+        if ($this->request->getVar('bahasa') == null) {
+            $bahasa = 'Belum ada deskripsi';
+        } else {
+            $bahasa = $this->request->getVar('bahasa');
+        }
+        if ($this->request->getVar('kolofon') == null) {
+            $kolofon = 'Belum ada deskripsi';
+        } else {
+            $kolofon = $this->request->getVar('kolofon');
+        }
+       
+
+        $this->NaskahModel->save([
+            'kodeNaskah' => $kodeNaskah,
+            'judulNaskah' => $judulNaskah,
+            'ukuranNaskah' => $ukuranNaskah,
+            'watermark' => $watermark,
+            'kondisiNaskah' => $kondisiNaskah,
+            'jumlahHalaman' => $jumlahHalaman,
+            'jumlahBarisPerHalaman' => $jumlahBarisPerHalaman,
+            'iluminasi' => $iluminasi,
+            'aksara' => $aksara,
+            'rubrikasi' => $rubrikasi,
+            'bahasa' => $bahasa,
+            'kolofon' => $kolofon,
+        
+
+        ]);
+        $target = '/museum';
+
+        session()->setFlashData('pesan', 'Data berhasil diinputkan');
+        return redirect()->to($target);
+    }
+    function deleteNaskah($id)
+    {
+        $this->museumModel->delete($id);
+        session()->setFlashData('pesan', 'Data berhasil dihapus');
+        return redirect()->to('/museum/');
+    }
+
+    function editNaskah($id)
+    {
+        $naskah = $this->NaskahModel->find($id);
+        $data = [
+            'title' => 'Edit data',
+            'museum' => $naskah
+        ];
+        echo view('headerFixedTop', $data);
+        echo view('editDataNaskahView', $data);
+        echo view('footer');
+    }
+    function do_editNaskah($id)
+    {
+        if ($this->request->getVar('kodeNaskah') == null) {
+            $kodeNaskah = 'Belum ada deskripsi';
+        } else {
+            $kodeNaskah = $this->request->getVar('kodeNaskah');
+        }
+
+        if ($this->request->getVar('judulNaskah') == null) {
+            $judulNaskah = 'Belum ada deskripsi';
+        } else {
+            $judulNaskah = $this->request->getVar('judulNaskah');
+        }
+        if ($this->request->getVar('ukuranNaskah') == null) {
+            $ukuranNaskah = 'Belum ada deskripsi';
+        } else {
+            $ukuranNaskah = $this->request->getVar('ukuranNaskah');
+        }
+        if ($this->request->getVar('watermark') == null) {
+            $watermark = 'Belum ada deskripsi';
+        } else {
+            $watermark = $this->request->getVar('watermark');
+        }
+        if ($this->request->getVar('kondisiNaskah') == null) {
+            $kondisiNaskah = 'Belum ada deskripsi';
+        } else {
+            $kondisiNaskah = $this->request->getVar('kondisiNaskah');
+        }
+        if ($this->request->getVar('jumlahHalaman') == null) {
+            $jumlahHalaman = 'Belum ada deskripsi';
+        } else {
+            $jumlahHalaman = $this->request->getVar('jumlahHalaman');
+        }
+        if ($this->request->getVar('jumlahBarisPerHalaman') == null) {
+            $jumlahBarisPerHalaman = 'Belum ada deskripsi';
+        } else {
+            $jumlahBarisPerHalaman = $this->request->getVar('jumlahBarisPerHalaman');
+        }
+        if ($this->request->getVar('ilumiinasi') == null) {
+            $iluminasi = 'Belum ada deskripsi';
+        } else {
+            $iluminasi = $this->request->getVar('iluminasi');
+        }
+        if ($this->request->getVar('aksara') == null) {
+            $aksara = 'Belum ada deskripsi';
+        } else {
+            $aksara = $this->request->getVar('aksara');
+        }
+        if ($this->request->getVar('rubrikasi') == null) {
+            $rubrikasi = 'Belum ada deskripsi';
+        } else {
+            $rubrikasi = $this->request->getVar('rubrikasi');
+        }
+        if ($this->request->getVar('bahasa') == null) {
+            $bahasa = 'Belum ada deskripsi';
+        } else {
+            $bahasa = $this->request->getVar('bahasa');
+        }
+        if ($this->request->getVar('kolofon') == null) {
+            $kolofon = 'Belum ada deskripsi';
+        } else {
+            $kolofon = $this->request->getVar('kolofon');
+        }
+
+        $this->NaskahModel->save([
+            'kodeNaskah' => $this->request->getVar('namaopk'),,
+            'judulNaskah' => $this->request->getVar('namaopk'),,
+            'ukuranNaskah' => $this->request->getVar('namaopk'),,
+            'watermark' => $this->request->getVar('namaopk'),,
+            'kondisiNaskah' => $this->request->getVar('namaopk'),,
+            'jumlahHalaman' => $this->request->getVar('namaopk'),,
+            'jumlahBarisPerHalaman' => $this->request->getVar('namaopk'),,
+            'iluminasi' => $this->request->getVar('namaopk'),,
+            'aksara' => $this->request->getVar('namaopk'),,
+            'rubrikasi' => $this->request->getVar('namaopk'),,
+            'bahasa' => $this->request->getVar('namaopk'),,
+            'kolofon' => $this->request->getVar('namaopk'),,
+
+        ]);
+
+        $target = '/museum';
+
+        session()->setFlashData('pesan', 'Data berhasil diedit');
+        return redirect()->to($target);
+    }
+
     function deleteUsers($id)
     {
         if (user_id() != $id) {
