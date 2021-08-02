@@ -414,9 +414,12 @@ class AdminController extends BaseController
             $this->museumModel->delete($id);
             session()->setFlashData('pesan', 'Data berhasil dihapus');
             return redirect()->to('/kategoriMuseum/' . $museum['jenis']);
-        }
-        if ($museum['gambar'] != 'image-not-found.svg') {
+        } elseif ($museum['gambar'] != 'image-not-found.svg') {
             unlink('assets/museum-images/' . $museum['gambar']);
+            $this->museumModel->delete($id);
+            session()->setFlashData('pesan', 'Data berhasil dihapus');
+            return redirect()->to('/kategoriMuseum/' . $museum['jenis']);
+        } else {
             $this->museumModel->delete($id);
             session()->setFlashData('pesan', 'Data berhasil dihapus');
             return redirect()->to('/kategoriMuseum/' . $museum['jenis']);
