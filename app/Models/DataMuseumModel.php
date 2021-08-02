@@ -8,7 +8,7 @@ class DataMuseumModel extends Model
 {
     protected $table = 'museum';
     protected $primarykey = 'id';
-    protected $allowedFields = ['namaBenda', 'uraian', 'noInventarisLama', 'noInventarisBaru', 'noRegister', 'bahan', 'bentuk', 'fungsi', 'ukuran', 'asalBuat', 'asalDapat', 'caraDapat', 'tanggalMasuk', 'kondisiBenda', 'tempatPenyimpanan', 'dicatatOleh', 'tanggal', 'lainnya', 'gambar'];
+    protected $allowedFields = ['namaBenda', 'jenis', 'uraian', 'noInventarisLama', 'noInventarisBaru', 'noRegister', 'bahan', 'bentuk', 'fungsi', 'ukuran', 'asalBuat', 'asalDapat', 'caraDapat', 'tanggalMasuk', 'kondisiBenda', 'tempatPenyimpanan', 'dicatatOleh', 'tanggal', 'lainnya', 'gambar'];
     public function getMuseum()
     {
         return $this->findAll();
@@ -26,7 +26,7 @@ class DataMuseumModel extends Model
         // $query = $this->get();
         // return $query->result();
         return $this->where('jenis', $jenis)->findAll();
-    }
+    }   
     function getOPKByKategoriLokasi($lokasi, $kategori)
     {
         return $this->where('lokasi', $lokasi)->where('kategori', $kategori)->findAll();
