@@ -111,20 +111,20 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="card card-opk-home">
-          <h3>Jumlah Objek</h3>
-          <h3><?= $opk; ?></h3>
+          <h3 class="text-opk-home">Jumlah Objek</h3>
+          <h3 class="text-opk-home"><?= $opk; ?></h3>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="card card-opk-home">
-          <h3>Kategori</h3>
-          <h3>11</h3>
+          <h3 class="text-opk-home">Kategori</h3>
+          <h3 class="text-opk-home">11</h3>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="card card-opk-home">
-          <h3>Subkategori</h3>
-          <h3>44</h3>
+          <h3 class="text-opk-home">Subkategori</h3>
+          <h3 class="text-opk-home">44</h3>
         </div>
       </div>
     </div>
