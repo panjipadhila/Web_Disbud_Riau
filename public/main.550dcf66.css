@@ -6081,6 +6081,7 @@ label {
 .text-opk-home:hover{
     background-color:transparent;
     color: black;
+    transition: 0.5s;
 }
 
 

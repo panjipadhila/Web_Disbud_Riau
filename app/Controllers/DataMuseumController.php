@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use \App\Models\DataMuseumModel;
+use \App\Models\DataNaskahModel;
+use \App\Models\DataNumismatikaModel;
 
 class DataMuseumController extends BaseController
 {
@@ -12,6 +14,8 @@ class DataMuseumController extends BaseController
 	public function __construct()
 	{
 		$this->MuseumModel = new DataMuseumModel();
+		$this->NaskahModel = new DataNaskahModel();
+		$this->NumismatikaModel = new DataNumismatikaModel();
 	}
 
 	function index()
@@ -38,9 +42,57 @@ class DataMuseumController extends BaseController
 		echo view('footer');
 	}
 
+	function dataNumismatika()
+	{
+		$museum = $this->NumismatikaModel->findAll();
+		$data = [
+			'title' => 'Data OPK | Web Disbud Riau',
+			'museums' => $museum
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DataMuseum', $data);
+		echo view('footer');
+	}
+
+	function dataNaskah()
+	{
+		$museum = $this->NaskahModel->findAll();
+		$data = [
+			'title' => 'Data OPK | Web Disbud Riau',
+			'museums' => $museum
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DataMuseum', $data);
+		echo view('footer');
+	}
+
 	public function detail($id)
 	{
 		$museum = $this->MuseumModel->find($id);
+		$data = [
+			'title' => 'Deskripsi | Web Disbud Riau',
+			'museum' => $museum
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DetailMuseum', $data);
+		echo view('footer');
+	}
+
+	public function detailNaskah($id)
+	{
+		$museum = $this->NaskahModel->find($id);
+		$data = [
+			'title' => 'Deskripsi | Web Disbud Riau',
+			'museum' => $museum
+		];
+		echo view('headerFixedTop', $data);
+		echo view('DetailMuseum', $data);
+		echo view('footer');
+	}
+
+	public function detailNumismatika($id)
+	{
+		$museum = $this->NaskahModel->find($id);
 		$data = [
 			'title' => 'Deskripsi | Web Disbud Riau',
 			'museum' => $museum
