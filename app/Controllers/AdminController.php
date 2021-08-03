@@ -817,7 +817,7 @@ class AdminController extends BaseController
             'title' => 'Tambah data'
         ];
         echo view('headerFixedTop', $data);
-        echo view('TambahNumismatikaView');
+        echo view('TambahDataNumismatikaView');
         echo view('footer');
     }
     function saveNumismatika()

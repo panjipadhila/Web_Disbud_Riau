@@ -44,13 +44,13 @@ class DataMuseumController extends BaseController
 
 	function dataNumismatika()
 	{
-		$museum = $this->NumismatikaModel->findAll();
+		$numismatika = $this->NumismatikaModel->findAll();
 		$data = [
 			'title' => 'Data OPK | Web Disbud Riau',
-			'museums' => $museum
+			'numismatika' => $numismatika
 		];
 		echo view('headerFixedTop', $data);
-		echo view('DataMuseum', $data);
+		echo view('DataNumismatika', $data);
 		echo view('footer');
 	}
 
