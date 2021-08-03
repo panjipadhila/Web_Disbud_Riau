@@ -4336,7 +4336,6 @@ tbody.collapse.in {
     margin-bottom: 0;
     border-width: 0px 0 0
 }
-@media(min-width:701px){
     .navbar-main-brand {
         float: left;
         padding: 27.5px 15px;
@@ -4344,19 +4343,38 @@ tbody.collapse.in {
         line-height: 25px;
         height: 80px
     }    
-}
-
 
 @media(max-width:700px){
     .navbar-main-brand{
         float: left;
         padding: 27.5px 15px;
-        font-size: 15px;
+        font-size: 55%;
         line-height: 25px;
         height: 80px
 
     }
 }
+@media(min-width:336px){
+    .navbar-main-brand{
+        float: left;
+        padding: 27.5px 15px;
+        font-size: 55%;
+        line-height: 25px;
+        height: 80px
+
+    }
+}
+@media(max-width:336px){
+    .navbar-main-brand{
+        float: left;
+        padding: 27.5px 15px;
+        font-size: 40%;
+        line-height: 25px;
+        height: 80px
+
+    }
+}
+
 
 .navbar-main-brand:focus,
 .navbar-main-brand:hover {
@@ -5134,35 +5152,46 @@ button.close {
     border: 0;
     -webkit-appearance: none
 }
-@media(min-width:694px){
 
-
-.carousel-item{
-    margin-top: 4.5%;
-    height:75%;
-    margin-bottom: 1px;
-    size: inherit;
-}
-}
- @media(max-width:693px){
-    .carousel-item
-    {
-        margin-top: 15%;
+    @media(min-width:1000px){
+        .carousel-item{
+            margin-top: 4.5%;
+            height:73%;
+            margin-bottom: 1px;
+            size: inherit;
+        }
     }
-} 
- 
+    @media(min-width:800px){
+        .carousel-item{
+            margin-top: 0%;
+            height:73%;
+            margin-bottom: 1px;
+            size: inherit;
+        }
+    }
 
-.carousel-caption{
-    height: 45%;
-}
-.carousel-item .carousel-caption{
-    margin-top: -40% ;
-}
-.carousel-item .h5-c{
-    margin-top: -40%;
-}
+    @media(min-width:450px){
+        .carousel-item{
+            margin-top: 4.5%;
+            height:73%;
+            margin-bottom: 1px;
+            size: inherit;
+        }
+    }
+    @media(max-width:450px){
+        .carousel-item{
+            margin-top: 21.5%;
+            height: 200px;;
+            margin-bottom: 1px;
+            size: inherit;
+        }
+    }
+
+
+
+ 
 .carousel-indicators{
-    height: 11%;
+    height: 15%;
 }
 
 
@@ -5887,16 +5916,24 @@ button.close {
 
 .navbar-main-brand>.navbar-main-logo-img {
     display: inline-block;
-    /* width: 100px;
-    height: 75px;
-    margin-top: -5px */
     height: 37px;
-width: 55px;
-left: 51px;
-top: 1px;
-border-radius: 0px;
+    width: 55px;
+    left: 51px;
+    top: 1px;
+    border-radius: 0px;
 
 }
+@media(max-width:700px){
+    .navbar-main-brand>.navbar-main-logo-img{
+        display: inline-block;
+        height: 22px;
+        width: 40px;
+        left: 51px;
+        top: 1px;
+        border-radius: 0px;
+    }
+}
+
 
 .navbar-main-default .navbar-main-toggle .icon-bar {
     background-color: #fff
@@ -6254,6 +6291,18 @@ h3.text-opk-home{
 .museum-btn-view{
     width: 250px;
 }
+@media(max-width:450px){
+    #text-footer>h5{
+        font-size: 12px;
+    }
+    #text-footer>p{
+        font-size: 12px;
+    }
+    #login-footer{
+        font-size: 12px;
+    }
+}
+
 
 
 /*# sourceMappingURL=main.0cf8b554.map*/

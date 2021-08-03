@@ -26,25 +26,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src=".\assets\images\carousel1.svg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 style="color:white;">OBJEK PEMAJUAN KEBUDAYAAN</h3>
-        <p>Website ini memuat 3000 lebih data mengenai objek pemajuan kebudayaan <br>di Provinsi Riau</p>
-      </div>
+      <img class="d-block w-100" src=".\assets\images\carousel11.svg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src=".\assets\images\carousel2.svg" alt="Second slide">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 style="color:white;">JOM KITA KE MUSEUM SANG NILAI UTAMA</h3>
-        <p>Museum ini memiliki koleksi budaya melayu terlengkap<br>di daerah Provinsi Riau</p>
-      </div>
+      <img class="d-block w-100" src=".\assets\images\carousel21.svg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src=".\assets\images\carousel3.svg" alt="Third slide">
-      <div style="height:25rem;" class="carousel-caption d-none d-md-block">
-        <h3 style="color:#3C814E;">MERAWAT BUDAYA MELAYU</h3>
-        <p style="color:#3C814E;">Website ini memberikan edukasi objek kebudayaan budaya Melayu<br>di daerah Provinsi Riau</p>
-      </div>
+      <img class="d-block w-100" src=".\assets\images\carousel31.svg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -56,6 +44,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 
 <div class="section-container">
   <div class="container text-center">
