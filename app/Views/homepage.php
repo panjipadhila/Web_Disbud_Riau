@@ -102,6 +102,7 @@
     </div>
   </div>
 </div>
+<br>
 <div class="section-container">
   <div class="container text-center">
     <div class="row section-container-spacer">
@@ -128,7 +129,7 @@
     </div>
   </div>
 </div>
-
+<br><br>
 <div class="container text-center">
   <div class="map-wrapper">
     <h2>LOKASI DINAS KEBUDAYAAN PROVINSI RIAU</h2>
