@@ -56,13 +56,13 @@ class DataMuseumController extends BaseController
 
 	function dataNaskah()
 	{
-		$museum = $this->NaskahModel->findAll();
+		$naskah = $this->NaskahModel->findAll();
 		$data = [
 			'title' => 'Data OPK | Web Disbud Riau',
-			'museums' => $museum
+			'naskah' => $naskah
 		];
 		echo view('headerFixedTop', $data);
-		echo view('DataMuseum', $data);
+		echo view('DataNaskahView', $data);
 		echo view('footer');
 	}
 

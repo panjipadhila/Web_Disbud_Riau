@@ -790,6 +790,7 @@ class AdminController extends BaseController
         }
 
         $this->NaskahModel->save([
+            'id' => $id,
             'kodeNaskah' => $kodeNaskah,
             'judulNaskah' => $judulNaskah,
             'ukuranNaskah' => $ukuranNaskah,
@@ -817,7 +818,7 @@ class AdminController extends BaseController
             'title' => 'Tambah data'
         ];
         echo view('headerFixedTop', $data);
-        echo view('TambahDataNumismatikaView');
+        echo view('TambahDataNumismatika');
         echo view('footer');
     }
     function saveNumismatika()
@@ -901,7 +902,7 @@ class AdminController extends BaseController
         }
 
 
-        $this->NaskahModel->save([
+        $this->NumismatikaModel->save([
             'foto' => $foto,
             'namaKoleksi' => $namaKoleksi,
             'noInventaris' => $noInventaris,
@@ -915,11 +916,11 @@ class AdminController extends BaseController
             'mintmark' => $mintmark,
             'masaPeredaran' => $masaPeredaran,
             'delinavit' => $delinavit,
-            'ukuran' => $ukuran,
+            'ukuran' => $ukuran
 
 
         ]);
-        $target = '/museum';
+        $target = 'NumismatikaDanHeraldika';
 
         session()->setFlashData('pesan', 'Data berhasil diinputkan');
         return redirect()->to($target);
@@ -1031,7 +1032,7 @@ class AdminController extends BaseController
         }
 
 
-        $this->NaskahModel->save([
+        $this->NumismatikaModel->save([
             'id' => $id,
             'foto' => $foto,
             'namaKoleksi' => $namaKoleksi,

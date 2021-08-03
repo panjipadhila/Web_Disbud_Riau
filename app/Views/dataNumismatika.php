@@ -18,10 +18,10 @@
                     <th scope="col">No.</th>
                     <th scope="col">Nama Koleksi</th>
                     <th scope="col">No. Inventaris</th>
-                    <th scope="col">Emisi</th>
-                    <th scope="col">Seri</th>
-                    <th scope="col">Tanda Tangan</th>
-                    <th scope="col">Pengaman</th>
+                    <th scope="col">Sisi Depan</th>
+                    <th scope="col">Sisi Belakang</th>
+                    <th scope="col">Masa Peredaran</th>
+                    <th scope="col">Delinavit</th>
                     <th scope="col">Ukuran</th>
                 </tr>
         </thead>
@@ -32,10 +32,9 @@
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $numismatika['namaKoleksi'] ?></td>
                     <td><?= $numismatika['noInventaris'] ?></td>
-                    <td><?= $numismatika['emisi'] ?></td>
-                    <td><?= $numismatika['seri'] ?></td>
-                    <td><?= $numismatika['tandaTangan'] ?></td>
-                    <td><?= $numismatika['pengaman'] ?></td>
+                    <td><?= $numismatika['sisiMuka'] ?></td>
+                    <td><?= $numismatika['sisiBelakang'] ?></td>
+                    <td><?= $numismatika['delinavit'] ?></td>
                     <td><?= $numismatika['ukuran'] ?></td>
                     <td><a href="/numismatika/edit/<?= $numismatika['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/numismatika/delete/<?= $numismatika['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
@@ -43,16 +42,11 @@
         </tbody>
     <?php else : ?>
         <tr>
+            <th scope="col">No.</th>
             <th scope="col">Nama Koleksi</th>
             <th scope="col">No. Inventaris</th>
-            <th scope="col">Sisi Muka</th>
-            <th scope="col">Sisi Belakang</th>
-            <th scope="col">Emisi</th>
-            <th scope="col">Seri</th>
-            <th scope="col">Tanda Tangan</th>
-            <th scope="col">Pengaman</th>
-            <th scope="col">Mintmaster</th>
-            <th scope="col">Mintmark</th>
+            <th scope="col">sisiMuka</th>
+            <th scope="col">sisiBelakang</th>
             <th scope="col">Masa Peredaran</th>
             <th scope="col">Delinavit</th>
             <th scope="col">Ukuran</th>
@@ -62,17 +56,12 @@
             <?php $i = 1; ?>
             <?php foreach ($numismatika as $numismatika) : ?>
                 <tr class='clickable-row' data-href='/museum/<?= $numismatika['id']; ?>'>
-                    <td><?= $numismatika['noInventaris'] ?></td>
                     <td><?= $numismatika['namaKoleksi'] ?></td>
+                    <td><?= $numismatika['noInventaris'] ?></td>
                     <td><?= $numismatika['sisiMuka'] ?></td>
                     <td><?= $numismatika['sisiBelakang'] ?></td>
-                    <td><?= $numismatika['emisi'] ?></td>
-                    <td><?= $numismatika['seri'] ?></td>
-                    <td><?= $numismatika['tandaTangan'] ?></td>
-                    <td><?= $numismatika['pengaman'] ?></td>
-                    <td><?= $numismatika['mintmaster'] ?></td>
-                    <td><?= $numismatika['mintmark'] ?></td>
                     <td><?= $numismatika['delinavit'] ?></td>
+                    <td><?= $numismatika['ukuran'] ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -95,8 +84,8 @@
         $('#dataTabelnumismatika').DataTable({
             language: {
                 searchPlaceholder: "Nama/Judul",
-            },"paging": true,
-            
+            },
+
         });
     });
 

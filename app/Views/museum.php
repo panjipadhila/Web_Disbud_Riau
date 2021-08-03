@@ -47,7 +47,7 @@
             <p><a href="kategoriMuseum/Historika" class="btn btn-primary museum-btn-view">Historika</a></p>
         </div>
         <div class="col-sm-4">
-            <p><a href="kategoriMuseum/Katalogisasi" class="btn btn-primary museum-btn-view">Katalogisasi Naskah</a></p>
+            <p><a href="Naskah" class="btn btn-primary museum-btn-view">Katalogisasi Naskah</a></p>
         </div>
     </div>
     <div class="row">
