@@ -49,13 +49,13 @@
             <th scope="col">sisiBelakang</th>
             <th scope="col">Delinavit</th>
             <th scope="col">Ukuran</th>
-            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($numismatika as $numismatika) : ?>
                 <tr class='clickable-row' data-href='NumismatikaDanHeraldika'>
+                    <th scope="row"><?= $i++ ?></th>
                     <td><?= $numismatika['namaKoleksi'] ?></td>
                     <td><?= $numismatika['noInventaris'] ?></td>
                     <td><?= $numismatika['sisiMuka'] ?></td>
@@ -85,7 +85,7 @@
             language: {
                 searchPlaceholder: "Nama/Judul",
             },
-            "paging":true
+            "paging": true
         });
     });
 

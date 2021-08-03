@@ -23,7 +23,7 @@
                     <th scope="col"></th>
                 </tr>
         </thead>
-        <tbody> 
+        <tbody>
             <?php $i = 1; ?>
             <?php foreach ($naskah as $naskah) : ?>
                 <tr class='clickable-row' data-href='Naskah'>
@@ -42,13 +42,13 @@
             <th scope="col">Kode Naskah</th>
             <th scope="col">Rubrikasi</th>
             <th scope="col">Bahasa</th>
-            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($naskah as $naskah) : ?>
                 <tr class='clickable-row' data-href='Naskah'>
+                    <th scope="row"><?= $i++ ?></th>
                     <td><?= $naskah['kodeNaskah'] ?></td>
                     <td><?= $naskah['judulNaskah'] ?></td>
                     <td><?= $naskah['aksara'] ?></td>
@@ -62,13 +62,12 @@
 </div>
 
 <script>
-
     $(document).ready(function() {
         $('#dataTabelnaskah').DataTable({
             language: {
                 searchPlaceholder: "Nama/Judul",
             },
-            "paging":true,
+            "paging": true,
         });
     });
 
