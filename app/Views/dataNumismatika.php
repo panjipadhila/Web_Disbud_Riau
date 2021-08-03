@@ -20,7 +20,7 @@
                     <th scope="col">No. Inventaris</th>
                     <th scope="col">Sisi Depan</th>
                     <th scope="col">Sisi Belakang</th>
-                    <th scope="col">Delinavit</th>
+                    <th scope="col">Emisi</th>
                     <th scope="col">Ukuran</th>
                     <th scope="col"></th>
                 </tr>
@@ -28,13 +28,13 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($numismatika as $numismatika) : ?>
-                <tr class='clickable-row' data-href='NumismatikaDanHeraldika'>
+                <tr class='clickable-row' data-href='/NumismatikaDanHeraldika/<?= $numismatika['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $numismatika['namaKoleksi'] ?></td>
                     <td><?= $numismatika['noInventaris'] ?></td>
                     <td><?= $numismatika['sisiMuka'] ?></td>
                     <td><?= $numismatika['sisiBelakang'] ?></td>
-                    <td><?= $numismatika['delinavit'] ?></td>
+                    <td><?= $numismatika['emisi'] ?></td>
                     <td><?= $numismatika['ukuran'] ?></td>
                     <td><a href="/numismatika/edit/<?= $numismatika['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/numismatika/delete/<?= $numismatika['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
@@ -45,22 +45,22 @@
             <th scope="col">No.</th>
             <th scope="col">Nama Koleksi</th>
             <th scope="col">No. Inventaris</th>
-            <th scope="col">sisiMuka</th>
-            <th scope="col">sisiBelakang</th>
-            <th scope="col">Delinavit</th>
+            <th scope="col">Sisi Muka</th>
+            <th scope="col">Sisi Belakang</th>
+            <th scope="col">Emisi</th>
             <th scope="col">Ukuran</th>
-            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($numismatika as $numismatika) : ?>
-                <tr class='clickable-row' data-href='NumismatikaDanHeraldika'>
+                <tr class='clickable-row' data-href='NumismatikaDanHeraldika/<?= $numismatika['id']; ?>'>
+                    <th scope="row"><?= $i++ ?></th>
                     <td><?= $numismatika['namaKoleksi'] ?></td>
                     <td><?= $numismatika['noInventaris'] ?></td>
                     <td><?= $numismatika['sisiMuka'] ?></td>
                     <td><?= $numismatika['sisiBelakang'] ?></td>
-                    <td><?= $numismatika['delinavit'] ?></td>
+                    <td><?= $numismatika['emisi'] ?></td>
                     <td><?= $numismatika['ukuran'] ?></td>
                 </tr>
             <?php endforeach; ?>
@@ -85,7 +85,7 @@
             language: {
                 searchPlaceholder: "Nama/Judul",
             },
-            "paging":true
+            "paging": true
         });
     });
 
