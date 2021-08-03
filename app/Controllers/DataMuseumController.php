@@ -80,25 +80,25 @@ class DataMuseumController extends BaseController
 
 	public function detailNaskah($id)
 	{
-		$museum = $this->NaskahModel->find($id);
+		$naskah = $this->NaskahModel->find($id);
 		$data = [
 			'title' => 'Deskripsi | Web Disbud Riau',
-			'museum' => $museum
+			'naskah' => $naskah
 		];
 		echo view('headerFixedTop', $data);
-		echo view('DetailMuseum', $data);
+		echo view('DetailNaskah', $data);
 		echo view('footer');
 	}
 
 	public function detailNumismatika($id)
 	{
-		$museum = $this->NaskahModel->find($id);
+		$numismatika = $this->NumismatikaModel->find($id);
 		$data = [
 			'title' => 'Deskripsi | Web Disbud Riau',
-			'museum' => $museum
+			'numismatika' => $numismatika
 		];
 		echo view('headerFixedTop', $data);
-		echo view('DetailMuseum', $data);
+		echo view('detailNumismatika', $data);
 		echo view('footer');
 	}
 }

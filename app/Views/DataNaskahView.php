@@ -26,7 +26,7 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($naskah as $naskah) : ?>
-                <tr class='clickable-row' data-href='Naskah'>
+                <tr class='clickable-row' data-href='Naskah/<?= $naskah['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $naskah['kodeNaskah'] ?></td>
                     <td><?= $naskah['judulNaskah'] ?></td>
@@ -48,7 +48,7 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($naskah as $naskah) : ?>
-                <tr class='clickable-row' data-href='Naskah'>
+                <tr class='clickable-row' data-href='Naskah/<?= $naskah['id']; ?>'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $naskah['kodeNaskah'] ?></td>
                     <td><?= $naskah['judulNaskah'] ?></td>

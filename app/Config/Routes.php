@@ -75,12 +75,14 @@ $routes->get('museum/delete/(:num)', 'AdminController::deleteMuseum/$1', ['filte
 $routes->get('museum/edit/(:num)', 'AdminController::editMuseum/$1', ['filter' => 'role:admin-pusat']);
 //Naskah
 $routes->get('Naskah', 'DataMuseumController::dataNaskah');
+$routes->get('Naskah/(:num)', 'DataMuseumController::detailNaskah/$1');
 $routes->get('tambahNaskah', 'AdminController::tambahNaskah');
 $routes->get('naskah/edit/(:num)', 'AdminController::editNaskah/$1');
 $routes->get('naskah/delete/(:num)', 'AdminController::deleteNaskah/$1');
 //Numismatika
 $routes->get('NumismatikaDanHeraldika', 'DataMuseumController::dataNumismatika');
 $routes->get('tambahNumismatika', 'AdminController::tambahNumismatika', ['filter' => 'role:admin-pusat']);
+$routes->get('NumismatikaDanHeraldika/(:num)', 'DataMuseumController::detailNumismatika/$1');
 $routes->get('numismatika/edit/(:num)', 'AdminController::editNumismatika/$1', ['filter' => 'role:admin-pusat']);
 $routes->get('numismatika/delete/(:num)', 'AdminController::deleteNumismatika/$1', ['filter' => 'role:admin-pusat']);
 /*
