@@ -38,6 +38,7 @@
         </tbody>
     <?php else : ?>
         <tr>
+            <th scope="col">No.</th>
             <th scope="col">Judul</th>
             <th scope="col">Kode Naskah</th>
             <th scope="col">Rubrikasi</th>
