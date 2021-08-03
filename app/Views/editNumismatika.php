@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 col-offset-3" style="max-width:100%">
             <div class="card">
-                <form id="editNumismatika" action="AdminController/editNumismatika" enctype="multipart/form-data" method="post">
+                <form id="editNumismatika" action="/AdminController/do_editNumismatika/<?= $numismatika['id']; ?>" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                         <label for="namaKoleksi">Nama Koleksi</label>
                         <input type="text" class="form-control" name="namaKoleksi" placeholder="Kode Naskah" value="<?= $numismatika['namaKoleksi'] ?>">

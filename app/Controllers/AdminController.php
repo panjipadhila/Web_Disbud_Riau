@@ -745,7 +745,7 @@ class AdminController extends BaseController
 
 
         ]);
-        $target = '/museum';
+        $target = 'Naskah';
 
         session()->setFlashData('pesan', 'Data berhasil diinputkan');
         return redirect()->to($target);
@@ -754,7 +754,7 @@ class AdminController extends BaseController
     {
         $this->museumModel->delete($id);
         session()->setFlashData('pesan', 'Data berhasil dihapus');
-        return redirect()->to('/dataMuseum/');
+        return redirect()->to('Naskah');
     }
 
     function editNaskah($id)
@@ -762,7 +762,7 @@ class AdminController extends BaseController
         $naskah = $this->NaskahModel->find($id);
         $data = [
             'title' => 'Edit data',
-            'museum' => $naskah
+            'naskah' => $naskah
         ];
         echo view('headerFixedTop', $data);
         echo view('editDataNaskahView', $data);
@@ -849,7 +849,7 @@ class AdminController extends BaseController
 
         ]);
 
-        $target = '/DataMuseum';
+        $target = 'Naskah';
 
         session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
@@ -971,27 +971,27 @@ class AdminController extends BaseController
     function deleteNumismatika($id)
     {
         $numismatika = $this->NumismatikaModel->find($id);
-        if ($numismatika['gambar'] != 'image-not-found.svg') {
+        if ($numismatika['foto'] != 'image-not-found.svg') {
             unlink('assets/museum-images/' . $numismatika['foto']);
-            $this->museumModel->delete($id);
+            $this->NumismatikaModel->delete($id);
             session()->setFlashData('pesan', 'Data berhasil dihapus');
-            return redirect()->to('/kategoriMuseum/' . $numismatika['jenis']);
+            return redirect()->to('NumismatikaDanHeraldika');
         } else {
-            $this->museumModel->delete($id);
+            $this->NumismatikaModel->delete($id);
             session()->setFlashData('pesan', 'Data berhasil dihapus');
-            return redirect()->to('/kategoriMuseum/' . $numismatika['jenis']);
+            return redirect()->to('NumismatikaDanHeraldika');
         }
     }
 
     function editNumismatika($id)
     {
-        $naskah = $this->NaskahModel->find($id);
+        $numismatika = $this->NumismatikaModel->find($id);
         $data = [
             'title' => 'Edit data',
-            'museum' => $naskah
+            'numismatika' => $numismatika
         ];
         echo view('headerFixedTop', $data);
-        echo view('editDataNaskahView', $data);
+        echo view('editNumismatika', $data);
         echo view('footer');
     }
     function do_editNumismatika($id)
@@ -1094,7 +1094,7 @@ class AdminController extends BaseController
 
 
         ]);
-        $target = '/museum';
+        $target = 'NumismatikaDanHeraldika';
 
         session()->setFlashData('pesan', 'Data berhasil diinputkan');
         return redirect()->to($target);

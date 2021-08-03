@@ -5,7 +5,7 @@
 </div>
 <div class="container ">
     <?php if (logged_in()) : ?>
-        <a href="#" class="btn btn-primary">Tambah data</a>
+        <a href="tambahNaskah" class="btn btn-primary">Tambah data</a>
         <br></br>
     <?php endif; ?>
     <?php if (session()->getFlashData('pesan')) : ?>
@@ -20,13 +20,13 @@
                     <th scope="col">Judul</th>
                     <th scope="col">Aksara</th>
                     <th scope="col">Bahasa</th>
-
+                    <th scope="col"></th>
                 </tr>
         </thead>
         <tbody> 
             <?php $i = 1; ?>
             <?php foreach ($naskah as $naskah) : ?>
-                <tr class='clickable-row' data-href='/museum/<?= $naskah['id']; ?>'>
+                <tr class='clickable-row' data-href='Naskah'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $naskah['kodeNaskah'] ?></td>
                     <td><?= $naskah['judulNaskah'] ?></td>
@@ -42,12 +42,13 @@
             <th scope="col">Kode Naskah</th>
             <th scope="col">Rubrikasi</th>
             <th scope="col">Bahasa</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($naskah as $naskah) : ?>
-                <tr class='clickable-row' data-href='/museum/<?= $naskah['id']; ?>'>
+                <tr class='clickable-row' data-href='Naskah'>
                     <td><?= $naskah['kodeNaskah'] ?></td>
                     <td><?= $naskah['judulNaskah'] ?></td>
                     <td><?= $naskah['aksara'] ?></td>
@@ -67,7 +68,7 @@
             language: {
                 searchPlaceholder: "Nama/Judul",
             },
-
+            "paging":true,
         });
     });
 

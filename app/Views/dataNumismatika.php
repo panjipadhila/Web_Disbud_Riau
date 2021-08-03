@@ -20,15 +20,15 @@
                     <th scope="col">No. Inventaris</th>
                     <th scope="col">Sisi Depan</th>
                     <th scope="col">Sisi Belakang</th>
-                    <th scope="col">Masa Peredaran</th>
                     <th scope="col">Delinavit</th>
                     <th scope="col">Ukuran</th>
+                    <th scope="col"></th>
                 </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($numismatika as $numismatika) : ?>
-                <tr class='clickable-row' data-href='/museum/<?= $numismatika['id']; ?>'>
+                <tr class='clickable-row' data-href='NumismatikaDanHeraldika'>
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $numismatika['namaKoleksi'] ?></td>
                     <td><?= $numismatika['noInventaris'] ?></td>
@@ -47,15 +47,15 @@
             <th scope="col">No. Inventaris</th>
             <th scope="col">sisiMuka</th>
             <th scope="col">sisiBelakang</th>
-            <th scope="col">Masa Peredaran</th>
             <th scope="col">Delinavit</th>
             <th scope="col">Ukuran</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($numismatika as $numismatika) : ?>
-                <tr class='clickable-row' data-href='/museum/<?= $numismatika['id']; ?>'>
+                <tr class='clickable-row' data-href='NumismatikaDanHeraldika'>
                     <td><?= $numismatika['namaKoleksi'] ?></td>
                     <td><?= $numismatika['noInventaris'] ?></td>
                     <td><?= $numismatika['sisiMuka'] ?></td>
@@ -85,7 +85,7 @@
             language: {
                 searchPlaceholder: "Nama/Judul",
             },
-
+            "paging":true
         });
     });
 
