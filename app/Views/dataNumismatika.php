@@ -5,28 +5,23 @@
 </div>
 <div class="container ">
     <?php if (logged_in()) : ?>
-        <a href="#" class="btn btn-primary">Tambah data</a>
+        <a href="tambahNumismatika" class="btn btn-primary">Tambah data</a>
         <br></br>
     <?php endif; ?>
     <?php if (session()->getFlashData('pesan')) : ?>
         <div class="alert alert-success" role="alert"><?= session()->getFlashData('pesan'); ?></div>
     <?php endif; ?>
-    <table class="table table-color table-border-radius10 " id="dataTabelOpk">
+    <table class="table table-color table-border-radius10 " id="dataTabelnumismatika">
         <thead class="thead thead-white-font">
             <?php if (logged_in()) : ?>
                 <tr>
+                    <th scope="col">No.</th>
                     <th scope="col">Nama Koleksi</th>
                     <th scope="col">No. Inventaris</th>
-                    <th scope="col">Sisi Muka</th>
-                    <th scope="col">Sisi Belakang</th>
                     <th scope="col">Emisi</th>
                     <th scope="col">Seri</th>
                     <th scope="col">Tanda Tangan</th>
                     <th scope="col">Pengaman</th>
-                    <th scope="col">Mintmaster</th>
-                    <th scope="col">Mintmark</th>
-                    <th scope="col">Masa Peredaran</th>
-                    <th scope="col">Delinavit</th>
                     <th scope="col">Ukuran</th>
                 </tr>
         </thead>
@@ -37,16 +32,10 @@
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $numismatika['namaKoleksi'] ?></td>
                     <td><?= $numismatika['noInventaris'] ?></td>
-                    <td><?= $numismatika['sisiMuka'] ?></td>
-                    <td><?= $numismatika['sisiBelakang'] ?></td>
                     <td><?= $numismatika['emisi'] ?></td>
                     <td><?= $numismatika['seri'] ?></td>
                     <td><?= $numismatika['tandaTangan'] ?></td>
                     <td><?= $numismatika['pengaman'] ?></td>
-                    <td><?= $numismatika['mintmaster'] ?></td>
-                    <td><?= $numismatika['mintmark'] ?></td>
-                    <td><?= $numismatika['masaPeredaran'] ?></td>
-                    <td><?= $numismatika['delinavit'] ?></td>
                     <td><?= $numismatika['ukuran'] ?></td>
                     <td><a href="/numismatika/edit/<?= $numismatika['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/numismatika/delete/<?= $numismatika['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
@@ -54,7 +43,7 @@
         </tbody>
     <?php else : ?>
         <tr>
-        <th scope="col">Nama Koleksi</th>
+            <th scope="col">Nama Koleksi</th>
             <th scope="col">No. Inventaris</th>
             <th scope="col">Sisi Muka</th>
             <th scope="col">Sisi Belakang</th>
@@ -103,10 +92,11 @@
     // }
 
     $(document).ready(function() {
-        $('#dataTabelOpk').DataTable({
+        $('#dataTabelnumismatika').DataTable({
             language: {
-                searchPlaceholder: "Nama/Judul"
-            }
+                searchPlaceholder: "Nama/Judul",
+            },"paging": true,
+            
         });
     });
 
@@ -117,7 +107,7 @@
     // });
 
     $(function() {
-        $("#dataTabelOpk").dataTable();
+        $("#dataTabelnumismatika").dataTable();
         $(document).on('click', ".clickable-row", function() {
             window.location = $(this).data("href");
         });

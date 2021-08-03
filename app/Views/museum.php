@@ -63,7 +63,7 @@
     </div>
     <div class="row text-center" >
         <div style="width:100%;" >
-            <p><a href="kategoriMuseum/NumismatikaDanHeraldika" class="btn btn-primary museum-btn-view" >Numismatika dan Heraldika</a></p>
+            <p><a href="NumismatikaDanHeraldika" class="btn btn-primary museum-btn-view" >Numismatika dan Heraldika</a></p>
         </div>
     </div>
 </div>
