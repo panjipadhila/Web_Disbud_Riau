@@ -6067,20 +6067,19 @@ label {
     
 }
 
-.card-opk-home{
-    height: 235px;
+#card-opk{
+    height: 15rem;
     margin: 0 10% 0 10%;
-    border-radius: 10%;
-    background-color: #4ba54d;
+    /* border-radius: 10%; */
+    padding: 1.4rem;
+    background-color: transparent;
 }
-.text-opk-home{
-    color: white;
-   
+h3.text-opk-home{
+    color:#4ba54d;
+    /* padding-bottom: 10px; */
 }
-.card-opk-home:hover,
-.text-opk-home:hover{
-    background-color:gray;
-    color: white;
+#card-opk:hover{
+    background-color:rgb(221, 220, 220);
     transition: 0.5s;
 }
 
