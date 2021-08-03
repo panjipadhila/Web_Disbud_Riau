@@ -121,7 +121,7 @@ class AdminController extends BaseController
     {
         $opk = $this->OpkModel->find($id);
         if ($opk['foto'] == 'image-not-found.svg') {
-            if ($this->request->getVar('foto') == null) {
+            if ($this->request->getFile('foto') == null) {
                 $foto = 'image-not-found.svg';
             } else {
                 $filefoto = $this->request->getFile("foto");
@@ -129,12 +129,13 @@ class AdminController extends BaseController
                 $filefoto->move('assets/opk-images', $foto);
             }
         } else {
-            if ($this->request->getVar('foto') != null) {
+            if ($this->request->getFile('foto') == null) {
+                $foto = $opk['foto'];
+            } else {
+                unlink('assets/opk-images/' . $opk['foto']);
                 $filefoto = $this->request->getFile("foto");
                 $foto = $filefoto->getRandomName();
                 $filefoto->move('assets/opk-images', $foto);
-            } else {
-                $foto = $opk['foto'];
             }
         }
 
@@ -175,6 +176,16 @@ class AdminController extends BaseController
         echo view('tambahGalleryView');
         echo view('footer');
     }
+    function tambahKegiatan()
+    {
+        $data = [
+            'title' => 'Tambah kegiatan'
+        ];
+        echo view('headerFixedTop', $data);
+        echo view('tambahKegiatanView');
+        echo view('footer');
+    }
+
     function tambahDokumen()
     {
         $data = [
