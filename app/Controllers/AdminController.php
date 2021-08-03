@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use \App\Models\DataOpkModel;
 use App\Models\GalleryModel;
+use App\Models\DataKegiatanModel;
 use App\Models\DataDokumenModel;
 use App\Models\DataMuseumModel;
 use App\Models\AdminKabupatenModel;
@@ -20,6 +21,7 @@ class AdminController extends BaseController
         //helper('form');
         $this->OpkModel = new DataOpkModel();
         $this->galleryModel = new GalleryModel();
+        $this->kegiatanModel = new DataKegiatanModel();
         $this->dokumenModel = new DataDokumenModel();
         $this->museumModel = new DataMuseumModel();
         $this->adminModel = new AdminKabupatenModel();
@@ -184,6 +186,36 @@ class AdminController extends BaseController
         echo view('headerFixedTop', $data);
         echo view('tambahKegiatanView');
         echo view('footer');
+    }
+    function saveKegiatan()
+    {
+        if ($this->request->getFile("foto") == null) {
+            $foto = 'image-not-found.svg';
+        } else {
+            $filefoto = $this->request->getFile("foto");
+            $foto = $filefoto->getRandomName();
+            $filefoto->move('doc/kegiatan', $foto);
+        }
+        $this->kegiatanModel->save([
+            'nama_kegiatan' => $this->request->getVar('namaKegiatan'),
+            'tanggal' => $this->request->getVar('tanggal'),
+            'deskripsi' => $this->request->getVar('deskripsi'),
+            'foto' => $foto
+
+        ]);
+        $target = "/kegiatan";
+        session()->setFlashData('pesan', 'Kegiatan berhasil diinputkan');
+        return redirect()->to($target);
+    }
+    function deleteKegiatan($id)
+    {
+        $kegiatan = $this->kegiatanModel->find($id);
+        if ($kegiatan['foto'] != 'image-not-found.svg') {
+            unlink('doc/kegiatan/' . $kegiatan['foto']);
+        }
+        $this->kegiatanModel->delete($id);
+        session()->setFlashData('pesan', 'Kegiatan berhasil dihapus');
+        return redirect()->to('/kegiatan');
     }
 
     function tambahDokumen()
