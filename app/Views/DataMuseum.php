@@ -78,7 +78,11 @@
         $('#dataTabelOpk').DataTable({
             language: {
                 searchPlaceholder: "Nama/Jenis"
-            }
+            },
+            rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
         });
     });
 

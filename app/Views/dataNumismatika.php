@@ -85,7 +85,10 @@
             language: {
                 searchPlaceholder: "Nama/Judul",
             },
-            "paging": true
+            rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
         });
     });
 

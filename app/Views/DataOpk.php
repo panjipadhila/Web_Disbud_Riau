@@ -79,7 +79,11 @@
         $('#dataTabelOpk').DataTable({
             language: {
                 searchPlaceholder: "Nama/SubKategori/Lokasi"
-            }
+            },
+            rowReorder: {
+            selector: 'td:nth-child(2)'
+        },
+        responsive: true
         });
     });
 
