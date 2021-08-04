@@ -4,7 +4,7 @@
             <div class="card-body">
                 <h5 class="card-title"><?= $museum['namaBenda'] ?></h5>
             </div>
-            <img style="width:70rem" src="/doc/museum/<?= $museum['gambar']; ?>" alt="Gambar<?= $museum['namaBenda']; ?>" class="card-img-bottom">
+            <img style="width:70rem" src="/assets/museum-images/<?= $museum['gambar']; ?>" alt="<?= $museum['gambar']; ?>" class="card-img-bottom">
 
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">

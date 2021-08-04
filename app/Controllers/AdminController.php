@@ -309,10 +309,10 @@ class AdminController extends BaseController
         // } else {
         //     $foto = $this->request->getVar('foto');
         // }
-        if ($this->request->getFile("foto") == null) {
+        if ($this->request->getVar('foto') == null) {
             $foto = 'image-not-found.svg';
         } else {
-            $filefoto = $this->request->getFile("foto");
+            $filefoto = $this->request->getFile('foto');
             $foto = $filefoto->getRandomName();
             $filefoto->move('doc/gallery', $foto);
         }
@@ -330,10 +330,22 @@ class AdminController extends BaseController
     function deleteGallery($id)
     {
         $file = $this->galleryModel->find($id);
-        unlink('doc/gallery/' . $file['foto']);
-        $this->galleryModel->delete($id);
-        session()->setFlashData('pesan', 'Gallery berhasil dihapus');
-        return redirect()->to('/news');
+        if ($file['foto'] != 'image-not-found.svg') {
+            unlink('doc/gallery/' . $file['foto']);
+            $this->galleryModel->delete($id);
+            session()->setFlashData('pesan', 'Gallery berhasil dihapus');
+            return redirect()->to('/news');
+        }else if($file['foto'] == null) {
+            $this->galleryModel->delete($id);
+            session()->setFlashData('pesan', 'Gallery berhasil dihapus');
+            return redirect()->to('/news');
+        }else{
+            $this->galleryModel->delete($id);
+            session()->setFlashData('pesan', 'Gallery berhasil dihapus');
+            return redirect()->to('/news');
+        }
+
+
     }
     // function register()
     // {
@@ -364,12 +376,12 @@ class AdminController extends BaseController
     {
 
 
-        if ($this->request->getFile("gambar") == null) {
-            $foto = 'image-not-found.svg';
+        if ($this->request->getVar('gambar') == null) {
+            $gambar = 'image-not-found.svg';
         } else {
             $filefoto = $this->request->getFile("gambar");
-            $foto = $filefoto->getRandomName();
-            $filefoto->move('assets/museum-images', $foto);
+            $gambar = $filefoto->getRandomName();
+            $filefoto->move('assets/museum-images', $gambar);
         }
 
         if ($this->request->getVar('jenis') == null) {
@@ -468,11 +480,6 @@ class AdminController extends BaseController
         } else {
             $lainnya = $this->request->getVar('lainnya');
         }
-        if ($this->request->getVar('gambar') == null) {
-            $gambar = 'image-not-found.svg';
-        } else {
-            $gambar = $this->request->getVar('gambar');
-        }
 
         $this->museumModel->save([
             'namaBenda' => $namaBenda,
@@ -536,12 +543,12 @@ class AdminController extends BaseController
     {
         $museum = $this->museumModel->find($id);
         if ($museum['gambar'] == 'image-not-found.svg') {
-            if ($this->request->getVar('gamabar') == null) {
-                $foto = 'image-not-found.svg';
+            if ($this->request->getVar('gambar') == null) {
+                $gambar = 'image-not-found.svg';
             } else {
                 $filefoto = $this->request->getFile("gambar");
-                $foto = $filefoto->getRandomName();
-                $filefoto->move('assets/museum-images', $foto);
+                $gambar = $filefoto->getRandomName();
+                $filefoto->move('assets/museum-images', $gambar);
             }
         } else {
             if ($this->request->getVar('gambar') != null && $this->request->getFile('foto')->isFile()) {

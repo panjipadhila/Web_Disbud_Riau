@@ -4354,16 +4354,6 @@ tbody.collapse.in {
 
     }
 }
-@media(min-width:336px){
-    .navbar-main-brand{
-        float: left;
-        padding: 27.5px 15px;
-        font-size: 55%;
-        line-height: 25px;
-        height: 80px
-
-    }
-}
 @media(max-width:336px){
     .navbar-main-brand{
         float: left;
