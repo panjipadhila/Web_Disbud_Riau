@@ -80,7 +80,7 @@
                 searchPlaceholder: "Nama/Jenis"
             },
             rowReorder: {
-            selector: 'td:nth-child(2)'
+            selector: 'td:nth-child(0)'
         },
         responsive: true
         });
