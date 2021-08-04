@@ -3,7 +3,7 @@
         <div class="row">
 
 
-            <div class="col-xs-12">
+            <div id="text-footer"class="col-xs-12">
                 <h5>DINAS KEBUDAYAAN PROVINSI RIAU</h5>
                 <p>Jln. Jenderal Sudirman No. 194 <br> Tangkerang - Pekanbaru - Riau <br> Kode Pos 28128 <br> Email: <a href="mailto:disbud@riau.go.id">disbud@riau.go.id</a>
                 </p>
@@ -22,7 +22,7 @@
                             </a>
                         </p>
                     </div>
-                    <div class="col-xs-12 col-sm-5 text-right">
+                    <div id="login-footer"class="col-xs-12 col-sm-5 text-right">
                         <?php if (logged_in()) : ?>
                             <a href="/logout" class="text-right">Logout</a>
                         <?php else : ?>

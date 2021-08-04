@@ -1,11 +1,7 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src=".\assets\images\carousel2.svg" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h2 style="color:white;">MUSEUM SANG NILAI UTAMA</h2>
-                <p>Selamat Datang di portal data inventaris Museum Sang Nila Utama<br>di daerah Provinsi Riau</p>
-            </div>
+            <img class="d-block w-100" src=".\assets\images\carousel21.svg" alt="First slide">
         </div>
     </div>
 </div>

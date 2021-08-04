@@ -79,7 +79,8 @@
         $('#dataTabelOpk').DataTable({
             language: {
                 searchPlaceholder: "Nama/SubKategori/Lokasi"
-            }
+            },
+        responsive: true
         });
     });
 
