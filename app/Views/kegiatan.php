@@ -8,7 +8,9 @@
         <a href="tambahKegiatan" class="btn btn-primary">Tambah kegiatan</a>
         <br></br>
     <?php endif; ?>
-
+    <?php if (session()->getFlashData('pesan')) : ?>
+        <div class="alert alert-success" role="alert"><?= session()->getFlashData('pesan'); ?></div>
+    <?php endif; ?>
     <?php if (logged_in() && in_groups('admin-pusat')) : ?>
         <table class="table table-color table-border-radius10 " id="dataTabelOpk">
             <thead class="thead thead-white-font">
@@ -26,7 +28,7 @@
                         <th scope="row"><?= $i++ ?></th>
                         <td><?= $kegiatan['nama_kegiatan'] ?></td>
                         <td><?= $kegiatan['tanggal'] ?></td>
-                        <td><a href="/AdminController/edit" class="btn btn-primary btn-sm">Edit</a> <a href="/AdminController/deleteKegiatan/<?= $kegiatan['id']; ?>" class="btn btn-info btn-sm">Delete</a></td>
+                        <td><a href="/AdminController/editKegiatan/<?= $kegiatan['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/AdminController/deleteKegiatan/<?= $kegiatan['id']; ?>" class="btn btn-info btn-sm">Delete</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

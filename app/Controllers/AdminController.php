@@ -131,13 +131,13 @@ class AdminController extends BaseController
                 $filefoto->move('assets/opk-images', $foto);
             }
         } else {
-            if ($this->request->getFile('foto') == null) {
-                $foto = $opk['foto'];
-            } else {
+            if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
                 unlink('assets/opk-images/' . $opk['foto']);
                 $filefoto = $this->request->getFile("foto");
                 $foto = $filefoto->getRandomName();
                 $filefoto->move('assets/opk-images', $foto);
+            } else {
+                $foto = $opk['foto'];
             }
         }
 
@@ -217,7 +217,57 @@ class AdminController extends BaseController
         session()->setFlashData('pesan', 'Kegiatan berhasil dihapus');
         return redirect()->to('/kegiatan');
     }
+    function editKegiatan($id)
+    {
+        $kegiatan = $this->kegiatanModel->find($id);
+        $data = [
+            'title' => 'Edit data',
+            'kegiatan' => $kegiatan
+        ];
+        echo view('headerFixedTop', $data);
+        echo view('editKegiatanView', $data);
+        echo view('footer');
+    }
+    function do_editKegiatan($id)
+    {
+        $kegiatan = $this->kegiatanModel->find($id);
+        if ($kegiatan['foto'] == 'image-not-found.svg') {
+            if ($this->request->getFile('foto') == null) {
+                $foto = 'image-not-found.svg';
+            } else {
+                $filefoto = $this->request->getFile("foto");
+                $foto = $filefoto->getRandomName();
+                $filefoto->move('doc/kegiatan', $foto);
+            }
+        } else {
+            if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
+                unlink('doc/kegiatan/' . $kegiatan['foto']);
+                $filefoto = $this->request->getFile("foto");
+                $foto = $filefoto->getRandomName();
+                $filefoto->move('doc/kegiatan', $foto);
+            } else {
+                $foto = $kegiatan['foto'];
+            }
+        }
 
+
+        if ($this->request->getVar('deskripsi') == null) {
+            $deskripsi = 'Belum ada deskripsi';
+        } else {
+            $deskripsi = $this->request->getVar('deskripsi');
+        }
+
+        $this->kegiatanModel->save([
+            'id' => $id,
+            'nama_kegiatan' => $this->request->getVar('namaKegiatan'),
+            'tanggal' => $this->request->getVar('tanggal'),
+            'deskripsi' => $deskripsi,
+            'foto' => $foto
+        ]);
+        $target = '/kegiatan';
+        session()->setFlashData('pesan', 'Data berhasil diedit');
+        return redirect()->to($target);
+    }
     function tambahDokumen()
     {
         $data = [
@@ -494,7 +544,7 @@ class AdminController extends BaseController
                 $filefoto->move('assets/museum-images', $foto);
             }
         } else {
-            if ($this->request->getVar('gambar') != null) {
+            if ($this->request->getVar('gambar') != null && $this->request->getFile('foto')->isFile()) {
                 $filefoto = $this->request->getFile("gambar");
                 $foto = $filefoto->getRandomName();
                 $filefoto->move('assets/museum-images', $foto);

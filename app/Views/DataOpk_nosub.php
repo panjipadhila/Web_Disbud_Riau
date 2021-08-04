@@ -8,6 +8,9 @@
         <a href="/tambahdata" class="btn btn-primary">Tambah data</a>
         <br></br>
     <?php endif; ?>
+    <?php if (session()->getFlashData('pesan')) : ?>
+        <div class="alert alert-success" role="alert"><?= session()->getFlashData('pesan'); ?></div>
+    <?php endif; ?>
     <table class="table table-color table-border-radius10 " id="dataTabelOpk">
         <thead class="thead thead-white-font">
             <?php if (logged_in()) : ?>
