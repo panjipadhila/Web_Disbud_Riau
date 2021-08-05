@@ -4486,11 +4486,31 @@ tbody.collapse.in {
 .navbar-sec-brand {
     float: left;
     padding: 27.5px 15px;
-    font-size: 23px;
+    font-size: 100%;
     line-height: 25px;
     height: 80px
-}
+}    
 
+@media(max-width:700px){
+.navbar-sec-brand{
+    float: left;
+    padding: 32.5px 15px;
+    font-size: 52%;
+    line-height: 25px;
+    height: 80px
+
+}
+}
+@media(max-width:336px){
+.navbar-sec-brand{
+    float: left;
+    padding: 27.5px 15px;
+    font-size: 40%;
+    line-height: 25px;
+    height: 80px
+
+}
+}
 .navbar-sec-brand:focus,
 .navbar-sec-brand:hover {
     text-decoration: none
@@ -5978,12 +5998,23 @@ button.close {
 
 .navbar-sec-brand>.navbar-sec-logo-img {
     display: inline-block;
-    height: 47px;
-    width: 65px;
-    left: 61px;
-    top: 11px;
+    height: 37px;
+    width: 55px;
+    left: 51px;
+    top: 1px;
     border-radius: 0px;
+
 }
+@media(max-width:700px){
+    .navbar-sec-brand>.navbar-sec-logo-img{
+        display: inline-block;
+        width: 17%;
+        left: 51px;
+        top: 1px;
+        border-radius: 0px;
+    }
+}
+
 
 .navbar-sec-default .navbar-sec-toggle .icon-bar {
     background-color: #fff
@@ -6915,6 +6946,17 @@ label {
 }
 .page-link{
     color: green;
+}
+@media(max-width:450px){
+    #text-footer>h5{
+        font-size: 12px;
+    }
+    #text-footer>p{
+        font-size: 12px;
+    }
+    #login-footer{
+        font-size: 12px;
+    }
 }
 
 
