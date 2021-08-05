@@ -67,14 +67,34 @@ class Filters extends BaseConfig
 		'login' => [
 			'before' => [
 				'adminpage',
+				//OPK
 				'tambahdata',
 				'opk/edit/*',
 				'opk/delete/*/*',
+				//Gallery
 				'tambahGallery',
-				'tambahdokumen',
 				'deleteGallery/*',
+				//Dokumen
+				'tambahdokumen',
 				'dokumen/delete/*',
+				//Kegiatan
+				'tambahKegiatan',
+				'deleteKegiatan/*',
+				//Museum
+				'tambahdatamuseum',
+				'museum/delete/*',
+				'museum/edit/*',
+
+				'tambahNaskah',
+				'naskah/edit/*',
+				'naskah/delete/*',
+
+				'tambahNumismatika',
+				'numismatika/edit/*',
+				'numismatika/delete/*',
+				//Admin
 				'deleteUsers/*',
+				'listAdmin'
 			]
 		],
 	];
