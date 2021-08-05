@@ -22,6 +22,56 @@
         </div>
     </div>
 </div>
+<div class="row">
+<div class="container text-center">
+    <h3>Jam Operasional Museum</h3>
+</div>
+<div class="container ">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <div style="width:35rem; margin-left:5%" class="card-body">
+            <table class="table table-color table-border-radius10">
+             <thead class="thead thead-white-font">
+                <tr>
+                    <th scope="col">Hari</th>
+                    <th scope="col">Jam</th>
+
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>08.00-15.00</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>08.00-15.00</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>08.00-15.00</td>
+                </tr>
+                <tr>
+                    <td>Kami</td>
+                    <td>08.00-15.00</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>Tutup</td>
+                </tr>
+                <tr>
+                    <td>Sabtu</td>
+                    <td>08.00-13.00</td>
+                </tr>
+                <tr>
+                    <td>Minggu</td>
+                    <td>08.00-13.00</td>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="col-sm-4"></div>
+</div>
+</div>
 <div class="container text-center">
     <h2>Kategori Inventaris Museum</h2>
     <div class="row">
