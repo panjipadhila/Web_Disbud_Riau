@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 col-offset-3" style="max-width:100%">
             <div class="card">
-                <form id="edit" action="/AdminController/do_editMuseum/<?= $museum['id']; ?>" method="post">
+                <form id="edit" action="/AdminController/do_editMuseum/<?= $museum['id']; ?>" enctype="multipart/form-data" method="post">
                     <input type="hidden" name="id" value="<?= $museum['id'] ?>">
                     <div class="form-group">
                         <label for="namaopk">Nama Benda</label>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="form-group">
                         <label for="save">Gambar</label>
-                        <input style="display:inline-block" type="file" id="foto" name="gambar" placeholder="" >
+                        <input style="display:inline-block" type="file" id="foto" name="gambar" placeholder="">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Save</button>
                 </form>

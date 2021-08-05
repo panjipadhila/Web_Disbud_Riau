@@ -5,39 +5,39 @@
                 <form id="saveMuseum" action="AdminController/saveMuseum" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                         <label for="namaopk">Nama Benda</label>
-                        <input type="text" class="form-control" name="namaBenda" placeholder="nama OPK">
+                        <input type="text" class="form-control" name="namaBenda" placeholder="Nama Benda">
                     </div>
                     <div class="form-group">
                         <label for="deskripsi">Uraian</label>
-                        <input type="text" class="form-control" name="uraian" placeholder="Deskripsi">
+                        <input type="text" class="form-control" name="uraian" placeholder="Uraian">
                     </div>
                     <div class="form-group">
                         <label for="kondisi">No. Inventaris Lama</label>
-                        <input type="text" class="form-control" name="noInventarisLama" placeholder="Kondisi">
+                        <input type="text" class="form-control" name="noInventarisLama" placeholder="No. Inventatis Lama">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">No. Inventaris Baru</label>
-                        <input type="text" class="form-control" name="noInventarisBaru" placeholder="Link Video">
+                        <input type="text" class="form-control" name="noInventarisBaru" placeholder="No. Inventaris Baru">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">No. Regristrasi</label>
-                        <input type="text" class="form-control" name="noRegister" placeholder="Link Video">
+                        <input type="text" class="form-control" name="noRegister" placeholder="No. Registrasi">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Bahan</label>
-                        <input type="text" class="form-control" name="bahan" placeholder="Link Video">
+                        <input type="text" class="form-control" name="bahan" placeholder="Bahan">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Bentuk</label>
-                        <input type="text" class="form-control" name="bentuk" placeholder="Link Video">
+                        <input type="text" class="form-control" name="bentuk" placeholder="Bentuk">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Fungsi</label>
-                        <input type="text" class="form-control" name="fungsi" placeholder="Link Video">
+                        <input type="text" class="form-control" name="fungsi" placeholder="Fungsi">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Ukuran</label>
-                        <input type="text" class="form-control" name="ukuran" placeholder="Link Video">
+                        <input type="text" class="form-control" name="ukuran" placeholder="Ukuran">
                     </div>
                     <div class="form-group">
                         <label for="start">Tanggal Masuk Barang</label>
@@ -93,7 +93,7 @@
                             </select>
                         <?php else : ?>
                             <select name="asalBuat" id="kabupaten">
-                                <option>Pilih Kabupaten</option>
+                                <option>Pilih Asal</option>
                                 <option>Pekanbaru</option>
                                 <option>Kampar</option>
                                 <option>Siak Sri Indrapura</option>
@@ -119,7 +119,7 @@
                             </select>
                         <?php else : ?>
                             <select name="asalDapat" id="kabupaten">
-                                <option>Pilih Kabupaten</option>
+                                <option>Pilih Asal</option>
                                 <option>Pekanbaru</option>
                                 <option>Kampar</option>
                                 <option>Siak Sri Indrapura</option>
