@@ -101,19 +101,19 @@
     </div>
     <div class="row">
       <div class="col-sm-4">
-        <div id="card-opk" class="card card-opk-home">
+        <a href="/opk" id="card-opk" class="card card-opk-home">
           <h3 class="text-opk-home">Jumlah Objek<br><br><?= $opk; ?></h3>
-        </div>
+        </a>
       </div>
       <div class="col-sm-4">
-        <div id="card-opk" class="card card-opk-home">
+        <a href="/opk" id="card-opk" class="card card-opk-home">
           <h3 class="text-opk-home">Kategori<br><br>11</h3>
-        </div>
+        </a>
       </div>
       <div class="col-sm-4">
-        <div id="card-opk" class="card card-opk-home">
+        <a href="/opk" id="card-opk" class="card card-opk-home">
           <h3 class="text-opk-home">Subkategori<br><br>44</h3>
-        </div>
+        </a>
       </div>
     </div>
   </div>
