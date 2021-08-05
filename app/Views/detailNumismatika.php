@@ -4,7 +4,7 @@
             <div class="card-body">
                 <h5 class="card-title"><?= $numismatika['namaKoleksi'] ?></h5>
             </div>
-            <img style="width:70rem" src="/doc/numismatika/<?= $numismatika['foto']; ?>" alt="Gambar<?= $numismatika['namaKoleksi']; ?>" class="card-img-bottom">
+            <img style="width:70rem" src="/assets/museum-images/<?= $numismatika['foto']; ?>" alt="Gambar<?= $numismatika['namaKoleksi']; ?>" class="card-img-bottom">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                     <label for="noInventaris" class="col-sm-2">Np. Inventaris</label>
@@ -92,7 +92,7 @@
                         <?= $numismatika['delinavit'] ?>
                     </div>
                 </li>
-            </ul>    
+            </ul>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                     <label for="ukuran" class="col-sm-2">Ukuran</label>
@@ -100,7 +100,7 @@
                         <?= $numismatika['ukuran'] ?>
                     </div>
                 </li>
-            </ul>    
+            </ul>
         </div>
     </div>
 </div>
