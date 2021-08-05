@@ -9,10 +9,10 @@
         <br></br>
         <a href="<?= route_to('register') ?>" class="btn btn-primary btn-sm admin-view">Tambah Admin Kabupaten/Kota</a>
         <br></br>
-        <a href="/dokumen" class="btn btn-primary btn-sm admin-view">Tambah Dokumen</a>
+        <a href="/tambahdokumen" class="btn btn-primary btn-sm admin-view">Tambah Dokumen</a>
         <br></br>
-        <a href="/news" class="btn btn-primary btn-sm admin-view">Tambah Gallery</a>
+        <a href="/tambahGallery" class="btn btn-primary btn-sm admin-view">Tambah Gallery</a>
         <br></br>
-        <a href="/kegiatan" class="btn btn-primary btn-sm admin-view">Tambah Kegiatan</a>
+        <a href="/tambahKegiatan" class="btn btn-primary btn-sm admin-view">Tambah Kegiatan</a>
     <?php endif; ?>
 </div>

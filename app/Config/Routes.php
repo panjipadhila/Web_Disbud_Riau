@@ -46,11 +46,11 @@ $routes->get('adminpage', 'AdminController::adminpage');
 $routes->get('tambahdata', 'AdminController::tambah');
 $routes->get('listAdmin', 'AdminController::listAdmin', ['filter' => 'role:admin-pusat']);
 //$routes->get('register', 'AdminController::register');
-$routes->get('/tambahdokumen', 'AdminController::tambahDokumen', ['filter' => 'role:admin-pusat']);
 $routes->get('detailBidang/(:any)', 'Home::detailBidang/$1');
 $routes->get('deleteUsers/(:num)', 'AdminController::deleteUsers/$1', ['filter' => 'role:admin-pusat']);
 //Dokumen
 $routes->get('dokumen', 'DokumenController::index');
+$routes->get('/tambahdokumen', 'AdminController::tambahDokumen', ['filter' => 'role:admin-pusat']);
 $routes->get('dokumen/download/(:num)', 'DokumenController::download/$1');
 $routes->get('dokumen/readOnline/(:num)', 'DokumenController::open/$1');
 $routes->get('dokumen/delete/(:num)', 'AdminController::deleteDokumen/$1', ['filter' => 'role:admin-pusat']);

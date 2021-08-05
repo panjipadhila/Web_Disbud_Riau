@@ -26,7 +26,7 @@ class AdminController extends BaseController
         $this->museumModel = new DataMuseumModel();
         $this->adminModel = new AdminKabupatenModel();
         $this->NaskahModel = new DataNaskahModel();
-        $this->NumismatikaModel = new DataNumismatikaModel();
+        $this->numismatikaModel = new DataNumismatikaModel();
     }
     function adminpage()
     {
@@ -711,68 +711,66 @@ class AdminController extends BaseController
     {
 
         if ($this->request->getVar('kodeNaskah') == null) {
-            $kodeNaskah = 'Belum ada deskripsi';
+            $kodeNaskah = '-';
         } else {
             $kodeNaskah = $this->request->getVar('kodeNaskah');
         }
 
         if ($this->request->getVar('judulNaskah') == null) {
-            $judulNaskah = 'Belum ada deskripsi';
+            $judulNaskah = 'Tidak diketahui';
         } else {
             $judulNaskah = $this->request->getVar('judulNaskah');
         }
         if ($this->request->getVar('ukuranNaskah') == null) {
-            $ukuranNaskah = 'Belum ada deskripsi';
+            $ukuranNaskah = '-';
         } else {
             $ukuranNaskah = $this->request->getVar('ukuranNaskah');
         }
         if ($this->request->getVar('watermark') == null) {
-            $watermark = 'Belum ada deskripsi';
+            $watermark = '-';
         } else {
             $watermark = $this->request->getVar('watermark');
         }
         if ($this->request->getVar('kondisiNaskah') == null) {
-            $kondisiNaskah = 'Belum ada deskripsi';
+            $kondisiNaskah = '-';
         } else {
             $kondisiNaskah = $this->request->getVar('kondisiNaskah');
         }
         if ($this->request->getVar('jumlahHalaman') == null) {
-            $jumlahHalaman = 'Belum ada deskripsi';
+            $jumlahHalaman = '-';
         } else {
             $jumlahHalaman = $this->request->getVar('jumlahHalaman');
         }
         if ($this->request->getVar('jumlahBarisPerHalaman') == null) {
-            $jumlahBarisPerHalaman = 'Belum ada deskripsi';
+            $jumlahBarisPerHalaman = '';
         } else {
             $jumlahBarisPerHalaman = $this->request->getVar('jumlahBarisPerHalaman');
         }
         if ($this->request->getVar('ilumiinasi') == null) {
-            $iluminasi = 'Belum ada deskripsi';
+            $iluminasi = '-';
         } else {
             $iluminasi = $this->request->getVar('iluminasi');
         }
         if ($this->request->getVar('aksara') == null) {
-            $aksara = 'Belum ada deskripsi';
+            $aksara = 'Tidak diketahui';
         } else {
             $aksara = $this->request->getVar('aksara');
         }
         if ($this->request->getVar('rubrikasi') == null) {
-            $rubrikasi = 'Belum ada deskripsi';
+            $rubrikasi = '-';
         } else {
             $rubrikasi = $this->request->getVar('rubrikasi');
         }
         if ($this->request->getVar('bahasa') == null) {
-            $bahasa = 'Belum ada deskripsi';
+            $bahasa = 'Tidak diketahui';
         } else {
             $bahasa = $this->request->getVar('bahasa');
         }
         if ($this->request->getVar('kolofon') == null) {
-            $kolofon = 'Belum ada deskripsi';
+            $kolofon = '-';
         } else {
             $kolofon = $this->request->getVar('kolofon');
         }
-
-
         $this->NaskahModel->save([
             'kodeNaskah' => $kodeNaskah,
             'judulNaskah' => $judulNaskah,
@@ -785,12 +783,9 @@ class AdminController extends BaseController
             'aksara' => $aksara,
             'rubrikasi' => $rubrikasi,
             'bahasa' => $bahasa,
-            'kolofon' => $kolofon,
-
-
+            'kolofon' => $kolofon
         ]);
         $target = 'Naskah';
-
         session()->setFlashData('pesan', 'Data berhasil diinputkan');
         return redirect()->to($target);
     }
@@ -814,85 +809,22 @@ class AdminController extends BaseController
     }
     function do_editNaskah($id)
     {
-        if ($this->request->getVar('kodeNaskah') == null) {
-            $kodeNaskah = 'Belum ada deskripsi';
-        } else {
-            $kodeNaskah = $this->request->getVar('kodeNaskah');
-        }
-
-        if ($this->request->getVar('judulNaskah') == null) {
-            $judulNaskah = 'Belum ada deskripsi';
-        } else {
-            $judulNaskah = $this->request->getVar('judulNaskah');
-        }
-        if ($this->request->getVar('ukuranNaskah') == null) {
-            $ukuranNaskah = 'Belum ada deskripsi';
-        } else {
-            $ukuranNaskah = $this->request->getVar('ukuranNaskah');
-        }
-        if ($this->request->getVar('watermark') == null) {
-            $watermark = 'Belum ada deskripsi';
-        } else {
-            $watermark = $this->request->getVar('watermark');
-        }
-        if ($this->request->getVar('kondisiNaskah') == null) {
-            $kondisiNaskah = 'Belum ada deskripsi';
-        } else {
-            $kondisiNaskah = $this->request->getVar('kondisiNaskah');
-        }
-        if ($this->request->getVar('jumlahHalaman') == null) {
-            $jumlahHalaman = 'Belum ada deskripsi';
-        } else {
-            $jumlahHalaman = $this->request->getVar('jumlahHalaman');
-        }
-        if ($this->request->getVar('jumlahBarisPerHalaman') == null) {
-            $jumlahBarisPerHalaman = 'Belum ada deskripsi';
-        } else {
-            $jumlahBarisPerHalaman = $this->request->getVar('jumlahBarisPerHalaman');
-        }
-        if ($this->request->getVar('ilumiinasi') == null) {
-            $iluminasi = 'Belum ada deskripsi';
-        } else {
-            $iluminasi = $this->request->getVar('iluminasi');
-        }
-        if ($this->request->getVar('aksara') == null) {
-            $aksara = 'Belum ada deskripsi';
-        } else {
-            $aksara = $this->request->getVar('aksara');
-        }
-        if ($this->request->getVar('rubrikasi') == null) {
-            $rubrikasi = 'Belum ada deskripsi';
-        } else {
-            $rubrikasi = $this->request->getVar('rubrikasi');
-        }
-        if ($this->request->getVar('bahasa') == null) {
-            $bahasa = 'Belum ada deskripsi';
-        } else {
-            $bahasa = $this->request->getVar('bahasa');
-        }
-        if ($this->request->getVar('kolofon') == null) {
-            $kolofon = 'Belum ada deskripsi';
-        } else {
-            $kolofon = $this->request->getVar('kolofon');
-        }
-
         $this->NaskahModel->save([
             'id' => $id,
-            'kodeNaskah' => $kodeNaskah,
-            'judulNaskah' => $judulNaskah,
-            'ukuranNaskah' => $ukuranNaskah,
-            'watermark' => $watermark,
-            'kondisiNaskah' => $kondisiNaskah,
-            'jumlahHalaman' => $jumlahHalaman,
-            'jumlahBarisPerHalaman' => $jumlahBarisPerHalaman,
-            'iluminasi' => $iluminasi,
-            'aksara' => $aksara,
-            'rubrikasi' => $rubrikasi,
-            'bahasa' => $bahasa,
-            'kolofon' => $kolofon,
+            'kodeNaskah' => $this->request->getVar('kodeNaskah'),
+            'judulNaskah' => $this->request->getVar('judulNaskah'),
+            'ukuranNaskah' => $this->request->getVar('ukuranNaskah'),
+            'watermark' => $this->request->getVar('watermark'),
+            'kondisiNaskah' => $this->request->getVar('kondisiNaskah'),
+            'jumlahHalaman' => $this->request->getVar('jumlahHalaman'),
+            'jumlahBarisPerHalaman' => $this->request->getVar('jumlahBarisPerHalaman'),
+            'iluminasi' => $this->request->getVar('iluminasi'),
+            'aksara' => $this->request->getVar('aksara'),
+            'rubrikasi' => $this->request->getVar('rubrikasi'),
+            'bahasa' => $this->request->getVar('bahasa'),
+            'kolofon' => $this->request->getVar('kolofon')
 
         ]);
-
         $target = 'Naskah';
 
         session()->setFlashData('pesan', 'Data berhasil diedit');
@@ -910,86 +842,84 @@ class AdminController extends BaseController
     }
     function saveNumismatika()
     {
-        if ($this->request->getFile("foto") == null) {
-            $foto = 'image-not-found.svg';
-        } else {
+        if ($this->request->getFile("foto") != null && $this->request->getFile('foto')->isFile()) {
             $filefoto = $this->request->getFile("foto");
             $foto = $filefoto->getRandomName();
             $filefoto->move('doc/numismatika', $foto);
+        } else {
+            $foto = 'image-not-found.svg';
         }
 
         if ($this->request->getVar('namaKoleksi') == null) {
-            $namaKoleksi = 'Belum ada deskripsi';
+            $namaKoleksi = 'Tidak diketahui';
         } else {
             $namaKoleksi = $this->request->getVar('namaKoleksi');
         }
 
         if ($this->request->getVar('noInventaris') == null) {
-            $noInventaris = 'Belum ada deskripsi';
+            $noInventaris = '-';
         } else {
             $noInventaris = $this->request->getVar('noInventaris');
         }
         if ($this->request->getVar('sisiMuka') == null) {
-            $sisiMuka = 'Belum ada deskripsi';
+            $sisiMuka = 'Tidak diketahui';
         } else {
             $sisiMuka = $this->request->getVar('sisiMuka');
         }
         if ($this->request->getVar('sisiBelakang') == null) {
-            $sisiBelakang = 'Belum ada deskripsi';
+            $sisiBelakang = 'Tidak diketahui';
         } else {
             $sisiBelakang = $this->request->getVar('sisiBelakang');
         }
         if ($this->request->getVar('emisi') == null) {
-            $emisi = 'Belum ada deskripsi';
+            $emisi = '-';
         } else {
             $emisi = $this->request->getVar('emisi');
         }
         if ($this->request->getVar('seri') == null) {
-            $seri = 'Belum ada deskripsi';
+            $seri = '-';
         } else {
             $seri = $this->request->getVar('seri');
         }
 
         if ($this->request->getVar('tandaTangan') == null) {
-            $tandaTangan = 'Belum ada deskripsi';
+            $tandaTangan = '-';
         } else {
             $tandaTangan = $this->request->getVar('tandaTangan');
         }
         if ($this->request->getVar('pengaman') == null) {
-            $pengaman = 'Belum ada deskripsi';
+            $pengaman = '-';
         } else {
             $pengaman = $this->request->getVar('pengaman');
         }
         if ($this->request->getVar('mintmaster') == null) {
-            $mintmaster = 'Belum ada deskripsi';
+            $mintmaster = '-';
         } else {
             $mintmaster = $this->request->getVar('mintmaster');
         }
         if ($this->request->getVar('mintmark') == null) {
-            $mintmark = 'Belum ada deskripsi';
+            $mintmark = '-';
         } else {
             $mintmark = $this->request->getVar('mintmark');
         }
         if ($this->request->getVar('masaPeredaran') == null) {
-            $masaPeredaran = 'Belum ada deskripsi';
+            $masaPeredaran = '-';
         } else {
             $masaPeredaran = $this->request->getVar('masaPeredaran');
         }
 
         if ($this->request->getVar('delinavit') == null) {
-            $delinavit = 'Belum ada deskripsi';
+            $delinavit = '-';
         } else {
             $delinavit = $this->request->getVar('delinavit');
         }
 
         if ($this->request->getVar('ukuran') == null) {
-            $ukuran = 'Belum ada deskripsi';
+            $ukuran = '-';
         } else {
             $ukuran = $this->request->getVar('ukuran');
         }
-
-
-        $this->NumismatikaModel->save([
+        $this->numismatikaModel->save([
             'foto' => $foto,
             'namaKoleksi' => $namaKoleksi,
             'noInventaris' => $noInventaris,
@@ -1014,14 +944,14 @@ class AdminController extends BaseController
     }
     function deleteNumismatika($id)
     {
-        $numismatika = $this->NumismatikaModel->find($id);
+        $numismatika = $this->numismatikaModel->find($id);
         if ($numismatika['foto'] != 'image-not-found.svg') {
             unlink('assets/museum-images/' . $numismatika['foto']);
-            $this->NumismatikaModel->delete($id);
+            $this->numismatikaModel->delete($id);
             session()->setFlashData('pesan', 'Data berhasil dihapus');
             return redirect()->to('NumismatikaDanHeraldika');
         } else {
-            $this->NumismatikaModel->delete($id);
+            $this->numismatikaModel->delete($id);
             session()->setFlashData('pesan', 'Data berhasil dihapus');
             return redirect()->to('NumismatikaDanHeraldika');
         }
@@ -1029,7 +959,7 @@ class AdminController extends BaseController
 
     function editNumismatika($id)
     {
-        $numismatika = $this->NumismatikaModel->find($id);
+        $numismatika = $this->numismatikaModel->find($id);
         $data = [
             'title' => 'Edit data',
             'numismatika' => $numismatika
@@ -1040,107 +970,45 @@ class AdminController extends BaseController
     }
     function do_editNumismatika($id)
     {
-        if ($this->request->getFile("foto") == null) {
-            $foto = 'image-not-found.svg';
+        $numismatika = $this->numismatikaModel->find($id);
+        if ($numismatika['foto'] == 'image-not-found.svg') {
+            if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
+                $filefoto = $this->request->getFile("foto");
+                $foto = $filefoto->getRandomName();
+                $filefoto->move('assets/museum-images', $foto);
+            } else {
+                $foto = 'image-not-found.svg';
+            }
         } else {
-            $filefoto = $this->request->getFile("foto");
-            $foto = $filefoto->getRandomName();
-            $filefoto->move('doc/numismatika', $foto);
+            if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
+                unlink('assets/museum-images/' . $numismatika['foto']);
+                $filefoto = $this->request->getFile("foto");
+                $foto = $filefoto->getRandomName();
+                $filefoto->move('assets/museum-images', $foto);
+            } else {
+                $foto = $numismatika['foto'];
+            }
         }
 
-        if ($this->request->getVar('namaKoleksi') == null) {
-            $namaKoleksi = 'Belum ada deskripsi';
-        } else {
-            $namaKoleksi = $this->request->getVar('namaKoleksi');
-        }
-
-        if ($this->request->getVar('noInventaris') == null) {
-            $noInventaris = 'Belum ada deskripsi';
-        } else {
-            $noInventaris = $this->request->getVar('noInventaris');
-        }
-        if ($this->request->getVar('sisiMuka') == null) {
-            $sisiMuka = 'Belum ada deskripsi';
-        } else {
-            $sisiMuka = $this->request->getVar('sisiMuka');
-        }
-        if ($this->request->getVar('sisiBelakang') == null) {
-            $sisiBelakang = 'Belum ada deskripsi';
-        } else {
-            $sisiBelakang = $this->request->getVar('sisiBelakang');
-        }
-        if ($this->request->getVar('emisi') == null) {
-            $emisi = 'Belum ada deskripsi';
-        } else {
-            $emisi = $this->request->getVar('emisi');
-        }
-        if ($this->request->getVar('seri') == null) {
-            $seri = 'Belum ada deskripsi';
-        } else {
-            $seri = $this->request->getVar('seri');
-        }
-
-        if ($this->request->getVar('tandaTangan') == null) {
-            $tandaTangan = 'Belum ada deskripsi';
-        } else {
-            $tandaTangan = $this->request->getVar('tandaTangan');
-        }
-        if ($this->request->getVar('pengaman') == null) {
-            $pengaman = 'Belum ada deskripsi';
-        } else {
-            $pengaman = $this->request->getVar('pengaman');
-        }
-        if ($this->request->getVar('mintmaster') == null) {
-            $mintmaster = 'Belum ada deskripsi';
-        } else {
-            $mintmaster = $this->request->getVar('mintmaster');
-        }
-        if ($this->request->getVar('mintmark') == null) {
-            $mintmark = 'Belum ada deskripsi';
-        } else {
-            $mintmark = $this->request->getVar('mintmark');
-        }
-        if ($this->request->getVar('masaPeredaran') == null) {
-            $masaPeredaran = 'Belum ada deskripsi';
-        } else {
-            $masaPeredaran = $this->request->getVar('masaPeredaran');
-        }
-
-        if ($this->request->getVar('delinavit') == null) {
-            $delinavit = 'Belum ada deskripsi';
-        } else {
-            $delinavit = $this->request->getVar('delinavit');
-        }
-
-        if ($this->request->getVar('ukuran') == null) {
-            $ukuran = 'Belum ada deskripsi';
-        } else {
-            $ukuran = $this->request->getVar('ukuran');
-        }
-
-
-        $this->NumismatikaModel->save([
+        $this->numismatikaModel->save([
             'id' => $id,
             'foto' => $foto,
-            'namaKoleksi' => $namaKoleksi,
-            'noInventaris' => $noInventaris,
-            'sisiMuka' => $sisiMuka,
-            'sisiBelakang' => $sisiBelakang,
-            'emisi' => $emisi,
-            'seri' => $seri,
-            'tandaTangan' => $tandaTangan,
-            'pengaman' => $pengaman,
-            'mintmaster' => $mintmaster,
-            'mintmark' => $mintmark,
-            'masaPeredaran' => $masaPeredaran,
-            'delinavit' => $delinavit,
-            'ukuran' => $ukuran,
-
-
+            'namaKoleksi' => $this->request->getVar('namaKoleksi'),
+            'noInventaris' => $this->request->getVar('noInventaris'),
+            'sisiMuka' => $this->request->getVar('sisiMuka'),
+            'sisiBelakang' => $this->request->getVar('sisiBelakang'),
+            'emisi' => $this->request->getVar('emisi'),
+            'seri' => $this->request->getVar('seri'),
+            'tandaTangan' => $this->request->getVar('tandaTangan'),
+            'pengaman' => $this->request->getVar('pengaman'),
+            'mintmaster' => $this->request->getVar('mintmaster'),
+            'mintmark' => $this->request->getVar('mintmark'),
+            'masaPeredaran' => $this->request->getVar('masaPeredaran'),
+            'delinavit' => $this->request->getVar('delinavit'),
+            'ukuran' => $this->request->getVar('ukuran')
         ]);
         $target = 'NumismatikaDanHeraldika';
-
-        session()->setFlashData('pesan', 'Data berhasil diinputkan');
+        session()->setFlashData('pesan', 'Data berhasil diedit');
         return redirect()->to($target);
     }
 

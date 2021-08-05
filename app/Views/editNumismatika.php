@@ -55,6 +55,10 @@
                         <label for="ukuran">Ukuran</label>
                         <input type="text" class="form-control" name="kolofon" placeholder="Ukuran" value="<?= $numismatika['ukuran'] ?>">
                     </div>
+                    <div class="form-group">
+                        <label for="save">Gambar</label>
+                        <input style="display:inline-block" type="file" id="foto" value=<?= $numismatika['foto']; ?> name="foto" placeholder="">
+                    </div>
                     <button type="submit" class="btn btn-primary btn-block">Save</button>
                 </form>
             </div>
