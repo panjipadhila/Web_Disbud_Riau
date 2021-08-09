@@ -4348,7 +4348,7 @@ tbody.collapse.in {
     .navbar-main-brand{
         float: left;
         padding: 27.5px 15px;
-        font-size: 11px;
+        font-size: 8px;
         line-height: 25px;
         height: 80px
 
@@ -5161,7 +5161,7 @@ button.close {
     }
     @media(max-width:450px){
         .carousel-item{
-            margin-top: 18.5%;
+            margin-top: 73px;
             height: 200px;;
             margin-bottom: 1px;
             size: inherit;
@@ -5907,7 +5907,7 @@ button.close {
 @media(max-width:700px){
     .navbar-main-brand>.navbar-main-logo-img{
         display: inline-block;
-        width: 39px;
+        width: 33px;
         left: 51px;
         top: 1px;
         border-radius: 0px;

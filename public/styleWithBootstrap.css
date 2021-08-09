@@ -4495,7 +4495,7 @@ tbody.collapse.in {
 .navbar-sec-brand{
     float: left;
     padding: 32.5px 15px;
-    font-size: 11px;
+    font-size: 8px;
     line-height: 25px;
     height: 80px
 
@@ -5999,7 +5999,7 @@ button.close {
 @media(max-width:700px){
     .navbar-sec-brand>.navbar-sec-logo-img{
         display: inline-block;
-        width: 11%;
+        width: 33px;
         left: 51px;
         top: 1px;
         border-radius: 0px;
