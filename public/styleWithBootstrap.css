@@ -4486,7 +4486,7 @@ tbody.collapse.in {
 .navbar-sec-brand {
     float: left;
     padding: 27.5px 15px;
-    font-size: 100%;
+    font-size: 20px;
     line-height: 25px;
     height: 80px
 }    
@@ -4495,22 +4495,13 @@ tbody.collapse.in {
 .navbar-sec-brand{
     float: left;
     padding: 32.5px 15px;
-    font-size: 52%;
+    font-size: 11px;
     line-height: 25px;
     height: 80px
 
 }
 }
-@media(max-width:336px){
-.navbar-sec-brand{
-    float: left;
-    padding: 27.5px 15px;
-    font-size: 40%;
-    line-height: 25px;
-    height: 80px
 
-}
-}
 .navbar-sec-brand:focus,
 .navbar-sec-brand:hover {
     text-decoration: none
@@ -6008,7 +5999,7 @@ button.close {
 @media(max-width:700px){
     .navbar-sec-brand>.navbar-sec-logo-img{
         display: inline-block;
-        width: 17%;
+        width: 11%;
         left: 51px;
         top: 1px;
         border-radius: 0px;

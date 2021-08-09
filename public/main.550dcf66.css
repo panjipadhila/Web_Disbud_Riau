@@ -4348,22 +4348,13 @@ tbody.collapse.in {
     .navbar-main-brand{
         float: left;
         padding: 27.5px 15px;
-        font-size: 55%;
+        font-size: 11px;
         line-height: 25px;
         height: 80px
 
     }
 }
-@media(max-width:336px){
-    .navbar-main-brand{
-        float: left;
-        padding: 27.5px 15px;
-        font-size: 40%;
-        line-height: 25px;
-        height: 80px
 
-    }
-}
 
 
 .navbar-main-brand:focus,
@@ -5170,7 +5161,7 @@ button.close {
     }
     @media(max-width:450px){
         .carousel-item{
-            margin-top: 21.5%;
+            margin-top: 18.5%;
             height: 200px;;
             margin-bottom: 1px;
             size: inherit;
@@ -5181,7 +5172,7 @@ button.close {
 
  
 .carousel-indicators{
-    height: 15%;
+    height: 18%;
 }
 
 
@@ -5916,8 +5907,7 @@ button.close {
 @media(max-width:700px){
     .navbar-main-brand>.navbar-main-logo-img{
         display: inline-block;
-        height: 22px;
-        width: 40px;
+        width: 39px;
         left: 51px;
         top: 1px;
         border-radius: 0px;
