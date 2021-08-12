@@ -61,17 +61,13 @@ class AdminController extends BaseController
 
     function save()
     {
-        $foto = '';
-        $deskripsi = '';
-
-        if ($this->request->getFile("foto") == null) {
-            $foto = 'image-not-found.svg';
-        } else {
+        if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
             $filefoto = $this->request->getFile("foto");
             $foto = $filefoto->getRandomName();
             $filefoto->move('assets/opk-images', $foto);
+        } else {
+            $foto = 'image-not-found.svg';
         }
-
         if ($this->request->getVar('deskripsi') == null) {
             $deskripsi = 'Belum ada deskripsi';
         } else {
@@ -123,12 +119,12 @@ class AdminController extends BaseController
     {
         $opk = $this->OpkModel->find($id);
         if ($opk['foto'] == 'image-not-found.svg') {
-            if ($this->request->getFile('foto') == null) {
-                $foto = 'image-not-found.svg';
-            } else {
+            if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
                 $filefoto = $this->request->getFile("foto");
                 $foto = $filefoto->getRandomName();
                 $filefoto->move('assets/opk-images', $foto);
+            } else {
+                $foto = 'image-not-found.svg';
             }
         } else {
             if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
@@ -189,13 +185,14 @@ class AdminController extends BaseController
     }
     function saveKegiatan()
     {
-        if ($this->request->getFile("foto") == null) {
-            $foto = 'image-not-found.svg';
-        } else {
+        if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
             $filefoto = $this->request->getFile("foto");
             $foto = $filefoto->getRandomName();
             $filefoto->move('doc/kegiatan', $foto);
+        } else {
+            $foto = 'image-not-found.svg';
         }
+
         $this->kegiatanModel->save([
             'nama_kegiatan' => $this->request->getVar('namaKegiatan'),
             'tanggal' => $this->request->getVar('tanggal'),
@@ -232,12 +229,12 @@ class AdminController extends BaseController
     {
         $kegiatan = $this->kegiatanModel->find($id);
         if ($kegiatan['foto'] == 'image-not-found.svg') {
-            if ($this->request->getFile('foto') == null) {
-                $foto = 'image-not-found.svg';
-            } else {
+            if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
                 $filefoto = $this->request->getFile("foto");
                 $foto = $filefoto->getRandomName();
                 $filefoto->move('doc/kegiatan', $foto);
+            } else {
+                $foto = 'image-not-found.svg';
             }
         } else {
             if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
@@ -280,17 +277,21 @@ class AdminController extends BaseController
 
     function saveDokumen()
     {
-        $file = $this->request->getfile('file');
-        $namafile = $file->getName();
-        $file->move('assets/dokumen', $namafile);
+        if ($this->request->getFile('file')->isFile()) {
+            $file = $this->request->getfile('file');
+            $namafile = $file->getName();
+            $file->move('assets/dokumen', $namafile);
 
-        $this->dokumenModel->save([
-            'nama' => $this->request->getVar('judul'),
-            'file' => $namafile
-        ]);
-        $target = '/dokumen';
-        session()->setFlashData('pesan', 'Dokumen berhasil diinputkan');
-        return redirect()->to($target);
+            $this->dokumenModel->save([
+                'nama' => $this->request->getVar('judul'),
+                'file' => $namafile
+            ]);
+            $target = '/dokumen';
+            return redirect()->to($target);
+        } else {
+            session()->setFlashData('pesan', 'Dokumen belum dimasukkan');
+            return redirect()->back();
+        }
     }
 
     function deleteDokumen($id)
@@ -304,17 +305,13 @@ class AdminController extends BaseController
 
     function saveGallery()
     {
-        // if ($this->request->getVar('foto') == null) {
-        //     $foto = 'image-not-found.svg';
-        // } else {
-        //     $foto = $this->request->getVar('foto');
-        // }
-        if ($this->request->getFile('foto') == null) {
-            $foto = 'image-not-found.svg';
-        } else {
-            $filefoto = $this->request->getFile('foto');
+
+        if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
+            $filefoto = $this->request->getFile("foto");
             $foto = $filefoto->getRandomName();
             $filefoto->move('doc/gallery', $foto);
+        } else {
+            $foto = 'image-not-found.svg';
         }
         $this->galleryModel->save([
             'judul' => $this->request->getVar('judul'),
@@ -372,14 +369,12 @@ class AdminController extends BaseController
     }
     function saveMuseum()
     {
-
-
-        if ($this->request->getFile('gambar') == null) {
-            $gambar = 'image-not-found.svg';
-        } else {
+        if ($this->request->getFile('gambar') != null && $this->request->getFile('gambar')->isFile()) {
             $filefoto = $this->request->getFile("gambar");
             $gambar = $filefoto->getRandomName();
             $filefoto->move('assets/museum-images', $gambar);
+        } else {
+            $gambar = 'image-not-found.svg';
         }
 
         if ($this->request->getVar('namaBenda') == null) {
