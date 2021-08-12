@@ -2,6 +2,11 @@
     <div class="container text-left">
         <div class="card">
             <div class="card-body">
+                <?php if (logged_in()) : ?>
+                    <a href="/naskah/edit/<?= $naskah['id']; ?>" class="btn btn-primary btn-sm">Edit</a> 
+                    <a href="/naskah/delete/<?= $naskah['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a>
+                <?php else : ?>
+                <?php endif; ?>
                 <h5 class="card-title"><?= $naskah['judulNaskah'] ?></h5>
             </div>
             <ul class="list-group list-group-flush">
