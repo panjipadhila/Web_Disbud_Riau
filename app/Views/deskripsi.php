@@ -3,6 +3,10 @@
     <div class="card">
       <?php foreach ($opk as $detail) : ?>
         <div class="card-body">
+        <?php if (logged_in()) : ?>
+          <a href="/opk/edit/<?= $detail['id']; ?>" class="btn btn-primary btn-sm">Edit</a> 
+          <a href="/opk/delete/<?= $detail['kategori']; ?>/<?= $detail['id']; ?>" class="btn btn-info btn-sm">Delete</a>
+        <?php endif; ?>
           <h5 class="card-title"><?= $detail['nama'] ?></h5>
         </div>
         <ul class="list-group list-group-flush">

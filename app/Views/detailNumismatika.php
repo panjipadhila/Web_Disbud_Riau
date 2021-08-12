@@ -2,6 +2,11 @@
     <div class="container text-left">
         <div class="card">
             <div class="card-body">
+            <?php if (logged_in()) : ?>
+                <a href="/numismatika/edit/<?= $numismatika['id']; ?>" class="btn btn-primary btn-sm">Edit</a> 
+                <a href="/numismatika/delete/<?= $numismatika['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a>
+                <?php else : ?>
+                <?php endif; ?>
                 <h5 class="card-title"><?= $numismatika['namaKoleksi'] ?></h5>
             </div>
             <img style="width:70rem" src="/assets/museum-images/<?= $numismatika['foto']; ?>" alt="Gambar<?= $numismatika['namaKoleksi']; ?>" class="card-img-bottom">

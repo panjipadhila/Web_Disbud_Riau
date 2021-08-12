@@ -2,6 +2,11 @@
     <div class="container text-left">
         <div class="card">
             <div class="card-body">
+                <?php if (logged_in()) : ?>
+                    <a href="/museum/edit/<?= $museum['id']; ?>" class="btn btn-primary btn-sm">Edit</a> 
+                    <a href="/museum/delete/<?= $museum['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a>
+                <?php else : ?>
+                <?php endif; ?>
                 <h5 class="card-title"><?= $museum['namaBenda'] ?></h5>
             </div>
             <img style="width:70rem" src="/assets/museum-images/<?= $museum['gambar']; ?>" alt="<?= $museum['gambar']; ?>" class="card-img-bottom">
