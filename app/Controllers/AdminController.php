@@ -309,7 +309,7 @@ class AdminController extends BaseController
         // } else {
         //     $foto = $this->request->getVar('foto');
         // }
-        if ($this->request->getVar('foto') == null) {
+        if ($this->request->getFile('foto') == null) {
             $foto = 'image-not-found.svg';
         } else {
             $filefoto = $this->request->getFile('foto');
