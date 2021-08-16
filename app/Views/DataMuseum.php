@@ -18,7 +18,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Kondisi Benda</th>
-                    <th scope="col">Tanggal Masuk</th>
+                    <th scope="col">Asal Dapat</th>
                     <th scope="col">Tempat Penyimpanan</th>
                     <th scope="col"></th>
                 </tr>
@@ -30,7 +30,7 @@
                     <th scope="row"><?= $i++ ?></th>
                     <td><?= $museum['namaBenda'] ?></td>
                     <td><?= $museum['kondisiBenda'] ?></td>
-                    <td><?= $museum['tanggalMasuk'] ?></td>
+                    <td><?= $museum['asalDapat'] ?></td>
                     <td><?= $museum['tempatPenyimpanan'] ?></td>
                     <td><a href="/museum/edit/<?= $museum['id']; ?>" class="btn btn-primary btn-sm">Edit</a> <a href="/museum/delete/<?= $museum['id']; ?>" onclick="return confirm('Are you sure you want to delete this item')" class="btn btn-info btn-sm">Delete</a></td>
                 </tr>
@@ -41,7 +41,7 @@
             <th scope="col">No</th>
             <th scope="col">Nama</th>
             <th scope="col">Kondisi Benda</th>
-            <th scope="col">Tanggal Masuk</th>
+            <th scope="col">Asal Dapat</th>
             <th scope="col">Tempat Penyimpanan</th>
 
         </tr>
@@ -80,9 +80,9 @@
                 searchPlaceholder: "Nama/Jenis"
             },
             rowReorder: {
-            selector: 'td:nth-child(0)'
-        },
-        responsive: true
+                selector: 'td:nth-child(0)'
+            },
+            responsive: true
         });
     });
 
