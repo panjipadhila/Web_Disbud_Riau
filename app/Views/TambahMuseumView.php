@@ -46,19 +46,19 @@
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Kondisi Benda</label>
-                        <input type="text" class="form-control" name="kondisiBenda" placeholder="Link Video">
+                        <input type="text" class="form-control" name="kondisiBenda" placeholder="Kondisi">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Tempat Penyimpanan</label>
-                        <input type="text" class="form-control" name="tempatPenyimpanan" placeholder="Link Video">
+                        <input type="text" class="form-control" name="tempatPenyimpanan" placeholder="Tempat">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Dicatat Oleh</label>
-                        <input type="text" class="form-control" name="dicatatOleh" placeholder="Link Video">
+                        <input type="text" class="form-control" name="dicatatOleh" placeholder="Pencatat">
                     </div>
                     <div class="form-group">
                         <label for="linkVideo">Lainnya</label>
-                        <input type="text" class="form-control" name="lainnya" placeholder="Link Video">
+                        <input type="text" class="form-control" name="lainnya" placeholder="Keterangan lainnya">
                     </div>
 
                     <div class="form-group">

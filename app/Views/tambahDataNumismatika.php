@@ -5,7 +5,7 @@
                 <form id="saveNumismatika" action="AdminController/saveNumismatika" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                         <label for="namaKoleksi">Nama Koleksi</label>
-                        <input type="text" class="form-control" name="namaKoleksi" placeholder="Kode Naskah">
+                        <input type="text" class="form-control" name="namaKoleksi" placeholder="Nama">
                     </div>
                     <div class="form-group">
                         <label for="noInventaris">No.Inventaris</label>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-group">
                         <label for="emisi">Emisi</label>
-                        <input type="text" class="form-control" name="emisi" placeholder="emisi">
+                        <input type="text" class="form-control" name="emisi" placeholder="Emisi">
                     </div>
                     <div class="form-group">
                         <label for="seri">Seri</label>

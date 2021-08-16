@@ -10,20 +10,20 @@
         <div class="row">
             <?php foreach ($news as $elements) : ?>
                 <div class="col-sm-4 ">
-                        <div class="card" style="max-width : 36rem;min-width:10rem; max-height: 60rem; min-height:55rem;">
-                            <div class="card-image">
+                    <div class="card" style="max-width : 36rem;min-width:10rem; height:60rem;">
+                        <div class="card-image">
                             <img class="card-img" src="/doc/gallery/<?= $elements['foto']; ?>" alt="Card image cap">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><b><?= $elements['judul']; ?></b></h5>
-                                <b><?= $elements['created_at']; ?></b><br>
-                                <p style="width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" class="card-text"><?= $elements['isi']; ?></p>
-                            </div>
-                            <div class="card-footer">
-                                <a href="/detailGallery/<?= $elements['id']; ?>" class="btn btn-primary">Full Details</a>
-                                <a href="/deleteGallery/<?= $elements['id']; ?>" class="btn btn-info">Hapus data</a>
-                            </div>
                         </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><b><?= $elements['judul']; ?></b></h5>
+                            <b><?= $elements['created_at']; ?></b><br>
+                            <p style="width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" class="card-text"><?= $elements['isi']; ?></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/detailGallery/<?= $elements['id']; ?>" class="btn btn-primary">Full Details</a>
+                            <a href="/deleteGallery/<?= $elements['id']; ?>" class="btn btn-info">Hapus data</a>
+                        </div>
+                    </div>
                 </div>
 
 

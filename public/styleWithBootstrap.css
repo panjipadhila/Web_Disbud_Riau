@@ -6496,6 +6496,7 @@ label {
 
 .card-img {
     width: 100%;
+    height: 32rem;
     border-radius: calc(.25rem - 1px)
 }
 

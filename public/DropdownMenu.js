@@ -1,5 +1,5 @@
 var kat_subKat = {
-    "kesenian": {
+    "Kesenian": {
         "Seni Musik": [],
         "Seni Tari": [],
         "Seni Rupa": [],

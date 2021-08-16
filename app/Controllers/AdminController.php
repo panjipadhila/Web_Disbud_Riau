@@ -51,16 +51,40 @@ class AdminController extends BaseController
     }
     function tambah()
     {
+        session();
         $data = [
-            'title' => 'Tambah data'
+            'title' => 'Tambah data',
+            'validation' => \Config\Services::validation()
         ];
         echo view('headerFixedTop', $data);
-        echo view('tambahDataView');
+        echo \Config\Services::validation()->listErrors();
+        echo view('tambahDataView', $data);
         echo view('footer');
     }
 
     function save()
     {
+        if (!$this->validate(
+            [
+                'namaopk' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => '{field} tidak boleh kosong'
+                    ]
+                ],
+                'foto' => [
+                    'rules' => 'max_size[foto, 40960]|is_image[foto]|mime_in[foto, image/jpg, image/jpeg, image/png]',
+                    'errors' => [
+                        'max_size' => 'Ukuran gambar terlalu besar',
+                        'is_image' => 'File yang diupload harus gambar',
+                        'mime_in' => 'File yang diupload harus gambar'
+                    ]
+                ]
+            ]
+        )) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/tambahdata')->withInput()->with('validation', $validation);
+        }
         if ($this->request->getFile('foto') != null && $this->request->getFile('foto')->isFile()) {
             $filefoto = $this->request->getFile("foto");
             $foto = $filefoto->getRandomName();
@@ -388,14 +412,14 @@ class AdminController extends BaseController
             $uraian = $this->request->getVar('uraian');
         }
         if ($this->request->getVar('noInventarisLama') == null) {
-            $noInvestarisLama = '-';
+            $noInventarisLama = '-';
         } else {
-            $noInvestarisLama = $this->request->getVar('noInventarisLama');
+            $noInventarisLama = $this->request->getVar('noInventarisLama');
         }
         if ($this->request->getVar('noInventarisBaru') == null) {
-            $noInvestarisBaru = '-';
+            $noInventarisBaru = '-';
         } else {
-            $noInvestarisBaru = $this->request->getVar('noInventarisBaru');
+            $noInventarisBaru = $this->request->getVar('noInventarisBaru');
         }
         if ($this->request->getVar('noRegister') == null) {
             $noRegister = '-';
@@ -472,8 +496,8 @@ class AdminController extends BaseController
             'namaBenda' => $namaBenda,
             'jenis' => $this->request->getVar('jenis'),
             'uraian' => $uraian,
-            'noInvestarisLama' => $noInvestarisLama,
-            'noInvestarisBaru' => $noInvestarisBaru,
+            'noInventarisLama' => $noInventarisLama,
+            'noInventarisBaru' => $noInventarisBaru,
             'noRegister' => $noRegister,
             'bahan' => $bahan,
             'bentuk' => $bentuk,
@@ -549,115 +573,93 @@ class AdminController extends BaseController
         }
 
         if ($this->request->getVar('namaBenda') == null) {
-            $namaBenda = 'Belum ada deskripsi';
+            $namaBenda = 'Tidak diketahui';
         } else {
             $namaBenda = $this->request->getVar('namaBenda');
         }
-
-        if ($this->request->getVar('jenis') == null) {
-            $jenis = 'Belum ada deskripsi';
-        } else {
-            $jenis = $this->request->getVar('jenis');
-        }
-
+        $jenis = $this->request->getVar('jenis');
         if ($this->request->getVar('uraian') == null) {
-            $uraian = 'Belum ada deskripsi';
+            $uraian = 'Belum ada uraian';
         } else {
             $uraian = $this->request->getVar('uraian');
         }
-
-        if ($this->request->getVar('noInvestarisLama') == null) {
-            $noInvestarisLama = 'Belum ada deskripsi';
+        if ($this->request->getVar('noInventarisLama') == null) {
+            $noInventarisLama = '-';
         } else {
-            $noInvestarisLama = $this->request->getVar('noInvestarisLama');
+            $noInventarisLama = $this->request->getVar('noInventarisLama');
         }
-
-        if ($this->request->getVar('noInvestarisBaru') == null) {
-            $noInvestarisBaru = 'Belum ada deskripsi';
+        if ($this->request->getVar('noInventarisBaru') == null) {
+            $noInventarisBaru = '-';
         } else {
-            $noInvestarisBaru = $this->request->getVar('noInvestarisBaru');
+            $noInventarisBaru = $this->request->getVar('noInventarisBaru');
         }
-
         if ($this->request->getVar('noRegister') == null) {
-            $noRegister = 'Belum ada deskripsi';
+            $noRegister = '-';
         } else {
             $noRegister = $this->request->getVar('noRegister');
         }
-
         if ($this->request->getVar('bahan') == null) {
-            $bahan = 'Belum ada deskripsi';
+            $bahan = '-';
         } else {
             $bahan = $this->request->getVar('bahan');
         }
-
         if ($this->request->getVar('bentuk') == null) {
-            $bentuk = 'Belum ada deskripsi';
+            $bentuk = '-';
         } else {
             $bentuk = $this->request->getVar('bentuk');
         }
-
         if ($this->request->getVar('fungsi') == null) {
-            $fungsi = 'Belum ada deskripsi';
+            $fungsi = '-';
         } else {
             $fungsi = $this->request->getVar('fungsi');
         }
-
         if ($this->request->getVar('ukuran') == null) {
-            $ukuran = 'Belum ada deskripsi';
+            $ukuran = '-';
         } else {
             $ukuran = $this->request->getVar('ukuran');
         }
-
-        if ($this->request->getVar('asalBuat') == null) {
-            $asalBuat = 'Belum ada deskripsi';
+        if ($this->request->getVar('asalBuat') == 'Pilih Asal') {
+            $asalBuat = 'Tidak diketahui';
         } else {
             $asalBuat = $this->request->getVar('asalBuat');
         }
-
-        if ($this->request->getVar('asalDapat') == null) {
-            $asalDapat = 'Belum ada deskripsi';
+        if ($this->request->getVar('asalDapat') == 'Pilih Asal') {
+            $asalDapat = 'Tidak diketahui';
         } else {
             $asalDapat = $this->request->getVar('asalDapat');
         }
-
         if ($this->request->getVar('caraDapat') == null) {
-            $caraDapat = 'Belum ada deskripsi';
+            $caraDapat = '-';
         } else {
             $caraDapat = $this->request->getVar('caraDapat');
         }
-
         if ($this->request->getVar('tanggalMasuk') == null) {
-            $tanggalMasuk = 'Belum ada deskripsi';
+            $tanggalMasuk = '-';
         } else {
             $tanggalMasuk = $this->request->getVar('tanggalMasuk');
         }
-
         if ($this->request->getVar('kondisiBenda') == null) {
-            $kondisiBenda = 'Belum ada deskripsi';
+            $kondisiBenda = '-';
         } else {
             $kondisiBenda = $this->request->getVar('kondisiBenda');
         }
-
         if ($this->request->getVar('tempatPenyimpanan') == null) {
-            $tempatPenyimpanan = 'Belum ada deskripsi';
+            $tempatPenyimpanan = '-';
         } else {
             $tempatPenyimpanan = $this->request->getVar('tempatPenyimpanan');
         }
-
         if ($this->request->getVar('dicatatOleh') == null) {
-            $dicatatOleh = 'Belum ada deskripsi';
+            $dicatatOleh = '-';
         } else {
             $dicatatOleh = $this->request->getVar('dicatatOleh');
         }
-
         if ($this->request->getVar('tanggal') == null) {
-            $tanggal = 'Belum ada deskripsi';
+            $tanggal = '-';
         } else {
             $tanggal = $this->request->getVar('tanggal');
         }
-
         if ($this->request->getVar('lainnya') == null) {
-            $lainnya = 'Belum ada deskripsi';
+            $lainnya = '-';
         } else {
             $lainnya = $this->request->getVar('lainnya');
         }
@@ -667,8 +669,8 @@ class AdminController extends BaseController
             'namaBenda' => $namaBenda,
             'jenis' => $jenis,
             'uraian' => $uraian,
-            'noInvestarisLama' => $noInvestarisLama,
-            'noInvestarisBaru' => $noInvestarisBaru,
+            'noInventarisLama' => $noInventarisLama,
+            'noInventarisBaru' => $noInventarisBaru,
             'noRegister' => $noRegister,
             'bahan' => $bahan,
             'bentuk' => $bentuk,
@@ -840,7 +842,7 @@ class AdminController extends BaseController
         if ($this->request->getFile("foto") != null && $this->request->getFile('foto')->isFile()) {
             $filefoto = $this->request->getFile("foto");
             $foto = $filefoto->getRandomName();
-            $filefoto->move('doc/numismatika', $foto);
+            $filefoto->move('assets/museum-images/', $foto);
         } else {
             $foto = 'image-not-found.svg';
         }
